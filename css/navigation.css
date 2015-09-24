@@ -1,33 +1,19 @@
-@import url(http://fonts.googleapis.com/css?family=roboto);
-
-body {
-  background: black;
-  font-size: 22px;
-  line-height: 32px;
-  color: #ffffff;
-  margin: 0;
-  padding: 0;
-  word-wrap: break-word !important;
-  font-family: 'roboto', sans-serif;
-}
-
-
 #container {
   margin: 0 auto;
   max-width: 890px;
 }
 
-p { text-align: center; }
  .toggle, [id^=drop] {
  display: none;
 }
 
-nav {
-  margin-top: 100px!important;
-  padding: 0;
-  background-color: #254441;
+.menu{
+  color: white;
 }
 
+.nav-above{
+  background-color: white;
+}
 #logo {
   display: block;
   padding: 0 30px;
@@ -35,13 +21,17 @@ nav {
   font-size: 20px;
   line-height: 80px;
   position: relative;
+  color: white;
 }
-#logo img{
-  height: 160px;
-  position: absolute;
-  left: 0;
-  top:-71px;
+.left-logo{
 
+}
+.left-logo img{
+  width: 400px;
+}
+nav {
+  padding: 0;
+  background-color: #254441;
 }
 
 nav:after {

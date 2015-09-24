@@ -1,0 +1,31 @@
+html{
+	background-color: gray;
+	font-size: 12px;
+}
+
+body {
+  background: #242046;
+  line-height: 32px;
+  margin: 0;
+  padding: 0!important;
+  word-wrap: break-word !important;
+}
+
+/*MEDIA QUERIES*/
+
+/*SM*/
+@media (min-width: 768px) {
+	 body{
+	 	font-size: 14px;
+	 }
+}
+/*MD*/
+@media (min-width: 992px) {
+	 body{
+	 	font-size: 18px;
+	 }
+}
+/*LG*/
+@media (min-width: 1200px) {
+
+}
