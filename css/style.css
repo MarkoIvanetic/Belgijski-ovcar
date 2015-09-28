@@ -13,7 +13,12 @@ body {
 nav{
 	overflow: hidden;
 }
-
+.test{
+	margin-top: 120px;
+	font-family: 'Lora', serif;
+	text-align: center;
+	font-size: 4em;
+}
 /*MEDIA QUERIES*/
 
 /*SM*/
