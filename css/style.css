@@ -10,6 +10,9 @@ body {
   padding: 0!important;
   word-wrap: break-word !important;
 }
+nav{
+	overflow: hidden;
+}
 
 /*MEDIA QUERIES*/
 
