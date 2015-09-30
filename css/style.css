@@ -4,8 +4,6 @@ html{
 }
 
 body {
-  background: #242046;
-  line-height: 32px;
   margin: 0;
   padding: 0!important;
   word-wrap: break-word !important;
@@ -13,27 +11,79 @@ body {
 nav{
 	overflow: hidden;
 }
-.test{
-	margin-top: 120px;
-	font-family: 'Lora', serif;
+.title{
 	text-align: center;
 	font-size: 4em;
 }
+.main-container{
+	/*background-color: yellow;*/
+	margin-top: 110px;
+	min-height: 100px;
+	font-family: 'Lora', serif;
+}
+.introduction{
+	/*background-color: gray;*/
+	border-bottom: 1px solid #CBC9CF;
+	padding-bottom: 19px;
+}
+.main-content h1{
+	margin-bottom: 0;
+	font-size: 1.5em;
+	text-decoration: underline;
+}
+.main-content div{
+	/*border-bottom: 1px solid #CBC9CF;*/
+	border-bottom: 3px solid red;
+	padding: 20px;
+	padding-bottom: 19px;
+	margin-top: 20px;
+}
+.main-content{
+	margin-top: 20px;
+}
+.profile div{
+	height: 400px;
+	background-color: LightGreen;
+}
+.imageClass{
+	min-height: 300px;
+	background-color: teal;
+}
+.article-image, .article{
+	min-height: 400px;
+	background-color:olive;
+}
 /*MEDIA QUERIES*/
-
+/*XD*/
+@media (max-width: 768px) {
+	 body{
+	 	font-size: 14px;
+	 	line-height: 20px;
+	 }
+}
 /*SM*/
 @media (min-width: 768px) {
 	 body{
 	 	font-size: 14px;
+	 	line-height: 24px;
 	 }
 }
 /*MD*/
 @media (min-width: 992px) {
 	 body{
 	 	font-size: 18px;
+	 	line-height: 28px;
 	 }
 }
 /*LG*/
 @media (min-width: 1200px) {
-
+		 body{
+	 	font-size: 20px;
+	 	line-height: 32px;
+	 }
+	.main-container{
+	margin-top: 40px;
+	width: calc(100% - 250px)!important;
+	margin-left: 250px;
+}
 }
