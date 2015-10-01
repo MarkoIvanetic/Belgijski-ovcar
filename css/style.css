@@ -12,6 +12,9 @@ body {
 nav{
 	overflow: hidden;
 }
+h3{
+	margin-top: 0;
+}
 .title{
 	text-align: center;
 	font-size: 4em;
@@ -47,11 +50,6 @@ nav{
 	height: 350px ;
 	display:block;
     margin:auto;
-    padding-right: 20px;
-
-    -webkit-border-radius: 60px;
--moz-border-radius: 60px;
-border-radius: 60px;
 }
 .profile p{
 	display: inline;
