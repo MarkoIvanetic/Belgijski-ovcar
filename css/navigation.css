@@ -27,6 +27,7 @@
 /* Sidebar Styles */
 .sidebar-logo{
   width: 80%;
+  opacity: .8;
 }
 .sidebar-nav {
     position: absolute;
@@ -42,7 +43,7 @@
     border-right: 4px solid #333;
 }
 .sidebar-nav li:hover {
-    background-color: #424242;
+    background-color: rgba(66,66,66,0.6);
     border-right: 4px solid red;
 }
 .sidebar-nav li a {
@@ -50,6 +51,9 @@
     text-decoration: none;
     color: #999999;
     text-transform: uppercase;
+}
+.navbar{
+    min-width: 300px;
 }
 .navbar-nav{
   text-transform: uppercase;

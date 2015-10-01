@@ -1,6 +1,7 @@
 html{
 	background-color: #EBEBEB;
 	font-size: 12px;
+	min-width: 300px;
 }
 
 body {
@@ -19,60 +20,77 @@ nav{
 	/*background-color: yellow;*/
 	margin-top: 110px;
 	min-height: 100px;
-	font-family: 'Lora', serif;
+	font-family: 'PT Sans', sans-serif;
 }
 .introduction{
 	/*background-color: gray;*/
 	border-bottom: 1px solid #CBC9CF;
 	padding-bottom: 19px;
+	margin-bottom: 20px;
 }
 .main-content h1{
-	margin-bottom: 0;
+	margin-bottom: 10;
 	font-size: 1.5em;
 	text-decoration: underline;
 }
-.main-content div{
-	/*border-bottom: 1px solid #CBC9CF;*/
-	border-bottom: 3px solid red;
-	padding: 20px;
+.main-content .row{
+	border-bottom: 1px solid #CBC9CF;
 	padding-bottom: 19px;
-	margin-top: 20px;
 }
 .main-content{
-	margin-top: 20px;
 }
 .profile div{
-	height: 400px;
+	min-height: 400px;
 	background-color: LightGreen;
+}
+.profile img{
+	height: 350px ;
+	display:block;
+    margin:auto;
+    padding-right: 20px;
+
+    -webkit-border-radius: 60px;
+-moz-border-radius: 60px;
+border-radius: 60px;
+}
+.profile p{
+	display: inline;
+	float: left;
+}
+section > div{
+	padding: 20px;
 }
 .imageClass{
 	min-height: 300px;
 	background-color: teal;
 }
 .article-image, .article{
-	min-height: 400px;
+	min-height: 200px;
 	background-color:olive;
 }
 /*MEDIA QUERIES*/
 /*XD*/
 @media (max-width: 768px) {
 	 body{
-	 	font-size: 14px;
-	 	line-height: 20px;
+	 	font-size: 16px;
+	 	line-height: 1.3;
+	 }
+	 .introduction h1{
+	 	font-size: 3em;
 	 }
 }
 /*SM*/
 @media (min-width: 768px) {
 	 body{
-	 	font-size: 14px;
-	 	line-height: 24px;
+	 	font-size: 16px;
+	 	line-height: 1.3;
 	 }
 }
 /*MD*/
 @media (min-width: 992px) {
 	 body{
 	 	font-size: 18px;
-	 	line-height: 28px;
+	 	line-height: 1.65;
 	 }
 }
 /*LG*/
