@@ -8,6 +8,9 @@
     overflow-y: auto;
     font-family: 'Raleway', sans-serif!important;
     background-color: #333;
+
+    background-image: url("../images/pattern/stressed.png");
+    background-repeat: repeat-y;
 }
 #wrapper.toggled #sidebar-wrapper {
     width: 250px;
