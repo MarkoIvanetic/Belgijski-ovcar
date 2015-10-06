@@ -1,0 +1,27 @@
+footer{
+	min-height: 200px;
+	background-color: #f4f4f4;
+}
+footer h2{
+	text-align: center;
+}
+.lower-footer{
+      width: 250px;
+    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+    margin-top: 10px;
+    float: none;
+    margin: 0 auto;
+
+}
+.lower-footer:after { content:' '; display:inline-block; width: 100%; height: 0 }
+footer li{
+	display: inline-block;
+}
+@media (min-width: 1200px) {
+    footer{
+    	width: calc(100% - 250px)!important;
+        margin-left: 250px!important;
+    }
+}

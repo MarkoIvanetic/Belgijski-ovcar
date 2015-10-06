@@ -54,6 +54,12 @@
 }
 .navbar{
     min-width: 300px;
+    font-family: 'Raleway', sans-serif!important;
+    background-color: #333;
+
+    background-image: url("../images/pattern/stressed.png");
+    background-repeat: repeat-x;
+
 }
 .navbar-nav{
   text-transform: uppercase;
