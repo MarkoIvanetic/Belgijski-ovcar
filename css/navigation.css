@@ -27,7 +27,7 @@
 /* Sidebar Styles */
 .sidebar-logo{
   width: 80%;
-  opacity: .8;
+  /*opacity: .9;*/
 }
 .sidebar-nav {
     position: absolute;
@@ -37,20 +37,28 @@
     list-style: none;
     text-align: center;
 }
+.sidebar-nav li:first-of-type{
+    margin-top: 20px;
+}
 .sidebar-nav li {
     line-height: 60px;
-    transition: all 0.5s;
-    border-right: 4px solid #333;
+    transition: all 1s;
 }
 .sidebar-nav li:hover {
-    background-color: rgba(66,66,66,0.6);
-    border-right: 4px solid red;
+    background-color: rgba(66,66,66,0.1);
+    color: #F2594B;
 }
+
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #999999;
+    color: rgba(255,255,255,0.7);
     text-transform: uppercase;
+    transition: all 0.5s;
+}
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fee0ae;
 }
 .navbar{
     min-width: 300px;
@@ -72,19 +80,12 @@
 .navbar-brand{
   padding: 0 10px;
 }
-.sidebar-nav li a:hover {
-    text-decoration: none;
-    color: #fff;
-}
+
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
     text-decoration: none;
 }
-.sidebar-nav > .sidebar-brand {
-    height: 25px;
-    font-size: 18px;
-    line-height: 60px;
-}
+
 .sidebar-nav > .sidebar-brand a {
     color: #999999;
 }
