@@ -46,7 +46,7 @@
 }
 .sidebar-nav li:hover {
     background-color: rgba(66,66,66,0.1);
-    color: #F2594B;
+    color: #DBAF47;
 }
 
 .sidebar-nav li a {
@@ -58,7 +58,7 @@
 }
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: #fee0ae;
+    color: #DBAF47;
 }
 .navbar{
     min-width: 300px;
