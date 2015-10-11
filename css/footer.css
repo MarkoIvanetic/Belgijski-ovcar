@@ -1,15 +1,10 @@
 footer{
-	background-color: #f4f4f4;
+	background-color: #373737;
     color: rgba(255,255,255,0.7);
+    padding: 15px;
 }
 .social {
-    width: 250px;
-    text-align: justify;
-    -ms-text-justify: distribute-all-lines;
-    text-justify: distribute-all-lines;
-    margin-top: 10px;
-    float: none;
-    margin: 0 auto;
+
 }
 .social a {
     padding-top: 10px;
@@ -20,18 +15,21 @@ footer{
 .social img {
     width: 50px;
 }
-.upper-footer{
+.footer-upper{
     padding: 40px;
-    background-color: #373737;
+    background-color: red;
+    height: 200px;
+
 }
-.upper-footer p{
+/*.upper-footer p{
     text-align: center;
     padding: 40px 0px 10px 0px;
-}
-.lower-footer{
+}*/
+.footer-lower{
     padding: 40px 0px;
     /*background-color: #63A69F;*/
     background-color: #fee0ae;
+    height: 80px;
 }
 .lower-navigation{
     margin-left: auto ;
