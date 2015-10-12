@@ -1,7 +1,7 @@
 footer{
 	background-color: #373737;
     color: rgba(255,255,255,0.7);
-    padding: 15px;
+    
 }
 .social {
 
@@ -16,17 +16,15 @@ footer{
     width: 50px;
 }
 .footer-upper{
-    padding: 40px;
+    padding: 15px;
+}
+.footer-upper-container{
+    padding: 20px;
     background-color: red;
     height: 200px;
-
 }
-/*.upper-footer p{
-    text-align: center;
-    padding: 40px 0px 10px 0px;
-}*/
 .footer-lower{
-    padding: 40px 0px;
+    padding: 15px;
     /*background-color: #63A69F;*/
     background-color: #fee0ae;
     height: 80px;
