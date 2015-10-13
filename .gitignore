@@ -4,6 +4,9 @@ ehthumbs.db
 
 # Folder config file
 Desktop.ini
+node_modules/
+Gruntfile.js
+package.json
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/

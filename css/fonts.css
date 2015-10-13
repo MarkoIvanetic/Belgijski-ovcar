@@ -1,15 +1,17 @@
 @font-face {
-	font-family: 'BebasNeue';
-	src: url('fonts/BebasNeue Bold.woff') format('woff');
-	font-weight: bold;
+  font-family: 'BebasNeue';
+  src: url('fonts/BebasNeue Bold.woff') format('woff');
+  font-weight: bold;
 }
+
 @font-face {
-	font-family: 'BebasNeue';
+  font-family: 'BebasNeue';
 	src: url('fonts/BebasNeue Light.woff') format('woff');
 	font-weight: lighter;
 }
+
 @font-face {
-	font-family: 'BebasNeue';
+  font-family: 'BebasNeue';
 	src: url('fonts/BebasNeue Regular.woff') format('woff');
 	font-weight: normal;
 }
