@@ -7,10 +7,7 @@ footer {
 }
 
 .social a {
-  padding-top: 10px;
-  vertical-align: top;
-  display: inline-block;
-  zoom: 1;
+  padding:10px;
 }
 
 .social img {
@@ -21,12 +18,22 @@ footer {
   padding: 15px;
 }
 
+.footer-upper-container div{
+  min-height: 50px;
+  background-color: orange;
+  border-right: 1px solid black;
+}
 .footer-upper-container {
-  padding: 20px;
+  padding: 15px;
   background-color: yellow;
   height: 200px;
 }
-
+.footer-upper-container span{
+  color: red;
+}
+.footer-upper-container h2{
+  color: red;
+}
 .footer-lower {
   padding: 15px;
     /*background-color: #63A69F;*/
@@ -65,5 +72,8 @@ footer {
   footer {
     width: calc(100% - 250px)!important;
     margin-left: 250px!important;
+  }
+  .footer-upper{
+    width: 100%;
   }
 }
