@@ -5,9 +5,11 @@ footer {
 
 .social {
 }
-
+.social div{
+  padding: 5px;
+}
 .social a {
-  padding:10px;
+  margin: 5px;
 }
 
 .social img {
@@ -15,7 +17,7 @@ footer {
 }
 
 .footer-upper {
-  padding: 15px;
+  padding: 10px;
 }
 
 .footer-upper-container div{
@@ -26,7 +28,7 @@ footer {
 .footer-upper-container {
   padding: 15px;
   background-color: yellow;
-  height: 200px;
+  min-height: 200px;
 }
 .footer-upper-container span{
   color: red;
@@ -38,7 +40,7 @@ footer {
   padding: 15px;
     /*background-color: #63A69F;*/
   background-color: #fee0ae;
-  height: 80px;
+  min-height: 80px;
 }
 
 .lower-navigation {
@@ -68,6 +70,14 @@ footer {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+.footer-nav{
+  display: inline-flex;
+}
+.footer-nav li{
+  margin-right: 10px;
+}
+}
 @media (min-width: 1200px) {
   footer {
     width: calc(100% - 250px)!important;
