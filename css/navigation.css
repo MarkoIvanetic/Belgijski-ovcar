@@ -47,6 +47,7 @@
 
 .sidebar-nav li {
   line-height: 60px;
+  -webkit-transition: all 1s;
   transition: all 1s;
 }
 
@@ -60,6 +61,7 @@
   text-decoration: none;
   color: rgba(255,255,255,0.7);
   text-transform: uppercase;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 

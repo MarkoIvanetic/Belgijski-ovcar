@@ -156,10 +156,11 @@ section > div {
 /*XS*/
 
 @media (max-width: 480px) {
-  .main-content h2{
+  .main-content h2 {
     text-align: center;
   }
 }
+
 @media (max-width: 768px) {
   body {
         /*	 	font-size: 16px;
@@ -167,7 +168,6 @@ section > div {
   }
 
   .main-container {
-
   }
 
   .introduction h2 {
@@ -177,7 +177,7 @@ section > div {
 
   .introduction h1 {
     font-size: 3em;
-    margin:20px 0px;
+    margin: 20px 0px;
   }
 }
 /*SM*/
