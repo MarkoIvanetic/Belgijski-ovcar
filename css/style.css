@@ -110,9 +110,7 @@ h4 {
   margin-top: 0;
 }
 
-.main-content div {
-  min-height: 400px;
-    /*background-color: #f4f4f4;*/
+.content-container {
   background-color: #f5f2e9;
 }
 
@@ -131,12 +129,9 @@ h4 {
   height: auto;
   display: inline-block;
   max-width: 350px;
-    /*change to fit your image*/
+  /*change to fit your image*/
   padding: 5px;
   vertical-align: middle;
-}
-
-.profile h3 {
 }
 
 .profile img {
@@ -152,6 +147,80 @@ section > div {
   padding: 20px;
 }
 
+/********************************************GALLERY********************************************/
+.video-thumbnail-container h3{
+  font-size: 1em;
+  white-space: nowrap; 
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.video-thumbnail{
+  position: relative;
+}
+.video-thumbnail img{
+  border: 2px solid transparent;
+background-color: black;
+transition: all 1s;
+max-width: none;
+}
+.video-thumbnail img:hover,.video-overlay:hover,.video-thumbnail-container h3:hover{
+  cursor: pointer;
+}
+
+.video-overlay {
+  position: absolute;
+  /*40px = 2x20px padding*/
+  width: calc(100% - 40px)!important;
+  /*40px = 2x20px padding*/
+  height: calc(100% - 40px - 35px)!important;
+  /*40px = 2x20px padding*/
+  top: calc(0% + 20px)!important;
+  /*40px = 2x20px padding*/
+  left: calc(0% + 20px)!important;
+  display: block;
+  color: #FFF;
+
+    background-color: rgba(0,0,0,0);
+    background-image: url('../images/icons/YouTube-icon-dark.png');
+    background-repeat: no-repeat;
+    background-size: 80px 50px;
+    background-position: center center; 
+    transition: all 0.1s;
+  }
+.video-overlay p {
+  display: none;
+  padding: 6px;
+  line-height: 20px;
+  font-size: 0.9em;
+}
+.video-overlay:hover {
+   background-color: rgba(0,0,0,0.6);
+   background-image: url('../images/icons/YouTube-icon-full_color.png');
+   transition: all 0.1s;
+}
+.video-overlay:hover p{
+  display: block;
+}
+
+#loading {
+   width: calc(100% - 40px);
+   height: 100%;
+   top: 0px;
+   left: 0px;
+   position: fixed;
+   display: block;
+   opacity: 1;
+   background-color: #fff;
+   z-index: 99;
+   text-align: center;
+}
+
+#loading-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+}
 /*MEDIA QUERIES*/
 /*XS*/
 
