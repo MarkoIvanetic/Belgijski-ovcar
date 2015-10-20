@@ -20,21 +20,15 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- PhotoSwipe -->
+    <link rel="stylesheet" href="css/photoswipe.css">
+    <link rel="stylesheet" href="css/default-skin/default-skin.css">
+    <script src="js/photoswipe.min.js"></script>
+    <script src="js/photoswipe-ui-default.min.js"></script>
 </head>
 
 <body class="col-xs-12">
-    <!-- <nav>
-         <div class="col-xs-12 nav-above">
-            <div class="col-xs-12 left-logo">
-                <img src="images/dogbanner.png">
-            </div>
-            <div class="col-xs-12 col-sm-6">
-                <p>Uzgajivačnica “Od Slunja”, Nikola Paulić</p>
-                <p>Ilovnjak 30, 10410 Velika Gorica</p>
-                <p>tel. 098/1744-194</p>
-                <p>npaulic@net.amis.hr</p>
-            </div>
-         </nav> -->
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a href="#">
@@ -74,7 +68,6 @@
                 </a>
 
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li> <a href="#">Dashboard</a>
@@ -98,10 +91,10 @@
         </div>
         <!-- /.container -->
     </nav>
-<!-- **************************************************************************************** -->
-<div id="loading">
-  <img id="loading-image" src="images/ajax-loader.gif" alt="Loading..." />
-</div>
+    <!-- **************************************************************************************** -->
+    <div id="loading" class="col-xs-12">
+        <img id="loading-image" src="images/ajax-loader.gif" alt="Loading..." />
+    </div>
     <div class="triangle"></div>
     <div class="container main-container">
         <div class="introduction col-xs-12 col-lg-10 col-lg-offset-1">
@@ -111,8 +104,77 @@
         </div>
 
         <div class="main-content col-xs-12 col-lg-10 col-lg-offset-1">
+            <section class="row photo-thumbnail-container">
+                <h2 class="col-xxs-12">Foto galerija</h2>
+                <!-- Root element of PhotoSwipe. Must have class pswp. -->
+                <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
+                    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+                    <div class="pswp__bg"></div>
+
+                    <!-- Slides wrapper with overflow:hidden. -->
+                    <div class="pswp__scroll-wrap">
+
+                        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+                        <div class="pswp__container">
+                            <div class="pswp__item"></div>
+                            <div class="pswp__item"></div>
+                            <div class="pswp__item"></div>
+                        </div>
+
+                        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                        <div class="pswp__ui pswp__ui--hidden">
+
+                            <div class="pswp__top-bar">
+
+                                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                                <div class="pswp__counter"></div>
+
+                                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                                <!-- element will get class pswp__preloader--active when preloader is running -->
+                                <div class="pswp__preloader">
+                                    <div class="pswp__preloader__icn">
+                                        <div class="pswp__preloader__cut">
+                                            <div class="pswp__preloader__donut"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                                <div class="pswp__share-tooltip"></div>
+                            </div>
+
+                            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                            </button>
+
+                            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                            </button>
+
+                            <div class="pswp__caption">
+                                <div class="pswp__caption__center"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
             <section class="row video-main-video">
+                <h2 class="col-xxs-12">Video galerija</h2>
                 <iframe class="col-xs-12" src="https://www.youtube.com/embed/ja2vYVgXu2c?theme=light&showinfo=1&iv_load_policy=3&showsearch=0&rel=0" frameborder="0" allowfullscreen>
                 </iframe>
             </section>
@@ -123,7 +185,7 @@
         </div>
     </div>
 
-<!-- **************************************************************************************** -->
+    <!-- **************************************************************************************** -->
     <footer class="col-xs-12">
         <div class="footer-upper container">
             <div class="footer-upper-container col-xs-12 col-lg-10 col-lg-offset-1">
@@ -179,6 +241,7 @@
 
                         </li>
                     </ul>
+                   </div> 
     </footer>
     </div>
     </div>
@@ -192,8 +255,9 @@
 <script src="js/myjs.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script language="javascript" type="text/javascript">
-     $(window).load(function() {
-     $('#loading').fadeOut(600);
-  });
+    $(window).load(function() {
+        $('#loading').fadeOut(600);
+    });
 </script>
+
 </html>
