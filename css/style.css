@@ -222,6 +222,7 @@ section > div {
 
 #loading-image {
   position: absolute;
+  transform:translate(-50%,-50%);
   top: 50%;
   left: 50%;
   z-index: 100;
@@ -277,9 +278,14 @@ section > div {
         /*	 	font-size: 20px;
 	 	line-height: 32px;*/
   }
+  #loading-image {
+  transform: translate(0%, 0%);
+}
 
   .main-container {
     margin-top: 20px;
+  }
+  .main-container, #loading{
     width: calc(100% - 250px)!important;
     margin-left: 250px;
   }
