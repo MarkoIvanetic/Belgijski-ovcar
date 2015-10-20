@@ -7,7 +7,7 @@ footer {
 }
 
 .social div {
-  padding: 5px;
+  padding: 0px 5px;
 }
 
 .social a {
@@ -15,7 +15,7 @@ footer {
 }
 
 .social img {
-  width: 50px;
+  width: 45px;
 }
 
 .footer-upper {
@@ -23,8 +23,8 @@ footer {
 }
 
 .footer-upper-container div {
-  min-height: 50px;
   line-height: 20px;
+  margin-left: -10px;
 }
 
 .footer-upper-container {
@@ -72,16 +72,21 @@ footer {
 .footer-nav a {
   color: rgba(255,255,255,0.7);
 }
+@media (max-width: 480px) {
+  .footer-upper-container {
+    text-align: center;
+  }
+}
 
 @media (max-width: 767px) {
   .footer-sitemap {
     margin-top: 20px;
+     text-align: center;
   }
 
   .footer-upper-container p {
     font-size: 12px;
   }
-
   .footer-nav {
     display: inline-flex;
   }

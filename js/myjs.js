@@ -41,31 +41,5 @@ $(document).ready(function() {
         $('.video-main-video iframe').attr('src', 'https://www.youtube.com/embed/' + videoID + '?theme=light&showinfo=0&iv_load_policy=3&showsearch=0&rel=0&autoplay=1')
     })
 
-    //Photo gallery
-    var pswpElement = document.querySelectorAll('.pswp')[0];
-
-    // build items array
-    var items = [{
-        src: 'images/photos/2a8a501d99ef.JPEG',
-        w: 600,
-        h: 400
-    },{
-        src: 'http://i.imgur.com/uVWjGo1.jpg'
-    }, {
-        src: 'images/photos/105425c31b1f.JPEG',
-        w: 1200,
-        h: 900
-    }];
-
-    // define options (if needed)
-    var options = {
-        // optionName: 'option value'
-        // for example:
-        index: 0 // start at first slide
-    };
-
-    // Initializes and opens PhotoSwipe
-    var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-    gallery.init();
-
+    
 });

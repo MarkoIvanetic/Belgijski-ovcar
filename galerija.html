@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Marko Ivanetić">
     <title>Belgijski Ovčar</title>
@@ -16,19 +16,22 @@
     <link href="css/navigation.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/Gamma.css"/>
     <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-    <!-- PhotoSwipe -->
-    <link rel="stylesheet" href="css/photoswipe.css">
-    <link rel="stylesheet" href="css/default-skin/default-skin.css">
-    <script src="js/photoswipe.min.js"></script>
-    <script src="js/photoswipe-ui-default.min.js"></script>
+    <!-- Gamma Gallery -->
+    <script src="js/modernizr.custom.70736.js"></script>
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="css/noJS.css" />
+    </noscript>
+
 </head>
 
 <body class="col-xs-12">
+
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a href="#">
@@ -105,70 +108,99 @@
         <div class="main-content col-xs-12 col-lg-10 col-lg-offset-1">
             <section class="row photo-thumbnail-container">
                 <h2 class="col-xxs-12">Foto galerija</h2>
-                <!-- Root element of PhotoSwipe. Must have class pswp. -->
-                <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="gamma-container gamma-loading" id="gamma-container">
 
-                    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-                    <div class="pswp__bg"></div>
+                    <ul class="gamma-gallery col-xs-12">
 
-                    <!-- Slides wrapper with overflow:hidden. -->
-                    <div class="pswp__scroll-wrap">
-
-                        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-                        <div class="pswp__container">
-                            <div class="pswp__item"></div>
-                            <div class="pswp__item"></div>
-                            <div class="pswp__item"></div>
-                        </div>
-
-                        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-                        <div class="pswp__ui pswp__ui--hidden">
-
-                            <div class="pswp__top-bar">
-
-                                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                                <div class="pswp__counter"></div>
-
-                                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                                <!-- element will get class pswp__preloader--active when preloader is running -->
-                                <div class="pswp__preloader">
-                                    <div class="pswp__preloader__icn">
-                                        <div class="pswp__preloader__cut">
-                                            <div class="pswp__preloader__donut"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <li>
+                            <div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+                                <div data-src="images/xxxlarge/3.jpg" data-min-width="1300"></div>
+                                <div data-src="images/xxlarge/3.jpg" data-min-width="1000"></div>
+                                <div data-src="images/xlarge/3.jpg" data-min-width="700"></div>
+                                <div data-src="images/large/3.jpg" data-min-width="300"></div>
+                                <div data-src="images/medium/3.jpg" data-min-width="200"></div>
+                                <div data-src="images/small/3.jpg" data-min-width="140"></div>
+                                <div data-src="images/xsmall/3.jpg"></div>
+                                <noscript>
+                                    <img src="images/xsmall/3.jpg" alt="img03"/>
+                                </noscript>
                             </div>
-
-                            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                                <div class="pswp__share-tooltip"></div>
+                        </li>
+                        <li>
+                            <div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+                                <div data-src="images/xxxlarge/3.jpg" data-min-width="1300"></div>
+                                <div data-src="images/xxlarge/3.jpg" data-min-width="1000"></div>
+                                <div data-src="images/xlarge/3.jpg" data-min-width="700"></div>
+                                <div data-src="images/large/3.jpg" data-min-width="300"></div>
+                                <div data-src="images/medium/3.jpg" data-min-width="200"></div>
+                                <div data-src="images/small/3.jpg" data-min-width="140"></div>
+                                <div data-src="images/xsmall/3.jpg"></div>
+                                <noscript>
+                                    <img src="images/xsmall/3.jpg" alt="img03"/>
+                                </noscript>
                             </div>
-
-                            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-                            </button>
-
-                            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-                            </button>
-
-                            <div class="pswp__caption">
-                                <div class="pswp__caption__center"></div>
+                        </li>
+                        <li>
+                            <div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+                                <div data-src="images/xxxlarge/3.jpg" data-min-width="1300"></div>
+                                <div data-src="images/xxlarge/3.jpg" data-min-width="1000"></div>
+                                <div data-src="images/xlarge/3.jpg" data-min-width="700"></div>
+                                <div data-src="images/large/3.jpg" data-min-width="300"></div>
+                                <div data-src="images/medium/3.jpg" data-min-width="200"></div>
+                                <div data-src="images/small/3.jpg" data-min-width="140"></div>
+                                <div data-src="images/xsmall/3.jpg"></div>
+                                <noscript>
+                                    <img src="images/xsmall/3.jpg" alt="img03"/>
+                                </noscript>
                             </div>
+                        </li>
+                        <li>
+                            <div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+                                <div data-src="images/xxxlarge/3.jpg" data-min-width="1300"></div>
+                                <div data-src="images/xxlarge/3.jpg" data-min-width="1000"></div>
+                                <div data-src="images/xlarge/3.jpg" data-min-width="700"></div>
+                                <div data-src="images/large/3.jpg" data-min-width="300"></div>
+                                <div data-src="images/medium/3.jpg" data-min-width="200"></div>
+                                <div data-src="images/small/3.jpg" data-min-width="140"></div>
+                                <div data-src="images/xsmall/3.jpg"></div>
+                                <noscript>
+                                    <img src="images/xsmall/3.jpg" alt="img03"/>
+                                </noscript>
+                            </div>
+                        </li>
+                        <li>
+                            <div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+                                <div data-src="images/xxxlarge/3.jpg" data-min-width="1300"></div>
+                                <div data-src="images/xxlarge/3.jpg" data-min-width="1000"></div>
+                                <div data-src="images/xlarge/3.jpg" data-min-width="700"></div>
+                                <div data-src="images/large/3.jpg" data-min-width="300"></div>
+                                <div data-src="images/medium/3.jpg" data-min-width="200"></div>
+                                <div data-src="images/small/3.jpg" data-min-width="140"></div>
+                                <div data-src="images/xsmall/3.jpg"></div>
+                                <noscript>
+                                    <img src="images/xsmall/3.jpg" alt="img03"/>
+                                </noscript>
+                            </div>
+                        </li>
+                        <li>
+                            <div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+                                <div data-src="images/xxxlarge/3.jpg" data-min-width="1300"></div>
+                                <div data-src="images/xxlarge/3.jpg" data-min-width="1000"></div>
+                                <div data-src="images/xlarge/3.jpg" data-min-width="700"></div>
+                                <div data-src="images/large/3.jpg" data-min-width="300"></div>
+                                <div data-src="images/medium/3.jpg" data-min-width="200"></div>
+                                <div data-src="images/small/3.jpg" data-min-width="140"></div>
+                                <div data-src="images/xsmall/3.jpg"></div>
+                                <noscript>
+                                    <img src="images/xsmall/3.jpg" alt="img03"/>
+                                </noscript>
+                            </div>
+                        </li>
+                    </ul>
 
-                        </div>
+                    <div class="gamma-overlay"></div>
 
-                    </div>
+                    <div id="loadmore" class="loadmore col-xs-12">Example for loading more items...</div>
 
                 </div>
             </section>
@@ -240,7 +272,7 @@
 
                         </li>
                     </ul>
-                   </div> 
+                </div>
     </footer>
     </div>
     </div>
@@ -253,6 +285,57 @@
 </body>
 <script src="js/myjs.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<!-- Gamma Gallery -->
+<script src="js/jquery.masonry.min.js"></script>
+<script src="js/jquery.history.js"></script>
+<script src="js/js-url.min.js"></script>
+<script src="js/jquerypp.custom.js"></script>
+<script src="js/gamma.js"></script>
+<script type="text/javascript">
+    $(function() {
+
+        var GammaSettings = {
+            // order is important!
+            viewport: [{
+                width: 1200,
+                columns: 5
+            }, {
+                width: 900,
+                columns: 4
+            }, {
+                width: 500,
+                columns: 3
+            }, {
+                width: 320,
+                columns: 2
+            }, {
+                width: 0,
+                columns: 2
+            }]
+        };
+
+        Gamma.init(GammaSettings, fncallback);
+
+        // Example how to add more items (just a dummy):
+
+        var page = 0,
+            items = ['<li><div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350"><div data-src="images/xxxlarge/3.jpg" data-min-width="1300"></div><div data-src="images/xxlarge/3.jpg" data-min-width="1000"></div><div data-src="images/xlarge/3.jpg" data-min-width="700"></div><div data-src="images/large/3.jpg" data-min-width="300"></div><div data-src="images/medium/3.jpg" data-min-width="200"></div><div data-src="images/small/3.jpg" data-min-width="140"></div><div data-src="images/xsmall/3.jpg"></div><noscript><img src="images/xsmall/3.jpg" alt="img03"/></noscript></div></li>']
+
+        function fncallback() {
+            $('#loadmore').show().on('click', function() {
+                ++page;
+                var newitems = items[page - 1]
+                if (page <= 1) {
+                    Gamma.add($(newitems));
+                }
+                if (page === 1) {
+                    $(this).remove();
+                }
+            });
+        }
+    });
+</script>
+<!-- End Gamma Gallery -->
 <script language="javascript" type="text/javascript">
     $(window).load(function() {
         $('#loading').fadeOut(600);

@@ -124,7 +124,7 @@ h4 {
   border: 0;
 }
 
-.main-content img {
+.profile img, .article img {
   width: 100%;
   height: auto;
   display: inline-block;
