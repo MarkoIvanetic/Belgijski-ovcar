@@ -16,11 +16,15 @@
     <link href="css/navigation.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/Gamma.css"/>
+    <link href="css/magnific-popup.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/myjs.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
 </head>
 
@@ -35,10 +39,10 @@
             <li> <a href="index.html">Početna</a>
 
             </li>
-            <li> <a href="galerija.html">Galerija</a>
+            <li> <a class='active' href="galerija.html">Galerija</a>
 
             </li>
-            <li> <a href="#">Overview</a>
+            <li> <a href="uzgajivacnica.html">Uzgajivačnica</a>
 
             </li>
             <li> <a href="#">Events</a>
@@ -67,13 +71,13 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li> <a href="#">Dashboard</a>
+                    <li> <a href="index.html">Početna</a>
 
                     </li>
-                    <li> <a href="#">Shortcuts</a>
+                    <li> <a class='active' href="galerija.html">Galerija</a>
 
                     </li>
-                    <li> <a href="#">Overview</a>
+                    <li> <a href="uzgajivacnica.html">Uzgajivačnica</a>
 
                     </li>
                     <li> <a href="#">Events</a>
@@ -103,11 +107,31 @@
         <div class="main-content col-xs-12 col-lg-10 col-lg-offset-1">
             <section class="row photo-thumbnail-container">
                 <h2 class="col-xxs-12">Foto galerija</h2>
-            
+
+                <div class="popup-gallery content-container col-xxs-12 col-xs-12">
+                    <a class='col-lg-3 col-sm-4 col-xs-6 gallery-thumbnail' href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg" title="Naslov slike">
+                        <img src="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg">
+                    </a>
+                    <a class='col-lg-3 col-sm-4 col-xs-6 gallery-thumbnail' href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg" title="Naslov slike">
+                        <img src="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg">
+                    </a>
+                    <a class='col-lg-3 col-sm-4 col-xs-6 gallery-thumbnail' href="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_b.jpg" title="Naslov slike"><img src="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_b.jpg">
+                    </a>
+                    <a class='col-lg-3 col-sm-4 col-xs-6 gallery-thumbnail' href="http://farm9.staticflickr.com/8383/8563475581_df05e9906d_b.jpg" title="Naslov slike"><img src="http://farm9.staticflickr.com/8383/8563475581_df05e9906d_b.jpg">
+                    </a>
+                    <a class='col-lg-3 col-sm-4 col-xs-6 gallery-thumbnail' href="http://farm9.staticflickr.com/8235/8559402846_8b7f82e05d_b.jpg" title="Naslov slike"><img src="http://farm9.staticflickr.com/8235/8559402846_8b7f82e05d_b.jpg">
+                    </a>
+                    <a class='col-lg-3 col-sm-4 col-xs-6 gallery-thumbnail' href="http://farm9.staticflickr.com/8235/8558295467_e89e95e05a_b.jpg" title="Naslov slike"><img src="http://farm9.staticflickr.com/8235/8558295467_e89e95e05a_b.jpg">
+                    </a>
+                    <a class='col-lg-3 col-sm-4 col-xs-6 gallery-thumbnail' href="http://farm9.staticflickr.com/8378/8559402848_9fcd90d20b_b.jpg" title="Naslov slike"><img src="http://farm9.staticflickr.com/8378/8559402848_9fcd90d20b_b.jpg">
+                    </a>                    
+                    <a class='col-lg-3 col-sm-4 col-xs-6 gallery-thumbnail' href="http://belgijskiovcar.com/wpimages/e68db316826.jpg" title="Naslov slike"><img src="http://belgijskiovcar.com/wpimages/e68db316826.jpg">
+                    </a>
+                </div>
             </section>
-            <section class="row video-main-video">
+            <section class="row video-main-video ">
                 <h2 class="col-xxs-12">Video galerija</h2>
-                <iframe class="col-xs-12" src="https://www.youtube.com/embed/ja2vYVgXu2c?theme=light&showinfo=1&iv_load_policy=3&showsearch=0&rel=0" frameborder="0" allowfullscreen>
+                <iframe class="col-xxs-12 col-xs-12" src="https://www.youtube.com/embed/ja2vYVgXu2c?theme=light&showinfo=1&iv_load_policy=3&showsearch=0&rel=0" frameborder="0" allowfullscreen>
                 </iframe>
             </section>
 
@@ -184,7 +208,6 @@
     </div>
     </div>
 </body>
-<script src="js/myjs.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script language="javascript" type="text/javascript">
     $(window).load(function() {

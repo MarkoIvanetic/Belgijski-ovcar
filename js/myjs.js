@@ -41,5 +41,31 @@ $(document).ready(function() {
         $('.video-main-video iframe').attr('src', 'https://www.youtube.com/embed/' + videoID + '?theme=light&showinfo=0&iv_load_policy=3&showsearch=0&rel=0&autoplay=1')
     })
 
-    
+    //Gallery
+if ( $( ".popup-gallery" ).length ) {
+    $('.popup-gallery img').each(function() {
+        if ($(this).width() > $(this).height()) {
+            $(this).addClass('portait');
+        } else $(this).addClass('landscape');
+    });
+
+    $('.popup-gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: false,
+            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">Slika #%curr%</a> se ne može učitati.',
+            titleSrc: function(item) {
+                return item.el.attr('title') + '<small>Nikola Paunović</small>';
+            }
+        }
+    });
+}
+
 });

@@ -46,7 +46,6 @@ h4 {
 .introduction {
   border-bottom: 1px solid #CBC9CF;
   padding-bottom: 19px;
-  margin-bottom: 20px;
 }
 
 .introduction h1 {
@@ -83,6 +82,7 @@ h4 {
 .imageClass {
   min-height: 500px;
   background-color: teal;
+  margin-top: 20px;
 }
 
 .main-content {
@@ -128,12 +128,11 @@ h4 {
   width: 100%;
   height: auto;
   display: inline-block;
-  /*change to fit your image*/
-  padding: 5px;
   vertical-align: middle;
 }
-.profle img, article img{
+.index .main-content img{
   max-width: 350px;
+  padding: 5px;
 }
 
 .profile img {
@@ -150,6 +149,10 @@ section > div {
 }
 
 /********************************************GALLERY********************************************/
+.video-thumbnail-container{
+    padding-bottom: 0;
+  margin-bottom: 40px;
+}
 .video-thumbnail-container h3 {
   font-size: 1em;
   white-space: nowrap;
@@ -166,6 +169,7 @@ section > div {
   background-color: black;
   transition: all 1s;
   max-width: none;
+  padding: 5px;
 }
 
 .video-thumbnail img:hover,.video-overlay:hover,.video-thumbnail-container h3:hover {
@@ -208,6 +212,30 @@ section > div {
 .video-overlay:hover p {
   display: block;
 }
+/*For gallery thumbnail callibration*/
+.photo-thumbnail-container{
+
+}
+.gallery-thumbnail {
+  position: relative;
+  /*min-width: 200px;*/
+  min-height: 200px;
+  overflow: hidden;
+}
+.gallery-thumbnail img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 120%;
+  width: auto;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+.gallery-thumbnail img.portrait {
+  width: 120%;
+  height: auto;
+}
 
 #loading {
   width: 100%;
@@ -230,19 +258,18 @@ section > div {
   z-index: 100;
 }
 /*MEDIA QUERIES*/
-/*XS*/
+/*XXS*/
 
 @media (max-width: 480px) {
   .main-content h2 {
     text-align: center;
   }
-}
-
-@media (max-width: 768px) {
-  body {
-        /*    font-size: 16px;
-    line-height: 1.3;*/
+  .gallery-thumbnail{
+    display: inherit;
   }
+}
+/*XS*/
+@media (max-width: 768px) {
 
   .main-container {
   }

@@ -1,3 +1,7 @@
+.active{
+  color: #DBAF47!important;
+}
+
 #sidebar-wrapper {
   z-index: 1000;
   position: fixed;
@@ -49,11 +53,6 @@
   line-height: 60px;
   -webkit-transition: all 1s;
   transition: all 1s;
-}
-
-.sidebar-nav li:hover {
-  background-color: rgba(66,66,66,0.1);
-  color: #DBAF47;
 }
 
 .sidebar-nav li a {
