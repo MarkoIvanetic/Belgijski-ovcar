@@ -310,6 +310,10 @@ margin: 5px 0px;
     font-size: 3em;
     margin: 20px 0px;
   }
+  .introduction-smaller h1{
+    font-size: 2em;
+    font-size: 10vw;
+  }
 }
 /*SM*/
 
