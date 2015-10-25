@@ -59,7 +59,11 @@ h4 {
   text-align: center;
   margin: 0;
 }
-
+.introduction-smaller h1{
+  text-align: center;
+  font-size: 5.5em;
+  margin: 40px 0px;
+}
 .triangle {
   margin-top: 91px;
 }
@@ -286,6 +290,11 @@ margin: 5px 0px;
 }
 /*************************************************MEDIA*************************************************/
 /*XS*/
+@media (max-width: 480px) {
+  .introduction-smaller h1{
+    font-size: 2.5em;
+  }
+}
 @media (max-width: 768px) {
 
   .main-container {
@@ -297,7 +306,6 @@ margin: 5px 0px;
     font-size: 1.2em;
     padding-bottom: 0px;
   }
-
   .introduction h1 {
     font-size: 3em;
     margin: 20px 0px;
