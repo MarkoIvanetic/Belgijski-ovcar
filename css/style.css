@@ -216,6 +216,9 @@ section > div {
 .photo-thumbnail-container{
 
 }
+.gallery-pad{
+  padding: 10px;
+}
 .gallery-thumbnail {
   position: relative;
   /*min-width: 200px;*/
@@ -268,12 +271,28 @@ section > div {
     display: inherit;
   }
 }
+/*********************************************ZANIMLJIVOSTI*********************************************/
+.zanimljivosti ul{
+  list-style: disc;
+  list-style-position: inside;
+  text-indent: -17px;
+}
+.zanimljivosti li{
+padding-left: 20px;
+margin: 5px 0px;
+}
+.zanimljivosti-article{
+  padding: 10px;
+}
+/*************************************************MEDIA*************************************************/
 /*XS*/
 @media (max-width: 768px) {
 
   .main-container {
   }
-
+  .zanimljivosti li:not(:last-child){
+  margin-bottom: 20px;
+  }
   .introduction h2 {
     font-size: 1.2em;
     padding-bottom: 0px;
