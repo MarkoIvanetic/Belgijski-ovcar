@@ -270,6 +270,8 @@ section > div {
 @media (max-width: 480px) {
   .main-content h2 {
     text-align: center;
+    font-size: 1em;
+    padding: 0px;
   }
   .gallery-thumbnail{
     display: inherit;
@@ -312,7 +314,7 @@ margin: 5px 0px;
   }
   .introduction-smaller h1{
     font-size: 2em;
-    font-size: 10vw;
+    font-size: 11vw;
   }
 }
 /*SM*/
