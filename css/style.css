@@ -137,6 +137,7 @@ h4 {
 .index .main-content img{
   max-width: 350px;
   padding: 5px;
+  float: right;
 }
 
 .profile img {
@@ -146,6 +147,19 @@ h4 {
 .article img {
   float: left;
   margin: 0 20px 30px 0;
+}
+.article-stats-image{
+
+}
+.article-stats-rating{
+
+}
+
+.rating-square{
+  width: 25px;
+  height: 25px;
+  background-color: blue;
+  margin-right: 5px;
 }
 
 section > div {

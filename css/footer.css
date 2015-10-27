@@ -37,10 +37,12 @@ footer {
 }
 
 .footer-lower {
-  padding: 15px;
+  font-size: 0.8em;
+  padding: 10px;
   text-align: center;
-  color: #333;
-  background-color: #fee0ae;
+  color: white;
+  background-color: #333;
+  background-image: url("../images/pattern/stressed.png");
 }
 
 .footer-sitemap {

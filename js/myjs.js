@@ -25,7 +25,8 @@ $(document).ready(function() {
     }
     setAspectRatio();
     jQuery(window).resize(setAspectRatio);
-
+    //DOG STATS
+    $(".article-stats-rating").append("");
     //Initial video
      videoChange(video_array[0].id,0);
     // Generating thumbnails
