@@ -7,7 +7,7 @@ footer {
   padding: 0px;
 }
 .social > div{
-  margin-left: -10px;
+  margin-left: -5px;
 }
 .social a {
   margin: 5px;
@@ -21,7 +21,7 @@ footer {
 }
 
 .footer-upper-container div {
-  line-height: 20px;
+  line-height: 24px;
 }
 
 .footer-upper-container {
@@ -126,8 +126,13 @@ footer {
     width: calc(100% - 250px)!important;
     margin-left: 250px!important;
   }
-
   .footer-upper {
     width: 100%;
   }
 }
+@media (min-width: 1600px) {
+    .footer-upper-container div {
+  line-height: 34px;
+}
+}
+
