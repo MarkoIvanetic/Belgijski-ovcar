@@ -75,7 +75,7 @@ h4 {
 }
 
 .main-content p {
-  font-size: 1em;
+  font-size: 0.9em;
   line-height: 30px;
 }
 
@@ -289,6 +289,7 @@ section > div {
 }
 
 .zanimljivosti li {
+  font-size: 0.9em;
   padding-left: 20px;
   margin: 5px 0px;
 }
