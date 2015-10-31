@@ -187,7 +187,7 @@ section > div {
   max-width: none;
   padding: 5px;
   -webkit-transition: all 1s;
-          transition: all 1s;
+  transition: all 1s;
 }
 
 /* line 183, ../scss/main.scss */
@@ -209,7 +209,7 @@ section > div {
   position: absolute;
   top: calc(0% + 20px) !important;
   -webkit-transition: all 0.1s;
-          transition: all 0.1s;
+  transition: all 0.1s;
   width: calc(100% - 40px) !important;
 }
 
@@ -226,7 +226,7 @@ section > div {
   background-color: rgba(0, 0, 0, 0.6);
   background-image: url("../images/icons/YouTube-icon-full_color.png");
   -webkit-transition: all 0.1s;
-          transition: all 0.1s;
+  transition: all 0.1s;
 }
 
 /* line 212, ../scss/main.scss */
@@ -261,8 +261,8 @@ section > div {
   position: absolute;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: auto;
 }
 
@@ -292,8 +292,8 @@ section > div {
   position: absolute;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   z-index: 100;
 }
 
@@ -393,8 +393,8 @@ section > div {
   /* line 355, ../scss/main.scss */
   .main-container, #loading-image {
     -webkit-transform: translate(0%, 0%);
-        -ms-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
   }
 
   /* line 358, ../scss/main.scss */

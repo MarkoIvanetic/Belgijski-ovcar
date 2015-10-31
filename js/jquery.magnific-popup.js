@@ -905,7 +905,7 @@
 
             prependTo: null,
 
-            fixedContentPos: 'auto',
+            fixedContentPos: true,
 
             fixedBgPos: 'auto',
 
