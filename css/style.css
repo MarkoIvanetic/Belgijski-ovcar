@@ -326,6 +326,9 @@ section > div {
 @media (max-width: 768px) {
   .main-container {
   }
+  .mfp-img-mobile{
+    opacity: 1!important;
+  }
 
   .zanimljivosti li:not(:last-child) {
     margin-bottom: 20px;
