@@ -111,33 +111,33 @@ $(document).ready(function() {
 
         // Callback function references the event target and adds the 'swipeleft' class to it
         function swipeleftHandler(event) {
-            $(event.target).css("width","100px");
+            $(event.target).css("width", "100px");
             alert('GRAD');
         }
 
-$('.popup-gallery img').each(function() {
-    if ($(this).width() > $(this).height()) {
-        $(this).addClass('portait');
-    } else $(this).addClass('landscape');
-});
+        $('.popup-gallery img').each(function() {
+            if ($(this).width() > $(this).height()) {
+                $(this).addClass('portait');
+            } else $(this).addClass('landscape');
+        });
 
-$('.popup-gallery').magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    tLoading: 'Loading image #%curr%...',
-    mainClass: 'mfp-img-mobile',
-    gallery: {
-        enabled: true,
-        navigateByImgClick: false,
-        preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-    },
-    image: {
-        tError: '<a href="%url%">Slika #%curr%</a> se ne može učitati.',
-        titleSrc: function(item) {
-            return item.el.attr('title') + '<small>Nikola Paunović</small>';
-        }
+        $('.popup-gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: false,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: '<a href="%url%">Slika #%curr%</a> se ne može učitati.',
+                titleSrc: function(item) {
+                    return item.el.attr('title') + '<small>Nikola Paunović</small>';
+                }
+            }
+        });
     }
-});
-}
 
 });
