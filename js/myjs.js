@@ -105,15 +105,30 @@ $(document).ready(function() {
     }
     //Gallery
     if ($(".popup-gallery").length) {
+        // Dynamically generating images from files
 
-        //Swipe
-        $(".mfp-figure img").on("swipeleft", swipeleftHandler);
+// SERVER SIDE ONLY, NOT LOCAL, DO NOT F****** DELETE **************************************
 
-        // Callback function references the event target and adds the 'swipeleft' class to it
-        function swipeleftHandler(event) {
-            $(event.target).css("width", "100px");
-            alert('GRAD');
-        }
+// function generateImages (classGallery, folder, alt) {
+// var dir = "images/photos/" + folder;
+// var fileextension = ".jpg";
+// $.ajax({
+//     //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+//     url: dir,
+//     success: function (data) {
+//         //List all .png file names in the page
+//         $(data).find("a:contains(" + fileextension + ")").each(function () {
+//             var filename = this.href.replace(window.location.host, "").replace("http://", "");
+//             var popupImage = '<div class="col-lg-3 col-sm-4 col-xs-6 gallery-pad"><a class="col-xs-12 gallery-thumbnail" href="'+ dir + filename +'" title="'+alt+'"><img src="'+ dir + filename +'" alt="'+ alt +'"></a></div>';
+//             $("."+classGallery).append(popupImage);
+//             //  $("body").append("<img src='" + dir + filename + "'>");
+//         });
+//     }
+// });
+// }
+// generateImages("gero","gero","Gero - pas za parenje");
+// generateImages("djanga","djanga","Djanga od Moslavine");
+// generateImages("stenci","stenci","Stenci");
 
         $('.popup-gallery img').each(function() {
             if ($(this).width() > $(this).height()) {

@@ -10,7 +10,7 @@
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
-  font-family: 'Raleway', sans-serif!important;
+  font-family: 'Lora', sans-serif!important;
   background-color: #333;
   background-image: url("../images/pattern/stressed.png");
   background-repeat: repeat-y;
@@ -71,7 +71,7 @@
 
 .navbar {
   min-width: 300px;
-  font-family: 'Raleway', sans-serif!important;
+  font-family: 'Lora', sans-serif!important;
   background-color: #333;
   background-image: url("../images/pattern/stressed.png");
   background-repeat: repeat-x;
