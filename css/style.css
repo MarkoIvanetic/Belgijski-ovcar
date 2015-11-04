@@ -298,15 +298,13 @@ section > div {
 
 .zanimljivosti li {
   font-size: 0.9em;
-<<<<<<< HEAD
   line-height: 25px;
-=======
->>>>>>> origin/master
   padding-left: 20px;
   margin: 5px 0px;
 }
 .zanimljivosti p{
   line-height: 25px;
+  padding: 20px
 }
 .zanimljivosti-article {
   padding: 10px;
@@ -434,6 +432,4 @@ section > div {
   a[href]:after {
     content: " (" attr(href) ") ";
   }
-=======
->>>>>>> origin/master
 }
