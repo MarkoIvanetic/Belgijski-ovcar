@@ -159,6 +159,9 @@ h4 {
 section > div {
   padding: 20px;
 }
+iframe{
+  padding: 20px 15px;
+}
 /********************************************GALLERY********************************************/
 
 .video-thumbnail-container {
