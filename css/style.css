@@ -159,8 +159,8 @@ h4 {
 section > div {
   padding: 20px;
 }
-iframe{
-  padding: 20px 15px;
+.video h3{
+  margin: 10px 0px;
 }
 /********************************************GALLERY********************************************/
 
