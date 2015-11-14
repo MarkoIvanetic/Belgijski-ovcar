@@ -1,5 +1,5 @@
 .container {
-  background-color: #4F3542;
+  background-color: #373737;
   height: 100%;
   padding: 0;
 }
@@ -19,7 +19,7 @@
  /*change to fit your image*/
 }
 
-.dog-bottom h1,h2 {
+.dog-bottom h1,h2,a {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   color: #d5ebda;
@@ -33,4 +33,15 @@
 
 .dog-bottom h2 {
   font-size: 1.5em;
+}
+.dog-bottom a{
+  font-size: 1em;
+  margin-left: 10px;
+}
+.dog-bottom a:hover{
+  color: #d5ebda;
+}
+.navigation{
+  text-align: center;
+  margin-top: 15px;
 }
