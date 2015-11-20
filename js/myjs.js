@@ -25,6 +25,7 @@ $(document).ready(function() {
     }
     setAspectRatio();
     jQuery(window).resize(setAspectRatio);
+
     //DOG STATS
     var dog_stats = [{
         osobina: 'Inteligencija',
@@ -58,6 +59,7 @@ $(document).ready(function() {
         ocjena: 5.5
     }];
 
+    function fill_stats (){
     $.each(dog_stats, function(index, value) {
         $(".article-stats-rating")
             .append('<div class="article-stats-property col-xs-12">' +
@@ -66,6 +68,7 @@ $(document).ready(function() {
                 '</div></div>'
             );
     });
+
     $('.rating-square-container').each(function() {
         var temp_ocjena = $(this).attr('data-rating');
         for (var i = 0; i < 10; i++) {
@@ -82,6 +85,7 @@ $(document).ready(function() {
 
         });
     });
+}
     //Initial video
     videoChange(video_array[0].id, 0);
     // Generating thumbnails
@@ -89,7 +93,6 @@ $(document).ready(function() {
         $(".video-thumbnail-container")
             .append('<div class="col-xxs-6 col-xs-6 col-sm-4 col-lg-3 video-thumbnail" video-id=' + value.id + '><img src="http://img.youtube.com/vi/' + value.id + '/hqdefault.jpg">' + '<div class="video-overlay"><p>' + value.naslov + '</p></div><h3>' + value.naslov + '</h3></div>');
     });
-
     //Thumbnail functionallity
     $(".video-thumbnail").click(function() {
         $('.video-thumbnail img').css("background-color", "black");
@@ -155,4 +158,15 @@ $(document).ready(function() {
         });
     }
 
+        //scroll effect
+    var nav_offset;
+
+    $('a[href^="#"]').click(function() {
+        $( window ).width() < 1200 ? nav_offset= 90 : nav_offset= 0;
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top - nav_offset
+        }, 1000);
+        return false;
+    });
+     $("#galerija:in-viewport").alert("GRAD");
 });
