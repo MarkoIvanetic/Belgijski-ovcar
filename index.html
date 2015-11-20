@@ -9,33 +9,31 @@
       <title>Belgijski Ovčar</title>
       <link rel="shortcut icon" href="images/icons/favicon.ico">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
       <link href="css/bootstrap.css" rel="stylesheet">
       <link href="css/fonts.css" rel="stylesheet">
       <link href="css/reset.css" rel="stylesheet">
       <link href="css/navigation.css" rel="stylesheet">
       <link href="css/footer.css" rel="stylesheet">
       <link href="css/style.css" rel="stylesheet">
-      <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'
-         type='text/css'>
-      <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'
-         type='text/css'>
-      <script src="js/myjs.js"></script>
-      <script src="js/bootstrap.min.js"></script>
       <link href="css/magnific-popup.css" rel="stylesheet">
+
+      <script src="js/jquery.magnific-popup.js"></script>
+      <script src="js/jquery.visible.js"></script>
+      
+      <script src="js/bootstrap.min.js"></script>
    </head>
    <body class="col-xs-12">
       <nav id="sidebar-wrapper">
-         <ul class="sidebar-nav">
-            <a href="#"> <img src="images/dogbanner-no-shit-around-itDARKER2.png" class="sidebar-logo"> </a> 
-            <li> <a class='active' href="index.html">Početna</a> 
+         <ul class="sidebar-nav nav-highlight">
+            <a href="#naslov"> <img src="images/dogbanner-no-shit-around-itDARKER2.png" class="sidebar-logo"> </a> 
+            <li> <a href="#uzgajivac">Uzgajivač</a> 
             </li>
-            <li> <a href="uzgajivacnica.html">Uzgajivačnica</a> 
+            <li> <a href="#belgijski">Belgijski Ovčar</a> 
             </li>
-            <li> <a href="galerija.html">Galerija</a> 
+            <li> <a href="#galerija">Galerija</a> 
             </li>
-            <li> <a href="zanimljivosti.html">Zanimljivosti</a> 
-            </li>
-            <li> <a href="#">About</a> 
+            <li> <a href="#zanimljivosti">Zanimljivosti</a> 
             </li>
          </ul>
       </nav>
@@ -49,16 +47,15 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                <ul class="nav navbar-nav">
-                  <li> <a class='active' href="index.html">Početna</a> 
-                  </li>
-                  <li> <a href="uzgajivacnica.html">Uzgajivačnica</a> 
-                  </li>
-                  <li> <a href="galerija.html">Galerija</a> 
-                  </li>
-                  <li> <a href="zanimljivosti.html">Zanimljivosti</a> 
-                  </li>
-                  <li> <a href="#">About</a> 
-                  </li>
+            <li> <a href="#uzgajivac">Uzgajivač</a> 
+            </li>
+            <li> <a href="#belgijski">Belgijski Ovčar</a> 
+            </li>
+            <li> <a href="#galerija">Galerija</a> 
+            </li>
+            <li> <a href="#zanimljivosti">Zanimljivosti</a> 
+            </li>
+
                </ul>
             </div>
          </div>
@@ -69,18 +66,18 @@
          <img id="loading-image" src="images/ajax-loader.gif" alt="Loading..."
             />
       </div>
-      <div class="triangle"></div>
-      <div class="container main-container index">
+      <div id="home" class="triangle"></div>
+      <div id="container" class="container main-container index">
          <div class="introduction col-xs-12 col-lg-10 col-lg-offset-1">
             <h2 class="col-xs-12">Uzgajivačnica</h2>
             <h1 class="col-xs-12">OD SLUNJA</h1>
             <h2 class="col-xs-12">Uzgoj i dresura belgijskih ovčara</h2>
          </div>
          <div class="main-content col-xs-12 col-lg-10 col-lg-offset-1">
-            <section class="row">
+            <section id="naslov" class="row">
                <div class="content-container imageClass col-xs-12"></div>
             </section>
-            <section class="row profile">
+            <section id="uzgajivac" class="row profile">
                <h2 class="col-xxs-12">Uzgajivač</h2>
                <div class="col-xxs-12 col-xs-12 content-container">
                   <h3>Nikola Paulić</h3>
@@ -98,7 +95,7 @@
                   </p>
                </div>
             </section>
-            <section class="row">
+            <section id="belgijski" class="row">
                <h2 class="col-xxs-12">Belgijski Ovčar</h2>
                <div class="col-xxs-12 col-xs-12 article content-container">
                   <p>
@@ -127,7 +124,9 @@
                      koš dubok i prostran. Toleriraju se male bjeline na prsima. Hod mu je živahan.
                   </p>
                </div>
-               <div class="article content-container col-xxs-12 col-xs-12">
+
+               <!-- DOG STATS -->
+    <!--            <div class="article content-container col-xxs-12 col-xs-12">
                   <div class="article-stats-image col-xs-12">
                      <div class="article-stats-rating col-xs-12 col-sm-7 col-lg-5"></div>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia
@@ -148,10 +147,11 @@
                         ullamcorper metus.
                      </p>
                   </div>
-               </div>
+               </div> -->
+
             </section>
          </div>
-         <div class="main-content galerija col-xs-12 col-lg-10 col-lg-offset-1">
+         <div id="galerija" class="main-content galerija col-xs-12 col-lg-10 col-lg-offset-1">
             <section class="row photo-thumbnail-container">
                <h2 class="col-xxs-12 col-xs-12">Foto galerija</h2>
                <div class="popup-gallery gero content-container col-xxs-12 col-xs-12">
@@ -202,7 +202,7 @@
                </div>
             </section>
          </div>
-         <div class="main-content zanimljivosti col-xxs-12 col-xs-12 col-lg-10 col-lg-offset-1">
+         <div id="zanimljivosti" class="main-content zanimljivosti col-xxs-12 col-xs-12 col-lg-10 col-lg-offset-1">
             <section class="row zanimljivosti zanimljivosti-article">
                <div class="col-xxs-12 col-xs-12 col-sm-6">
                   <h2 class="col-xxs-12 col-xs-12">Jeste li znali?</h2>
@@ -273,6 +273,7 @@
       </div>
       </div>
    </body>
+   <script src="js/myjs.js"></script>
    <script language="javascript" type="text/javascript">
       $(window).load(function(){$('#loading').fadeOut(600);});
    </script>

@@ -1,22 +1,77 @@
 $(document).ready(function() {
-    var video_array = [{
-        id: 'ja2vYVgXu2c',
-        naslov: 'Title1 extremely wide title that cannot be read easely'
-    }, {
-        id: 'fLRWPpTnF3I',
-        naslov: 'Title2'
-    }, {
-        id: 'ohnkNMFSnAc',
-        naslov: 'Title3'
-    }, {
-        id: '8VyL0SAVQ7s',
-        naslov: 'Title4'
-    }, {
-        id: 'tUl7w4d1NBY',
-        naslov: 'Title5'
-    }];
-    var videoW = 560;
-    var videoH = 315;
+
+    function getStart(elementID){
+        return $("#" + elementID + "").offset().top;
+// return $('#galerija').offset().top
+}
+
+//Fill the array with anchor tags
+var link;
+var navLinks = [];
+$(".nav-highlight a[href^='#']").each(function(){
+    console.log($(this).text());
+    link = $(this).attr('href').substring(1);
+    navLinks.push({anchor:link, start:getStart(link)});
+});
+console.log(navLinks)
+
+// var elementTop = $('#galerija').offset().top;
+// var elementBottom = $("#" + this + "").offset().top + $('#galerija').height();
+
+
+$(window).on('scroll',function() {
+    var scrollPosition = $(document).scrollTop();
+    var windowHeight = $(window).height();
+//For each anchor in array
+for(var i=0;i<navLinks.length;i++){
+
+if (i==0) {
+if (scrollPosition < $("#" + navLinks[i].anchor + "").height()) {
+    console.log(navLinks[i].anchor + " in view");
+    $(".nav-highlight a[href='#" + navLinks[0].anchor + "]").addClass("active");
+};
+
+} else if (i==navLinks.length-1){
+    if (scrollPosition >= (navLinks[i].start - windowHeight/2)) {
+    $(".nav-highlight a[href='#" + navLinks[4].anchor + "]").addClass("active");
+    console.log(navLinks[i].anchor + " in view");
+};
+} else {if (scrollPosition >= (navLinks[i].start - windowHeight/2) && scrollPosition < (navLinks[i+1].start - windowHeight/2)) {
+   console.log(navLinks[i].anchor + " in view");
+   $(".nav-highlight a[href='#" + navLinks[i].anchor + "']").addClass("active");
+};
+}
+}
+
+});
+
+
+    var scrollPosition = $(document).scrollTop();
+    var windowHeight = $(window).height();
+    var elementTop = $('#galerija').offset().top;
+    var elementBottom = $('#galerija').offset().top + $('#galerija').height();
+
+
+
+
+var video_array = [{
+    id: 'ja2vYVgXu2c',
+    naslov: 'Title1 extremely wide title that cannot be read easely'
+}, {
+    id: 'fLRWPpTnF3I',
+    naslov: 'Title2'
+}, {
+    id: 'ohnkNMFSnAc',
+    naslov: 'Title3'
+}, {
+    id: '8VyL0SAVQ7s',
+    naslov: 'Title4'
+}, {
+    id: 'tUl7w4d1NBY',
+    naslov: 'Title5'
+}];
+var videoW = 560;
+var videoH = 315;
     //Keeps videos responsive
     function setAspectRatio() {
         jQuery('iframe').each(function() {
@@ -25,6 +80,7 @@ $(document).ready(function() {
     }
     setAspectRatio();
     jQuery(window).resize(setAspectRatio);
+
     //DOG STATS
     var dog_stats = [{
         osobina: 'Inteligencija',
@@ -58,38 +114,40 @@ $(document).ready(function() {
         ocjena: 5.5
     }];
 
-    $.each(dog_stats, function(index, value) {
-        $(".article-stats-rating")
+    function fill_stats (){
+        $.each(dog_stats, function(index, value) {
+            $(".article-stats-rating")
             .append('<div class="article-stats-property col-xs-12">' +
                 '<h3 class="col-xxs-12 col-xs-4">' + value.osobina + '</h3>' +
                 '<div data-rating=' + value.ocjena + ' class="col-xxs-12 col-xs-8 rating-square-container">' +
                 '</div></div>'
-            );
-    });
-    $('.rating-square-container').each(function() {
-        var temp_ocjena = $(this).attr('data-rating');
-        for (var i = 0; i < 10; i++) {
-            $(this).append('<div class="rating-square col-xxs-1 col-xs-1"></div>');
-        }
-        $(this).children('.rating-square').each(function() {
-            if (temp_ocjena > 1) {
-                $(this).addClass('rating-full');
-                temp_ocjena--;
-            } else if (temp_ocjena > 0 && temp_ocjena < 1) {
-                $(this).addClass('rating-half');
-                temp_ocjena--;
-            }
-
+                );
         });
-    });
+
+        $('.rating-square-container').each(function() {
+            var temp_ocjena = $(this).attr('data-rating');
+            for (var i = 0; i < 10; i++) {
+                $(this).append('<div class="rating-square col-xxs-1 col-xs-1"></div>');
+            }
+            $(this).children('.rating-square').each(function() {
+                if (temp_ocjena > 1) {
+                    $(this).addClass('rating-full');
+                    temp_ocjena--;
+                } else if (temp_ocjena > 0 && temp_ocjena < 1) {
+                    $(this).addClass('rating-half');
+                    temp_ocjena--;
+                }
+
+            });
+        });
+    }
     //Initial video
     videoChange(video_array[0].id, 0);
     // Generating thumbnails
     $.each(video_array, function(index, value) {
         $(".video-thumbnail-container")
-            .append('<div class="col-xxs-6 col-xs-6 col-sm-4 col-lg-3 video-thumbnail" video-id=' + value.id + '><img src="http://img.youtube.com/vi/' + value.id + '/hqdefault.jpg">' + '<div class="video-overlay"><p>' + value.naslov + '</p></div><h3>' + value.naslov + '</h3></div>');
+        .append('<div class="col-xxs-6 col-xs-6 col-sm-4 col-lg-3 video-thumbnail" video-id=' + value.id + '><img src="http://img.youtube.com/vi/' + value.id + '/hqdefault.jpg">' + '<div class="video-overlay"><p>' + value.naslov + '</p></div><h3>' + value.naslov + '</h3></div>');
     });
-
     //Thumbnail functionallity
     $(".video-thumbnail").click(function() {
         $('.video-thumbnail img').css("background-color", "black");
@@ -108,11 +166,11 @@ $(document).ready(function() {
         // Dynamically generating images from files
 
         // SERVER SIDE ONLY, NOT LOCAL, DO NOT F****** DELETE **************************************
-
-        function generateImages (classGallery, folder, alt) {
-        var dir = "images/photos/" + folder;
-        var fileextension = ".jpg";
-        $.ajax({
+        if (0){
+            function generateImages (classGallery, folder, alt) {
+                var dir = "images/photos/" + folder;
+                var fileextension = ".jpg";
+                $.ajax({
             //This will retrieve the contents of the folder if the folder is configured as 'browsable'
             url: dir,
             success: function (data) {
@@ -125,25 +183,25 @@ $(document).ready(function() {
                 });
             }
         });
-        }
-        generateImages("gero","gero","Gero - pas za parenje");
-        generateImages("djanga","djanga","Djanga od Moslavine");
-        generateImages("stenci","stenci","Stenci");
+            }
+            generateImages("gero","gero","Gero - pas za parenje");
+            generateImages("djanga","djanga","Djanga od Moslavine");
+            generateImages("stenci","stenci","Stenci");
 
-        $('.popup-gallery img').each(function() {
-            if ($(this).width() > $(this).height()) {
-                $(this).addClass('portait');
-            } else $(this).addClass('landscape');
-        });
+            $('.popup-gallery img').each(function() {
+                if ($(this).width() > $(this).height()) {
+                    $(this).addClass('portait');
+                } else $(this).addClass('landscape');
+            });
 
-        $('.popup-gallery').magnificPopup({
-            delegate: 'a',
-            type: 'image',
-            tLoading: 'Loading image #%curr%...',
-            mainClass: 'mfp-img-mobile',
-            gallery: {
-                enabled: true,
-                navigateByImgClick: false,
+            $('.popup-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                tLoading: 'Loading image #%curr%...',
+                mainClass: 'mfp-img-mobile',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: false,
                 preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
             },
             image: {
@@ -153,6 +211,17 @@ $(document).ready(function() {
                 }
             }
         });
+        }
     }
+        //scroll effect
+        var nav_offset;
 
-});
+        $('a[href^="#"]').click(function() {
+            $( window ).width() < 1200 ? nav_offset= 90 : nav_offset= 0;
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top - nav_offset
+            }, 1000);
+            return false;
+        });
+
+    });
