@@ -35,14 +35,17 @@
 .dog-bottom h2 {
   font-size: 1.5em;
 }
-.dog-bottom a{
+
+.dog-bottom a {
   font-size: 1em;
   margin-left: 10px;
 }
-.dog-bottom a:hover{
+
+.dog-bottom a:hover {
   color: #DBAF47;
 }
-.navigation{
+
+.navigation {
   text-align: center;
   margin-top: 15px;
 }

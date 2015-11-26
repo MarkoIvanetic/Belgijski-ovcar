@@ -108,7 +108,6 @@ h4 {
   padding-bottom: 19px;
 }
 
-
 .main-content img {
   width: 100%;
   height: auto;
@@ -161,9 +160,11 @@ section > div {
 .video-thumbnail-container {
   padding-bottom: 0;
 }
-.video-main-video{
+
+.video-main-video {
   border-bottom: 0!important;
 }
+
 .video-thumbnail-container h3 {
   font-size: 1em;
   white-space: nowrap;
@@ -277,7 +278,8 @@ section > div {
   position: absolute;
   -webkit-transform: translate(-50%,
   transform: translate -50%);
-  -ms-transform: translate(-50%, -50%);(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  (-50%, -50%);
   top: 50%;
   left: 50%;
   z-index: 100;
@@ -289,6 +291,7 @@ section > div {
 .zanimljivosti {
   padding-left: 0;
 }
+
 .zanimljivosti ul {
   list-style: disc;
   list-style-position: inside;
@@ -309,14 +312,17 @@ section > div {
 .zanimljivosti-article {
   padding: 0px;
 }
+
 .zanimljivosti-article .content-container {
   padding: 0;
 }
-.zanimljivosti-article div{
+
+.zanimljivosti-article div {
   padding-right: 0;
   padding-top: 0;
 }
-.zanimljivosti-article div:first-of-type{
+
+.zanimljivosti-article div:first-of-type {
   padding-right: 15px;
   padding-left: 0;
 }
@@ -327,29 +333,36 @@ section > div {
   .introduction-smaller h1 {
     font-size: 2.5em;
   }
-  .article-stats-property h3{
+
+  .article-stats-property h3 {
     margin: 10px 0px 0px 0px;
   }
-  .zanimljivosti-article > div{
-  padding: 0;
-}
-.zanimljivosti p{
-  padding: 10px 5px;
-}
-.zanimljivosti li{
-  padding: 10px 5px;
-}
-.zanimljivosti .row{
-  padding: 0;
-}
+
+  .zanimljivosti-article > div {
+    padding: 0;
+  }
+
+  .zanimljivosti p {
+    padding: 10px 5px;
+  }
+
+  .zanimljivosti li {
+    padding: 10px 5px;
+  }
+
+  .zanimljivosti .row {
+    padding: 0;
+  }
+
   .main-content h2 {
     text-align: center;
     font-size: 1em;
     padding: 0px;
   }
 }
+
 @media (min-width: 481px) {
-    .main-content h2{
+  .main-content h2 {
     float: left;
   }
 }
@@ -400,7 +413,6 @@ section > div {
 /*SM*/
 
 @media (min-width: 768px) {
-
 }
 /*MD*/
 

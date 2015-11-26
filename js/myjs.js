@@ -59,33 +59,33 @@ $(document).ready(function() {
         ocjena: 5.5
     }];
 
-    function fill_stats (){
-    $.each(dog_stats, function(index, value) {
-        $(".article-stats-rating")
-            .append('<div class="article-stats-property col-xs-12">' +
-                '<h3 class="col-xxs-12 col-xs-4">' + value.osobina + '</h3>' +
-                '<div data-rating=' + value.ocjena + ' class="col-xxs-12 col-xs-8 rating-square-container">' +
-                '</div></div>'
-            );
-    });
-
-    $('.rating-square-container').each(function() {
-        var temp_ocjena = $(this).attr('data-rating');
-        for (var i = 0; i < 10; i++) {
-            $(this).append('<div class="rating-square col-xxs-1 col-xs-1"></div>');
-        }
-        $(this).children('.rating-square').each(function() {
-            if (temp_ocjena > 1) {
-                $(this).addClass('rating-full');
-                temp_ocjena--;
-            } else if (temp_ocjena > 0 && temp_ocjena < 1) {
-                $(this).addClass('rating-half');
-                temp_ocjena--;
-            }
-
+    function fill_stats() {
+        $.each(dog_stats, function(index, value) {
+            $(".article-stats-rating")
+                .append('<div class="article-stats-property col-xs-12">' +
+                    '<h3 class="col-xxs-12 col-xs-4">' + value.osobina + '</h3>' +
+                    '<div data-rating=' + value.ocjena + ' class="col-xxs-12 col-xs-8 rating-square-container">' +
+                    '</div></div>'
+                );
         });
-    });
-}
+
+        $('.rating-square-container').each(function() {
+            var temp_ocjena = $(this).attr('data-rating');
+            for (var i = 0; i < 10; i++) {
+                $(this).append('<div class="rating-square col-xxs-1 col-xs-1"></div>');
+            }
+            $(this).children('.rating-square').each(function() {
+                if (temp_ocjena > 1) {
+                    $(this).addClass('rating-full');
+                    temp_ocjena--;
+                } else if (temp_ocjena > 0 && temp_ocjena < 1) {
+                    $(this).addClass('rating-half');
+                    temp_ocjena--;
+                }
+
+            });
+        });
+    }
     //Initial video
     videoChange(video_array[0].id, 0);
     // Generating thumbnails
@@ -112,26 +112,26 @@ $(document).ready(function() {
 
         // SERVER SIDE ONLY, NOT LOCAL, DO NOT F****** DELETE **************************************
 
-        function generateImages (classGallery, folder, alt) {
-        var dir = "images/photos/" + folder;
-        var fileextension = ".jpg";
-        $.ajax({
-            //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-            url: dir,
-            success: function (data) {
-                //List all .png file names in the page
-                $(data).find("a:contains(" + fileextension + ")").each(function () {
-                    var filename = this.href.replace(window.location.host, "").replace("http://", "");
-                    var popupImage = '<div class="col-lg-3 col-sm-4 col-xs-6 col-xxs-12 gallery-pad"><a class="col-xs-12 gallery-thumbnail" href="'+ dir + filename +'" title="'+alt+'"><img src="'+ dir + filename +'" alt="'+ alt +'"></a></div>';
-                    $("."+classGallery).append(popupImage);
-                    //  $("body").append("<img src='" + dir + filename + "'>");
-                });
-            }
-        });
+        function generateImages(classGallery, folder, alt) {
+            var dir = "images/photos/" + folder;
+            var fileextension = ".jpg";
+            $.ajax({
+                //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+                url: dir,
+                success: function(data) {
+                    //List all .png file names in the page
+                    $(data).find("a:contains(" + fileextension + ")").each(function() {
+                        var filename = this.href.replace(window.location.host, "").replace("http://", "");
+                        var popupImage = '<div class="col-lg-3 col-sm-4 col-xs-6 col-xxs-12 gallery-pad"><a class="col-xs-12 gallery-thumbnail" href="' + dir + filename + '" title="' + alt + '"><img src="' + dir + filename + '" alt="' + alt + '"></a></div>';
+                        $("." + classGallery).append(popupImage);
+                        //  $("body").append("<img src='" + dir + filename + "'>");
+                    });
+                }
+            });
         }
-        generateImages("gero","gero","Gero - pas za parenje");
-        generateImages("djanga","djanga","Djanga od Moslavine");
-        generateImages("stenci","stenci","Stenci");
+        generateImages("gero", "gero", "Gero - pas za parenje");
+        generateImages("djanga", "djanga", "Djanga od Moslavine");
+        generateImages("stenci", "stenci", "Stenci");
 
         $('.popup-gallery img').each(function() {
             if ($(this).width() > $(this).height()) {
@@ -158,15 +158,15 @@ $(document).ready(function() {
         });
     }
 
-        //scroll effect
+    //scroll effect
     var nav_offset;
 
     $('a[href^="#"]').click(function() {
-        $( window ).width() < 1200 ? nav_offset= 90 : nav_offset= 0;
+        $(window).width() < 1200 ? nav_offset = 90 : nav_offset = 0;
         $('html, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top - nav_offset
         }, 1000);
         return false;
     });
-     $("#galerija:in-viewport").alert("GRAD");
+    $("#galerija:in-viewport").alert("GRAD");
 });
