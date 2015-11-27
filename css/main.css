@@ -1,11 +1,9 @@
-/* line 1, ../scss/main.scss */
 html {
   background-color: #EBEBEB;
   font-size: 16px !important;
   min-width: 300px;
 }
 
-/* line 7, ../scss/main.scss */
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
@@ -13,51 +11,48 @@ body {
   word-wrap: break-word !important;
 }
 
-/* line 14, ../scss/main.scss */
 nav {
   overflow: hidden;
 }
 
-/* line 18, ../scss/main.scss */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: "Lora", sans-serif !important;
 }
 
-/* line 22, ../scss/main.scss */
 .main-container {
-  /*margin-top: 110px;*/
+ /*margin-top: 110px;*/
   font-family: 'Open Sans', sans-serif;
   line-height: 25px;
   margin-top: 20px;
   min-height: 100px;
 }
 
-/* line 31, ../scss/main.scss */
 .introduction {
   border-bottom: 1px solid #CBC9CF;
   padding-bottom: 19px;
 }
-/* line 36, ../scss/main.scss */
+
 .introduction h1 {
   font-size: 6em;
   margin: 40px 0px;
   text-align: center;
 }
-/* line 41, ../scss/main.scss */
+
 .introduction h2 {
   font-size: 1.5em;
   margin: 0;
   text-align: center;
 }
 
-/* line 48, ../scss/main.scss */
 .introduction-smaller h1 {
   font-size: 5.5em;
   margin: 40px 0px;
   text-align: center;
 }
 
-/* line 54, ../scss/main.scss */
 .triangle {
   background-image: url("../images/pattern/triangle.png");
   background-repeat: repeat-x;
@@ -66,21 +61,19 @@ h1, h2, h3, h4 {
   opacity: .7;
 }
 
-/* line 62, ../scss/main.scss */
 .imageClass {
   background-color: teal;
   margin-top: 20px;
   min-height: 500px;
 }
 
-/* line 71, ../scss/main.scss */
 .main-content p {
   font-size: 1em;
   line-height: 30px;
 }
-/* line 75, ../scss/main.scss */
+
 .main-content h2 {
-  /*text-decoration: underline;*/
+ /*text-decoration: underline;*/
   border: 2px solid #DBAF47;
   color: #DBAF47;
   float: left;
@@ -90,28 +83,26 @@ h1, h2, h3, h4 {
   margin-bottom: 20px;
   padding: 10px;
 }
-/* line 87, ../scss/main.scss */
+
 .main-content h3 {
   font-size: 1.4em;
   margin-top: 0;
 }
 
-/* line 93, ../scss/main.scss */
 .content-container {
   background-color: #f5f2e9;
 }
 
-/* line 100, ../scss/main.scss */
 .main-content .row {
   border-bottom: 1px solid #CBC9CF;
   padding-bottom: 19px;
 }
-/* line 104, ../scss/main.scss */
+
 .main-content .row:last-child {
   border: 0;
   padding-bottom: 40px;
 }
-/* line 108, ../scss/main.scss */
+
 .main-content img {
   display: inline-block;
   height: auto;
@@ -119,36 +110,35 @@ h1, h2, h3, h4 {
   width: 100%;
 }
 
-/* line 116, ../scss/main.scss */
 .index .main-content img {
   max-width: 350px;
   padding: 5px;
 }
 
-/* line 121, ../scss/main.scss */
 .profile img {
   float: right;
 }
 
-/* line 125, ../scss/main.scss */
 .article img {
   float: right;
   margin: 0 0 30px 20px;
 }
 
 /********************************************GALLERY********************************************/
+
 /*For gallery thumbnail callibration*/
-/* line 148, ../scss/main.scss */
-.article-stats-property > h3, .video-overlay:hover, .video-thumbnail img:hover, .article-stats-rating {
+
+.article-stats-property > h3,
+.video-overlay:hover,
+.video-thumbnail img:hover,
+.article-stats-rating {
   margin: 0px 20px 30px 0px;
 }
 
-/* line 151, ../scss/main.scss */
 .article-stats-property > div {
   padding: 0;
 }
 
-/* line 154, ../scss/main.scss */
 .rating-square {
   background-color: #E6B9B5;
   height: 25px;
@@ -156,18 +146,15 @@ h1, h2, h3, h4 {
   padding: 0;
 }
 
-/* line 160, ../scss/main.scss */
 section > div {
   padding: 20px;
 }
 
-/* line 163, ../scss/main.scss */
 .video-thumbnail-container {
   margin-bottom: 40px;
   padding-bottom: 0;
 }
 
-/* line 167, ../scss/main.scss */
 .video-thumbnail-container h3 {
   font-size: 1em;
   overflow: hidden;
@@ -175,12 +162,10 @@ section > div {
   white-space: nowrap;
 }
 
-/* line 173, ../scss/main.scss */
 .video-thumbnail {
   position: relative;
 }
 
-/* line 176, ../scss/main.scss */
 .video-thumbnail img {
   background-color: black;
   border: 2px solid transparent;
@@ -190,14 +175,12 @@ section > div {
   transition: all 1s;
 }
 
-/* line 183, ../scss/main.scss */
 .video-thumbnail-container h3:hover {
   cursor: pointer;
 }
 
-/* line 186, ../scss/main.scss */
 .video-overlay {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   background-image: url("../images/icons/YouTube-icon-dark.png");
   background-position: center center;
   background-repeat: no-repeat;
@@ -213,7 +196,6 @@ section > div {
   width: calc(100% - 40px) !important;
 }
 
-/* line 201, ../scss/main.scss */
 .video-overlay p {
   display: none;
   font-size: 0.9em;
@@ -221,7 +203,6 @@ section > div {
   padding: 6px;
 }
 
-/* line 207, ../scss/main.scss */
 .video-overlay:hover {
   background-color: rgba(0, 0, 0, 0.6);
   background-image: url("../images/icons/YouTube-icon-full_color.png");
@@ -229,30 +210,31 @@ section > div {
   transition: all 0.1s;
 }
 
-/* line 212, ../scss/main.scss */
 .video-overlay:hover p {
   display: block;
 }
 
 /*MEDIA QUERIES*/
+
 /*XXS*/
+
 /*********************************************ZANIMLJIVOSTI*********************************************/
+
 /*************************************************MEDIA*************************************************/
+
 /*XS*/
-/* line 238, ../scss/main.scss */
+
 .gallery-pad {
   padding: 10px;
 }
 
-/* line 241, ../scss/main.scss */
 .gallery-thumbnail {
-  /*min-width: 200px;*/
+ /*min-width: 200px;*/
   min-height: 200px;
   overflow: hidden;
   position: relative;
 }
 
-/* line 248, ../scss/main.scss */
 .gallery-thumbnail img {
   -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -266,13 +248,11 @@ section > div {
   width: auto;
 }
 
-/* line 258, ../scss/main.scss */
 .gallery-thumbnail img.portrait {
   height: auto;
   width: 120%;
 }
 
-/* line 262, ../scss/main.scss */
 #loading {
   background-color: #fff;
   display: block;
@@ -286,7 +266,6 @@ section > div {
   z-index: 99;
 }
 
-/* line 274, ../scss/main.scss */
 #loading-image {
   left: 50%;
   position: absolute;
@@ -297,142 +276,137 @@ section > div {
   z-index: 100;
 }
 
-/* line 281, ../scss/main.scss */
 .zanimljivosti ul {
   list-style-position: inside;
   list-style: disc;
   text-indent: -17px;
 }
 
-/* line 286, ../scss/main.scss */
 .zanimljivosti li {
   margin: 5px 0px;
   padding-left: 20px;
 }
 
-/* line 290, ../scss/main.scss */
 .zanimljivosti-article {
   padding: 10px;
 }
 
-@media (max-width: 480px) {
-  /* line 294, ../scss/main.scss */
-  .introduction-smaller h1 {
-    font-size: 2.5em;
-  }
+.rating-full {
+  background: #E68799;
 }
 
-@media (max-width: 520px) {
-  /* line 301, ../scss/main.scss */
-  .index .main-content img {
-    max-width: inherit;
-    padding: 5px;
-  }
-
-  /* line 305, ../scss/main.scss */
-  .main-content h2 {
-    font-size: 1em;
-    padding: 0px;
-    text-align: center;
-  }
-
-  /* line 310, ../scss/main.scss */
-  .gallery-thumbnail {
-    display: inherit;
-  }
-}
-
-@media (max-width: 768px) {
-  /*SM*/
-  /*MD*/
-  /*LG*/
-  /* line 321, ../scss/main.scss */
-  .zanimljivosti li:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  /* line 324, ../scss/main.scss */
-  .introduction h2 {
-    font-size: 1.2em;
-    padding-bottom: 0px;
-  }
-
-  /* line 328, ../scss/main.scss */
-  .introduction h1 {
-    font-size: 3em;
-    margin: 20px 0px;
-  }
-
-  /* line 332, ../scss/main.scss */
-  .introduction-smaller h1 {
-    font-size: 11vw;
-    font-size: 2em;
-  }
-
-  /* line 336, ../scss/main.scss */
-  .article-stats-rating {
-    margin: 0px 0px 20px 0px;
-  }
+.rating-half {
+  background-image: -webkit-linear-gradient(45deg, #E68799 50%, #E6B9B5 50%);
+  background-image: linear-gradient(45deg, #E68799 50%, #E6B9B5 50%);
 }
 
 @media (min-width: 768px) {
-  /* line 341, ../scss/main.scss */
+
   body {
-    /*    font-size: 16px;line-height: 1.3;*/
+ /*    font-size: 16px;line-height: 1.3;*/
   }
 }
 
 @media (min-width: 992px) {
-  /* line 346, ../scss/main.scss */
+
   body {
-    /*    font-size: 18px;line-height: 1.65;*/
+ /*    font-size: 18px;line-height: 1.65;*/
+  }
+
+  html {
+ /*    font-size: 18px;line-height: 1.65;*/
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 355, ../scss/main.scss */
-  .main-container, #loading-image {
+
+  .main-container,
+#loading-image {
     -webkit-transform: translate(0%, 0%);
     -ms-transform: translate(0%, 0%);
     transform: translate(0%, 0%);
   }
 
-  /* line 358, ../scss/main.scss */
   .article-stats-rating {
     min-width: 525px;
   }
 
-  /* line 361, ../scss/main.scss */
   .main-container {
     margin-top: 20px;
   }
 
-  /* line 364, ../scss/main.scss */
   #loading {
     margin-left: 250px;
     width: calc(100% - 250px) !important;
   }
 
-  /* line 368, ../scss/main.scss */
   .triangle {
     margin-top: 0px;
   }
 }
 
 @media (min-width: 1600px) {
-  /* line 373, ../scss/main.scss */
+
   body {
     font-size: 18px;
     line-height: 34px;
   }
 }
-/* line 378, ../scss/main.scss */
-.rating-full {
-  background: #E68799;
+
+@media (max-width: 768px) {
+
+/*SM*/
+
+/*MD*/
+
+/*LG*/
+
+  .zanimljivosti li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .introduction h2 {
+    font-size: 1.2em;
+    padding-bottom: 0px;
+  }
+
+  .introduction h1 {
+    font-size: 3em;
+    margin: 20px 0px;
+  }
+
+  .introduction-smaller h1 {
+    font-size: 11vw;
+    font-size: 2em;
+  }
+
+  .article-stats-rating {
+    margin: 0px 0px 20px 0px;
+  }
 }
 
-/* line 381, ../scss/main.scss */
-.rating-half {
-  background-image: -webkit-linear-gradient(45deg, #e68799 50%, #e6b9b5 50%);
-  background-image: linear-gradient(45deg, #e68799 50%, #e6b9b5 50%);
+@media (max-width: 520px) {
+
+  .index .main-content img {
+    max-width: inherit;
+    padding: 5px;
+  }
+
+  .main-content h2 {
+    font-size: 1em;
+    padding: 0px;
+    text-align: center;
+  }
+
+  .gallery-thumbnail {
+    display: inherit;
+  }
 }
+
+@media (max-width: 480px) {
+
+  .introduction-smaller h1 {
+    font-size: 2.5em;
+  }
+}
+
