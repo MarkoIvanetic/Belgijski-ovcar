@@ -152,7 +152,7 @@ $(document).ready(function() {
             image: {
                 tError: '<a href="%url%">Slika #%curr%</a> se ne može učitati.',
                 titleSrc: function(item) {
-                    return item.el.attr('title') + '<small>Nikola Paunović</small>';
+                    return item.el.attr('title') + '<small>Nikola Paulić</small>';
                 }
             }
         });
@@ -169,4 +169,30 @@ $(document).ready(function() {
         return false;
     });
     $("#galerija:in-viewport").alert("GRAD");
+
+    // Bind to scroll
+    $(window).scroll(function() {
+        console.log(check());
+
+    }).scroll();
+
+    function check() {
+        function getRegion(pos) {
+            //returns where the on page element starts or ends
+            // element = selector, pos = start, end
+            if (pos == "start") {
+                return $(this).offset().top
+            };
+            if (pos == "end") {
+                return $(this).offset().top + $(this).height();
+            };
+        }
+        $('.scrollMe').each(function(i) {
+            var start = $(this).offset().top;
+            var end = $(this).scrollTop() + $(this).height();
+            console.log(start + '+' + end);
+            if ($(window).scrollTop() >= end && $(window).scrollTop() >= start) {};
+        });
+    };
+
 });
