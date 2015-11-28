@@ -17,6 +17,15 @@ $(document).ready(function() {
     }];
     var videoW = 560;
     var videoH = 315;
+
+    var reset = 1;
+    var sizes = [0];
+
+    $(window).on('resize', function(){
+    reset = 1;
+    console.log("Resize");
+    console.log(reset);
+    });
     //Keeps videos responsive
     function setAspectRatio() {
         jQuery('iframe').each(function() {
@@ -172,27 +181,27 @@ $(document).ready(function() {
 
     // Bind to scroll
     $(window).scroll(function() {
-        console.log(check());
-
-    }).scroll();
+        if (reset) {
+            reset = 0;
+            calculateSizes();
+        };
+        check();
+    });
 
     function check() {
-        function getRegion(pos) {
-            //returns where the on page element starts or ends
-            // element = selector, pos = start, end
-            if (pos == "start") {
-                return $(this).offset().top
-            };
-            if (pos == "end") {
-                return $(this).offset().top + $(this).height();
-            };
-        }
-        $('.scrollMe').each(function(i) {
-            var start = $(this).offset().top;
-            var end = $(this).scrollTop() + $(this).height();
-            console.log(start + '+' + end);
-            if ($(window).scrollTop() >= end && $(window).scrollTop() >= start) {};
-        });
+        sizes.each(function(i){
+          //check if is greater then i and less than i=1  $(window).scrollTop()
+        })
     };
+    function calculateSizes () {
+        sizes = [0];
+        $('.scrollMe').each(function(i) {
+            
+            sizes.push($(this).offset().top + $(this).height());
+        });
+    console.log("Recalculation");
+    console.log(reset);
+    console.log(sizes);
+    }
 
 });
