@@ -21,10 +21,10 @@ $(document).ready(function() {
     var reset = 1;
     var sizes = [0];
 
-    $(window).on('resize', function(){
-    reset = 1;
-    console.log("Resize");
-    console.log(reset);
+    $(window).on('resize', function() {
+        reset = 1;
+        console.log("Resize");
+        console.log(reset);
     });
     //Keeps videos responsive
     function setAspectRatio() {
@@ -177,7 +177,6 @@ $(document).ready(function() {
         }, 1000);
         return false;
     });
-    $("#galerija:in-viewport").alert("GRAD");
 
     // Bind to scroll
     $(window).scroll(function() {
@@ -186,22 +185,35 @@ $(document).ready(function() {
             calculateSizes();
         };
         check();
+        $(window).scrollTop();
     });
 
     function check() {
-        sizes.each(function(i){
-          //check if is greater then i and less than i=1  $(window).scrollTop()
-        })
+        //iterate through array
+        for (var i = 0; i < sizes.length - 1; i++) {
+            //check between which sizes current scroll position is
+            if ($(window).scrollTop() >= sizes[i] && $(window).scrollTop() < sizes[i + 1]) {
+                //if it doesnt have calss active
+                if (!$("nav ul li:nth(" + i + ") a").hasClass('active')) {
+                    //remove active from everybody
+                    $("nav ul li a").removeClass('active');
+                    $(".nav li a").removeClass('active');
+                    //add active to certain link
+                    $("nav ul li:nth(" + i + ") a").addClass('active');
+                    $(".nav li:nth(" + i + ") a").addClass('active');
+                }
+            };
+        };
     };
-    function calculateSizes () {
+
+    function calculateSizes() {
         sizes = [0];
         $('.scrollMe').each(function(i) {
-            
-            sizes.push($(this).offset().top + $(this).height());
+            //Half of screen height because area of section begins when its top reaches half screen
+            sizes.push($(this).offset().top + $(this).height() - $(window).height() / 2);
         });
-    console.log("Recalculation");
-    console.log(reset);
-    console.log(sizes);
+        console.log("Recalculation");
+        console.log(sizes);
     }
 
 });
