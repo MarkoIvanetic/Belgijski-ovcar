@@ -196,9 +196,9 @@ section > div {
     /*40px = 2x20px padding*/
   width: calc(100% - 40px)!important;
     /*40px = 2x20px padding*/
-  height: calc(100% - 40px - 35px)!important;
+  height: calc(100% - 40px)!important;
     /*40px = 2x20px padding*/
-  top: calc(0% + 20px)!important;
+  top: calc(0%)!important;
     /*40px = 2x20px padding*/
   left: calc(0% + 20px)!important;
   display: block;
@@ -358,6 +358,9 @@ section > div {
     text-align: center;
     font-size: 1em;
     padding: 0px;
+  }
+  .video-overlay {
+    display: none;
   }
 }
 
