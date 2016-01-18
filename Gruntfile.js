@@ -108,7 +108,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-combine-media-queries');
 
 
-    grunt.registerTask('clean', ['autoprefixer', 'cmq', 'cssbeautifier', 'jsbeautifier', 'prettysass']);
+    grunt.registerTask('clean', ['autoprefixer', 'cmq', 'cssbeautifier', 'jsbeautifier']);
     grunt.registerTask('bigbrother', ['watch']);
     grunt.registerTask('build', ['autoprefixer', 'cmq', 'uglify', 'cssmin']);
 };
