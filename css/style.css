@@ -68,12 +68,10 @@ h4 {
 }
 
 .imageClass {
-  min-height: 500px;
   background-color: teal;
   margin-top: 20px;
 }
 #banner{
-  width: 100%;
   max-width: none;
   background: url(images/banner.png);
   background-size: cover;
@@ -419,6 +417,9 @@ section > div {
   .article-stats-rating {
     margin: 0px 0px 20px 0px;
   }
+  .imageClass {
+  padding: 0;
+}
 }
 
 /*SM*/
