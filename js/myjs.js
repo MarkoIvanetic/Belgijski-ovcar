@@ -116,7 +116,7 @@ $(document).ready(function() {
         $('.video-main-video iframe').attr('src', source);
     }
     //Gallery
-    if ($(".popup-gallery").length) {
+    if ($(".popup-galleryy").length) {
         // Dynamically generating images from files
 
         // SERVER SIDE ONLY, NOT LOCAL, DO NOT F****** DELETE **************************************
@@ -140,6 +140,8 @@ $(document).ready(function() {
         }
         generateImages("gero", "gero", "Gero - pas za parenje");
         generateImages("djanga", "djanga", "Djanga od Moslavine");
+        generateImages("roki", "roki", "Roki Od Slunja");
+        generateImages("ria", "ria", "Ria Od Slunja");
         generateImages("stenci", "stenci", "Stenci");
 
         $('.popup-gallery img').each(function() {
@@ -210,10 +212,11 @@ $(document).ready(function() {
         sizes = [0];
         $('.scrollMe').each(function(i) {
             //Half of screen height because area of section begins when its top reaches half screen
-            sizes.push($(this).offset().top + $(this).height() - $(window).height() / 2);
+            sizes.push($(this).offset().top);
         });
-        console.log("Recalculation");
         console.log(sizes);
     }
+
+
 
 });
