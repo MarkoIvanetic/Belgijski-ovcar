@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var video_array = [{
-        id: 'ja2vYVgXu2c',
+        id: 'CRsXwCvnSZU',
         naslov: 'Title1 extremely wide title that cannot be read easely'
     }, {
         id: 'fLRWPpTnF3I',
@@ -35,66 +35,6 @@ $(document).ready(function() {
     setAspectRatio();
     jQuery(window).resize(setAspectRatio);
 
-    //DOG STATS
-    var dog_stats = [{
-        osobina: 'Inteligencija',
-        ocjena: 5
-    }, {
-        osobina: 'Emocije',
-        ocjena: 5
-    }, {
-        osobina: 'Njeznost',
-        ocjena: 8
-    }, {
-        osobina: 'Poza',
-        ocjena: 5
-    }, {
-        osobina: 'Lajanje',
-        ocjena: 5
-    }, {
-        osobina: 'Inteligencija',
-        ocjena: 4
-    }, {
-        osobina: 'Inteligencija',
-        ocjena: 5
-    }, {
-        osobina: 'Inteligencija',
-        ocjena: 5
-    }, {
-        osobina: 'Inteligencija',
-        ocjena: 5
-    }, {
-        osobina: 'Pamčenje',
-        ocjena: 5.5
-    }];
-
-    function fill_stats() {
-        $.each(dog_stats, function(index, value) {
-            $(".article-stats-rating")
-                .append('<div class="article-stats-property col-xs-12">' +
-                    '<h3 class="col-xxs-12 col-xs-4">' + value.osobina + '</h3>' +
-                    '<div data-rating=' + value.ocjena + ' class="col-xxs-12 col-xs-8 rating-square-container">' +
-                    '</div></div>'
-                );
-        });
-
-        $('.rating-square-container').each(function() {
-            var temp_ocjena = $(this).attr('data-rating');
-            for (var i = 0; i < 10; i++) {
-                $(this).append('<div class="rating-square col-xxs-1 col-xs-1"></div>');
-            }
-            $(this).children('.rating-square').each(function() {
-                if (temp_ocjena > 1) {
-                    $(this).addClass('rating-full');
-                    temp_ocjena--;
-                } else if (temp_ocjena > 0 && temp_ocjena < 1) {
-                    $(this).addClass('rating-half');
-                    temp_ocjena--;
-                }
-
-            });
-        });
-    }
     //Initial video
     videoChange(video_array[0].id, 0);
     // Generating thumbnails
