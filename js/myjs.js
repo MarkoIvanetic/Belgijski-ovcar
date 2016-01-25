@@ -1,20 +1,27 @@
 $(document).ready(function() {
     var video_array = [{
+        id: 'tCEMnKw6yUs',
+        naslov: 'Od Slunja - Training#2 '
+    }, {
         id: 'CRsXwCvnSZU',
-        naslov: 'Title1 extremely wide title that cannot be read easely'
+        naslov: 'Od Slunja - Training'
     }, {
-        id: 'fLRWPpTnF3I',
-        naslov: 'Title2'
+        id: 'kem7F7GX8BE',
+        naslov: 'Od Slunja - Malinois training#1'
     }, {
-        id: 'ohnkNMFSnAc',
-        naslov: 'Title3'
+        id: 'tSzB3N-tQdY',
+        naslov: 'Od Slunja - Malinois training#2'
     }, {
-        id: '8VyL0SAVQ7s',
-        naslov: 'Title4'
+        id: 'ondkah3hDBI',
+        naslov: 'Od Slunja - Malinois training#3'
     }, {
-        id: 'tUl7w4d1NBY',
-        naslov: 'Title5'
-    }];
+        id: 'yGyfw8xiJ1Y',
+        naslov: 'Od Slunja - Malinois training#4'
+    },{
+        id: 'zHVaOWm2Sc0',
+        naslov: 'Od Slunja - Malinois training#5'
+    }
+    ];
     var videoW = 560;
     var videoH = 315;
 
