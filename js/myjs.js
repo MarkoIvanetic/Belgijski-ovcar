@@ -69,7 +69,7 @@ $(document).ready(function() {
         // SERVER SIDE ONLY, NOT LOCAL, DO NOT F****** DELETE **************************************
 
         function generateImages(classGallery, folder, alt) {
-            var dir = "images/photos/" + folder;
+            var dir = "images/photos/" + folder +"/";
             var fileextension = ".jpg";
             $.ajax({
                 //This will retrieve the contents of the folder if the folder is configured as 'browsable'
