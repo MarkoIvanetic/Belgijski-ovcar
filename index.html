@@ -165,9 +165,9 @@
             </iframe>
          </section>
          <section class="row">
-           <div class="col-xs-12 video-thumbnail-container content-container"></div>
-        </section>
-        <section id="rodovnice" class="row photo-thumbnail-container scrollMe">
+          <div class="col-xs-12 video-thumbnail-container content-container"></div>
+       </section>
+       <section id="rodovnice" class="row photo-thumbnail-container scrollMe">
          <h2 class="col-xxs-12">Rodovnice</h2>
          <div class="popup-gallery content-container col-xxs-12 col-xs-12">
             <div class="col-lg-3 col-sm-4 col-xs-6 gallery-pad">
@@ -275,14 +275,33 @@
 <script language="javascript" type="text/javascript">
    $(window).load(function(){
       $('#loading').fadeOut(600);
-        generateImages("djanga", "djanga", "Djanga od Moslavine");
-        generateImages("roki", "roki", "Roki Od Slunja");
-        generateImages("ria", "ria", "Ria Od Slunja");
-        generateImages("hed", "hed", "Hed od Slunja (Majka- Dina, Otac - Gero)");
-        generateImages("rus", "rus", "Rus od Slunja (Majka- Djanga, Otac - Gero)");
-        generateImages("rex", "rex", "Rex od Slunja (Majka- Djanga, Otac - Gero)");
-        generateImages("laki", "laki", "Laki od Slunja (Majka- Dina, Otac -Conan von Karlosha )");
-        generateImages("stenci", "stenci", "Stenci");
+      
+          function generateImages(classGallery, folder, alt, extension) {
+            var dir = "images/photos/" + folder;
+            var fileextension = ".jpg";
+            $.ajax({
+                //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+                url: dir,
+                success: function(data) {
+                    //List all .png file names in the page
+                    $(data).find("a:contains(" + fileextension + ")").each(function() {
+                        var filename = this.href.replace(window.location.host, "").replace("http://", "");
+                        var popupImage = '<div class="col-lg-3 col-sm-4 col-xs-6 col-xxs-12 gallery-pad"><a class="col-xs-12 gallery-thumbnail" href="' + dir + filename + '" title="' + alt + " " + extension + '"><img src="' + dir + filename + '" alt="' + alt + '"></a></div>';
+                        $("." + classGallery).append(popupImage);
+                        //  $("body").append("<img src='" + dir + filename + "'>");
+                    });
+                }
+            });
+        }
+      generateImages("gero", "gero", "Gero - pas za parenje");
+      generateImages("djanga", "djanga", "Djanga od Moslavine","");
+      generateImages("roki", "roki", "Roki Od Slunja","");
+      generateImages("ria", "ria", "Ria Od Slunja","");
+      generateImages("hed", "hed", "Hed od Slunja", "(Majka- Dina, Otac - Gero)");
+      generateImages("rus", "rus", "Rus od Slunja", "(Majka- Djanga, Otac - Gero)");
+      generateImages("rex", "rex", "Rex od Slunja", "(Majka- Djanga, Otac - Gero)");
+      generateImages("laki", "laki", "Laki od Slunja", "(Majka- Dina, Otac - <a target='_blank' href='http://en.working-dog.eu/dogs-details/86104/Conan-van-Karlosha'>Conan von Karlosha</a>)");
+      generateImages("stenci", "stenci", "Stenci","");
    });
 </script>
 </html>
