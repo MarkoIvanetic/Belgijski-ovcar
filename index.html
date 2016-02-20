@@ -132,16 +132,28 @@
          <section class="row photo-thumbnail-container">
             <h2 class="col-xxs-12">Foto galerija</h2>
             <div class="popup-gallery gero content-container col-xxs-12 col-xs-12">
-               <h3 class="col-xxs-12 col-xs-12">Gero</h3>
+               <h3 class="col-xxs-12 col-xs-12">Gero od Slunja</h3>
             </div>
             <div class="popup-gallery djanga content-container col-xxs-12 col-xs-12">
                <h3 class="col-xxs-12 col-xs-12">Djanga od Moslavine</h3>
             </div>
             <div class="popup-gallery roki content-container col-xxs-12 col-xs-12">
-               <h3 class="col-xxs-12 col-xs-12">Roki</h3>
+               <h3 class="col-xxs-12 col-xs-12">Roki od Slunja</h3>
             </div>
             <div class="popup-gallery ria content-container col-xxs-12 col-xs-12">
-               <h3 class="col-xxs-12 col-xs-12">Ria</h3>
+               <h3 class="col-xxs-12 col-xs-12">Ria od Slunja</h3>
+            </div>
+            <div class="popup-gallery rex content-container col-xxs-12 col-xs-12">
+               <h3 class="col-xxs-12 col-xs-12">Rex od Slunja</h3>
+            </div>
+            <div class="popup-gallery laki content-container col-xxs-12 col-xs-12">
+               <h3 class="col-xxs-12 col-xs-12">Laki od Slunja</h3>
+            </div>
+            <div class="popup-gallery hed content-container col-xxs-12 col-xs-12">
+               <h3 class="col-xxs-12 col-xs-12">Hed od Slunja</h3>
+            </div>
+            <div class="popup-gallery rus content-container col-xxs-12 col-xs-12">
+               <h3 class="col-xxs-12 col-xs-12">Rus od Slunja</h3>
             </div>
             <div class="popup-gallery stenci content-container col-xxs-12 col-xs-12">
                <h3 class="col-xxs-12 col-xs-12">Štenci</h3>
@@ -261,6 +273,16 @@
 </div>
 </body>
 <script language="javascript" type="text/javascript">
-   $(window).load(function(){$('#loading').fadeOut(600);});
+   $(window).load(function(){
+      $('#loading').fadeOut(600);
+        generateImages("djanga", "djanga", "Djanga od Moslavine");
+        generateImages("roki", "roki", "Roki Od Slunja");
+        generateImages("ria", "ria", "Ria Od Slunja");
+        generateImages("hed", "hed", "Hed od Slunja (Majka- Dina, Otac - Gero)");
+        generateImages("rus", "rus", "Rus od Slunja (Majka- Djanga, Otac - Gero)");
+        generateImages("rex", "rex", "Rex od Slunja (Majka- Djanga, Otac - Gero)");
+        generateImages("laki", "laki", "Laki od Slunja (Majka- Dina, Otac -Conan von Karlosha )");
+        generateImages("stenci", "stenci", "Stenci");
+   });
 </script>
 </html>

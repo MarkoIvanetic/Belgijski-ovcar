@@ -69,7 +69,7 @@ $(document).ready(function() {
         // SERVER SIDE ONLY, NOT LOCAL, DO NOT F****** DELETE **************************************
 
         function generateImages(classGallery, folder, alt) {
-            var dir = "images/photos/" + folder +"/";
+            var dir = "images/photos/" + folder;
             var fileextension = ".jpg";
             $.ajax({
                 //This will retrieve the contents of the folder if the folder is configured as 'browsable'
@@ -86,10 +86,7 @@ $(document).ready(function() {
             });
         }
         generateImages("gero", "gero", "Gero - pas za parenje");
-        generateImages("djanga", "djanga", "Djanga od Moslavine");
-        generateImages("roki", "roki", "Roki Od Slunja");
-        generateImages("ria", "ria", "Ria Od Slunja");
-        generateImages("stenci", "stenci", "Stenci");
+
 
         $('.popup-gallery img').each(function() {
             if ($(this).width() > $(this).height()) {
