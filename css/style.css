@@ -71,13 +71,15 @@ h4 {
   background-color: teal;
   margin-top: 20px;
 }
-#banner{
+
+#banner {
   max-width: none;
   background: url(images/banner.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
+
 .main-content {
 }
 
@@ -257,7 +259,6 @@ section > div {
   height: 120%;
   width: auto;
   -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -281,6 +282,7 @@ section > div {
 
 #loading-image {
   position: absolute;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   top: 50%;
@@ -416,9 +418,10 @@ section > div {
   .article-stats-rating {
     margin: 0px 0px 20px 0px;
   }
+
   .imageClass {
-  padding: 0;
-}
+    padding: 0;
+  }
 }
 
 /*SM*/
@@ -438,7 +441,6 @@ section > div {
 @media (min-width: 1200px) {
   #loading-image {
     -webkit-transform: translate(0%, 0%);
-    -ms-transform: translate(0%, 0%);
     transform: translate(0%, 0%);
   }
 

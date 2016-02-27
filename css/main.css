@@ -219,9 +219,11 @@ section > div {
 /*XXS*/
 
 /*********************************************ZANIMLJIVOSTI*********************************************/
-.zanimljivosti{
+
+.zanimljivosti {
   margin-bottom: 80px;
 }
+
 /*************************************************MEDIA*************************************************/
 
 /*XS*/
@@ -245,7 +247,6 @@ section > div {
   position: absolute;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: auto;
 }
@@ -273,7 +274,6 @@ section > div {
   position: absolute;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 100;
 }
@@ -325,7 +325,6 @@ section > div {
   .main-container,
 #loading-image {
     -webkit-transform: translate(0%, 0%);
-    -ms-transform: translate(0%, 0%);
     transform: translate(0%, 0%);
   }
 

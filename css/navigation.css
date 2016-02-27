@@ -104,23 +104,29 @@
   color: #fff;
   background: none;
 }
+
 .language {
   margin-top: 20px;
 }
-.language a{
-    text-decoration: underline;
+
+.language a {
+  text-decoration: underline;
 }
-.language a, .language span{
+
+.language a, .language span {
   color: #999999;
 }
-.language a:hover{
+
+.language a:hover {
   color: #DBAF47;
 }
-.navbar-language{
+
+.navbar-language {
   display: inline;
   margin-top: 0;
   line-height: 90px;
 }
+
 @media(max-width:767px) {
   .navbar-nav > li > a {
     padding-top: 10px;

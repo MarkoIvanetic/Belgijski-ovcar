@@ -17,11 +17,10 @@ $(document).ready(function() {
     }, {
         id: 'yGyfw8xiJ1Y',
         naslov: 'Od Slunja - Malinois training#4'
-    },{
+    }, {
         id: 'zHVaOWm2Sc0',
         naslov: 'Od Slunja - Malinois training#5'
-    }
-    ];
+    }];
     var videoW = 560;
     var videoH = 315;
 
@@ -68,7 +67,7 @@ $(document).ready(function() {
 
         // SERVER SIDE ONLY, NOT LOCAL, DO NOT F****** DELETE **************************************
 
-        
+
 
 
         $('.popup-gallery img').each(function() {
