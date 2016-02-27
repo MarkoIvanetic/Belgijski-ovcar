@@ -73,19 +73,16 @@ module.exports = function(grunt) {
                 }
             }
         },
+        concat: {
+            css: {
+                src: 'css/test/*.css',
+                dest: 'css/test/combined.css'
+            }
+        },
         cssmin: {
-            options: {
-                shorthandCompacting: false,
-                roundingPrecision: -1
-            },
-            target: {
-                files: [{
-                    expand: true,
-                    cwd: 'css',
-                    src: ['css/*.css', '!css/*.min.css'],
-                    dest: 'css',
-                    ext: '.min.css'
-                }]
+            css: {
+                src: 'css/combined.css',
+                dest: 'css/combined.min.css'
             }
         },
         prettysass: {
@@ -106,9 +103,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-combine-media-queries');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
 
     grunt.registerTask('clean', ['autoprefixer', 'cmq', 'cssbeautifier', 'jsbeautifier']);
     grunt.registerTask('bigbrother', ['watch']);
-    grunt.registerTask('build', ['autoprefixer', 'cmq', 'uglify', 'cssmin']);
+    grunt.registerTask('build', ['cssmin']);
+    // grunt.registerTask('build', ['concat', 'cssmin']);
 };
