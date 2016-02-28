@@ -6242,6 +6242,19 @@ footer {
   }
 }
 
+@media (min-width:768px) and (max-width:991px){
+.navbar-language {
+  display: block;
+  line-height: initial;
+}
+.navbar-nav > li > a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 80px;
+}
+}​
+
+
 @media (max-width: 992px) {
   .footer-contact {
     padding-right: 0;
@@ -6751,6 +6764,10 @@ img.mfp-img {
   right: 0;
   padding-top: 0;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
 
 html {
   background-color: #EBEBEB;
