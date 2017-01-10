@@ -255,7 +255,13 @@ section > div {
   height: auto;
   width: 120%;
 }
-
+#novosti {
+  
+}
+#novosti img {
+  width: 340px;
+  height: 255px;
+}
 #loading {
   background-color: #fff;
   display: block;
