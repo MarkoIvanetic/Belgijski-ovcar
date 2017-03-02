@@ -6848,7 +6848,17 @@ h4 {
   background-repeat: no-repeat;
   background-position: center center;
 }
-
+.logo {
+  color: #bd9c63;
+}
+.logo a {
+  display: inline-block;
+  
+}
+.logo span {
+  font-size: 24px;
+  font-weight: 900;
+}
 .main-content {
 }
 
@@ -7247,7 +7257,6 @@ section > div {
   background-image: linear-gradient(45deg, #E68799 50%, #E6B9B5 50%);
   background-image: -webkit-linear-gradient(45deg, #E68799 50%, #E6B9B5 50%);
   background-image: -ms-linear-gradient(45deg, #E68799 50%, #E6B9B5 50%);
-  <<<<<<< HEAD
 }
 
 @media print {

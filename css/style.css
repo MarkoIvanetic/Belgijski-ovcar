@@ -22,7 +22,17 @@ h3,
 h4 {
   font-family: 'Lora', sans-serif!important;
 }
-
+.logo {
+  color: #bd9c63;
+}
+.logo a {
+  display: inline-block;
+  
+}
+.logo span {
+  font-size: 24px;
+  font-weight: 900;
+}
 .main-container {
     /*margin-top: 110px;*/
   margin-top: 20px;
