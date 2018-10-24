@@ -22,6 +22,13 @@ gulp.task('build-autoprefixer', function() {
         .pipe(gulp.dest(path.dist));
 });
 
+gulp.task('compile', function(callback) {
+  return runSequence(
+    'build-css',
+    callback
+  );
+});
+
 gulp.task('build', function(callback) {
   return runSequence(
     'build-css', 'build-autoprefixer',

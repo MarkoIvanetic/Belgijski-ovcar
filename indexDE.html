@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
    <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -12,22 +12,28 @@
       <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
    </head>
    <body class="col-xs-12">
-      <nav id="sidebar-wrapper">
-         <ul class="sidebar-nav">
-            <div class="logo">
-               <span>ZWINGER</span>
-               <a href="#triangle"> 
-               <img src="images/dogbanner.png" class="sidebar-logo" alt="Od Slunja"> 
-               </a>
-               <p>DRILLEN • AUSBILDUNG • BERATUNG</p>
-            </div>
+      <nav id="sidebar-wrapper" class="navbar-collapsed">
+         <div class="sidebar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
+            <span class="icon-bar"></span> <span class="icon-bar"></span>
+            </button>
+         </div>
+         <div class="logo-container">
+            <span>ZWINGER</span>
+            <a href="#triangle">
+            <img class="navbar-logo-lg" src="images/dogbanner.png"  alt="Od Slunja">
+            <img class="navbar-logo" src="images/dog-logo-only-circleDARKER.png" alt="Od Slunja">
+            </a>
+            <p>DRILLEN • AUSBILDUNG • BERATUNG</p>
             <div class="language">
-               <a href="/hr" rel="alternate" hreflang="hr">HR</a>
+               <a href="/hr" rel="alternate" hreflang="hr" class="active">HR</a>
                <span>/</span>
-               <a href="/en" rel="alternate" hreflang="en">EN</a>
+               <a href="/en" rel="alternate" hreflang="en" >EN</a>
                <span>/</span>
-               <a href="/de" rel="alternate" hreflang="de" class="active">DE</a>
+               <a href="/de" rel="alternate" hreflang="de" >DE</a>
             </div>
+         </div>
+         <ul class="sidebar-nav">
             <li> <a href="#uzgajivac">Züchter</a>
             </li>
             <li> <a href="#ovcar">Belgischen Schäferhunde</a>
@@ -40,244 +46,214 @@
             </li>
          </ul>
       </nav>
-      <nav class="navbar navbar-inverse navbar-fixed-top hidden-lg" role="navigation">
-         <div class="container">
-            <div class="navbar-header">
-               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
-               <span class="icon-bar"></span> <span class="icon-bar"></span>
-               </button>
-               <a class="navbar-brand" href="#"> <img src="images/dog-logo-only-circleDARKER.png" class="navbar-logo" alt="Od Slunja"> </a>
-               <div class="language navbar-language">
-                  <a href="/hr">HR</a>
-                  <span>/</span>
-                  <a href="/en" class="active">EN</a>
-                  <span>/</span>
-                  <a href="/de" rel="alternate" hreflang="de" class="active">DE</a>
-               </div>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-               <ul class="nav navbar-nav">
-                  <li> <a href="#uzgajivac">Züchter</a>
-                  </li>
-                  <li> <a href="#ovcar">Belgischen Schäferhunde</a>
-                  </li>
-                  <li> <a href="#galerija">Galerie</a>
-                  </li>
-                  <li> <a href="#rodovnice">Stammbaum</a>
-                  </li>
-                  <li> <a href="#zanimljivosti">Trivia</a>
-                  </li>
-               </ul>
-            </div>
-         </div>
-      </nav>
       <!-- ****************************************************************************************
          -->
-      <div id="loading">
-         <img id="loading-image" src="images/ajax-loader.gif" alt="Loading..." />
-      </div>
-      <div id="triangle" class="triangle"></div>
-      <div class="container main-container index">
-         <div class="introduction col-xs-12 col-lg-10 col-lg-offset-1">
-            <h2 class="col-xs-12">Zwinger</h2>
-            <h1 class="col-xs-12">OD SLUNJA</h1>
-            <h2 class="col-xs-12">Malinois Zucht und Training</h2>
+      <div class="main-container-wrapper">
+         <div id="loading">
+            <img id="loading-image" src="images/ajax-loader.gif" alt="Loading..." />
          </div>
-         <div class="main-content col-xs-12 col-lg-10 col-lg-offset-1">
-            <section class="row">
-               <div class="content-container imageClass col-xs-12">
-                  <img id="banner" src="images/banner.jpg" alt="Banner">
-               </div>
-            </section>
-            <section id="novosti" class="row">
-               <h2 class="col-xxs-12">Nachrichten</h2>
-               <div class="col-xxs-12 col-xs-12 content-container news-container">
-                  <h3>Welpen - 20.12.2018</h3>
-                  <h4>Zucht von <a target="_blank" href="https://en.working-dog.com/dogs-details/1005240/Keel-Running-Wild"><i>Keel Running Wild</i></a> and <i>Ria aus Slunja</i></h4>
-                  <div class="col-xs-12">
-                     <a target="_blank" href="images/rodovnice/rodovnica_ria.jpeg">Stammbaum Ria aus Slunja</a>
-                     <a target="_blank" style="margin-left: 15px;" href="images/rodovnice/rodovnica_keel.jpeg">Stammbaum Keel Running Wild</a>
+         <div id="triangle" class="triangle"></div>
+         <div class="container main-container index">
+            <div class="introduction col-xs-12 col-lg-10 col-lg-offset-1">
+               <h2 class="col-xs-12">Zwinger</h2>
+               <h1 class="col-xs-12">OD SLUNJA</h1>
+               <h2 class="col-xs-12">Malinois Zucht und Training</h2>
+            </div>
+            <div class="main-content col-xs-12 col-lg-10 col-lg-offset-1">
+               <section class="row">
+                  <div class="content-container imageClass col-xs-12">
+                     <img id="banner" src="images/banner.jpg" alt="Banner">
                   </div>
-                  <div class="col-xs">
-                     <a target="_blank" href="images/photos/parenje/siaxkeel1.jpg">
-                     <img alt="ria&keel" class="lazy" src="images/blank.gif" width="300px" data-src="images/photos/parenje/siaxkeel1_icon.jpg">
-                     </a>
+               </section>
+               <section id="novosti" class="row">
+                  <h2 class="col-xxs-12">Nachrichten</h2>
+                  <div class="col-xxs-12 col-xs-12 content-container news-container">
+                     <h3>Welpen - 20.12.2018</h3>
+                     <h4>Zucht von <a target="_blank" href="https://en.working-dog.com/dogs-details/1005240/Keel-Running-Wild"><i>Keel Running Wild</i></a> and <i>Ria aus Slunja</i></h4>
+                     <div class="col-xs-12">
+                        <a target="_blank" href="images/rodovnice/rodovnica_ria.jpeg">Stammbaum Ria aus Slunja</a>
+                        <a target="_blank" style="margin-left: 15px;" href="images/rodovnice/rodovnica_keel.jpeg">Stammbaum Keel Running Wild</a>
+                     </div>
+                     <div class="col-xs">
+                        <a target="_blank" href="images/photos/parenje/siaxkeel1.jpg">
+                        <img alt="ria&keel" class="lazy" src="images/blank.gif" data-src="images/photos/parenje/siaxkeel1_icon.jpg">
+                        </a>
+                     </div>
+                     <div class="col-xs">
+                        <a target="_blank" href="images/photos/parenje/siaxkeel2.jpg">
+                        <img alt="ria&keel" class="lazy" src="images/blank.gif" data-src="images/photos/parenje/siaxkeel2_icon.jpg">
+                        </a>
+                     </div>
+                     <div class="col-xs">
+                        <a target="_blank" href="images/photos/parenje/siaxkeel3.jpg">
+                        <img alt="ria&keel" class="lazy" src="images/blank.gif" data-src="images/photos/parenje/siaxkeel3_icon.jpg">
+                        </a>
+                     </div>
+                     <div class="col-xs">
+                        <a target="_blank" href="images/photos/parenje/siaxkeel4.jpg">
+                        <img alt="ria&keel" class="lazy" src="images/blank.gif" data-src="images/photos/parenje/siaxkeel4_icon.jpg">
+                        </a>
+                     </div>
                   </div>
-                  <div class="col-xs">
-                     <a target="_blank" href="images/photos/parenje/siaxkeel2.jpg">
-                     <img alt="ria&keel" class="lazy" src="images/blank.gif" width="300px" data-src="images/photos/parenje/siaxkeel2_icon.jpg">
-                     </a>
+               </section>
+               <section id="uzgajivac" class="row profile scrollMe">
+                  <h2 class="col-xxs-12">Züchter</h2>
+                  <div class="col-xxs-12 col-xs-12 content-container">
+                     <h3>Nikola Paulić</h3>
+                     <p>
+                        <img class="lazy" src="images/blank.gif" data-src="images/photos/nikola.png" alt="Nikola Paulic">Ich arbeite seit 1993 mit Hunden. Als Hundeoffizier führte ich den Polizeihund "Medo". Im selben Jahr habe ich mit der Ausbildung von Hunden für die Polizei begonnen. Ich war Mitglied der Spezialeinheit "Alpha", wo ich intensiv am Hundetraining für militärische Zwecke, speziell für anti-terroristische Operationen mitarbeitete. Diese Ausbilung fand in der rauen Umgebung von Velebit Mesa, im Jahr 2003 statt. Ich wurde Befehlshaber der Suchhundstaffel des Polizei-Hauptquartiers Zagreb. Im Jahr 2003 registrierte ich den Zwinger "Od Slunja". Ich arbeite meistens mit offiziellen Hunden, die für Militär, Polizei und Sicherheit ausgebildet sind. Ich arbeitete auch mit spezialisierten Sprengstoff.- und Betäubungsmittel Erkennungshunden.
+                     </p>
+                     <p>
+                        Nach Jahren harter Arbeit kann ich mich als ein Experte auf dem Gebiet der belgischen Schäferhunde und Polizeihunde sowie Haushaltshunde bezeichnen. Ich führe auch Schulungen für andere Hunderassen durch und bereite Hunde für Ausstellungen und Shows vor. Unteranderem kann ich auch bei der Auswahl einer Hunderasse oder den Kauf eines bestimmten Hundes beraten.
+                     </p>
                   </div>
-                  <div class="col-xs">
-                     <a target="_blank" href="images/photos/parenje/siaxkeel3.jpg">
-                     <img alt="ria&keel" class="lazy" src="images/blank.gif" width="300px" data-src="images/photos/parenje/siaxkeel3_icon.jpg">
-                     </a>
+               </section>
+               <section id="ovcar" class="row scrollMe">
+                  <h2 class="col-xxs-12">Belgischen Schäferhunde</h2>
+                  <div class="col-xxs-12 col-xs-12 article content-container">
+                     <p>
+                        <img src="images/blank.gif" data-src="images/imageTest.jpg" class="img-responsive lazy" alt="Malinois">Die Malinois Rasse wird meistens als Polizei / Militärhund verwendet, aber auch als Familienhund. Wenn Sie ein dynamischer Typ von Person sind, dann ist dies ein perfekter Hund für Sie. Er ist stark, wendig, gut muskulös, wachsam und voller Leben. Angesichts seiner dynamischen Natur braucht er viel Bewegung und muss aktiv bleiben.
+                     </p>
+                     <br>
+                     <p>Malinois haben kurze, gerade Haare, die sich rau anfühlen. Das raue Fell und die dichte Unterwolle sorgen für eine Wetterbeständigkeit die für einen Hund, der gezüchtet wurde, um im Freien unter allen Bedingungen zu arbeiten, steht.Das Haar ist etwas länger um den Hals und bildet eine Art Mini-Mähne. Diese Rasse ist selten krank, benötigt weniger Futter und hat keine Hüftprobleme wie die meisten vergleichbaren Hunde. Die Lebenserwartung eines Malinois beträgt etwa 15 Jahre.
+                     </p>
+                     <br>
+                     <p>Die Rasse Malinois gibt es in vielen Frabschattierungen; braun, gelb, rot und schwarz. Grundlegende Merkmale sind ist die mittlere Grösse und das elegante Aussehen.Die farbliche Abstimmung am Kopf ist schön strukturiert, während die Nase meist dunkel ist. Die Kiefer der Malinois sind stark und deren Zähne sind gesund weiss. Die männlichen Malinois haben eine Schulterhöhe von ca. 60 bis 65 Zentimeter und wiegen ca 20 bis 30 Kilogramm. Weibliche Malinois hingegen haben eine Schulterhöhe von ca. 55 bis 60 Zentimeter und wiegen ca 20 bis 30 Kilogramm
+                     </p>
                   </div>
-                  <div class="col-xs">
-                     <a target="_blank" href="images/photos/parenje/siaxkeel4.jpg">
-                     <img alt="ria&keel" class="lazy" src="images/blank.gif" width="300px" data-src="images/photos/parenje/siaxkeel4_icon.jpg">
-                     </a>
+               </section>
+            </div>
+            <div id="galerija" class="main-content scrollMe galerija col-xs-12 col-lg-10 col-lg-offset-1">
+               <section class="row photo-thumbnail-container">
+                  <h2 class="col-xxs-12">Fotogallerie</h2>
+                  <div class="popup-gallery gero content-container col-xxs-12 col-xs-12">
+                     <h3 class="col-xxs-12 col-xs-12">Gero od Slunja</h3>
                   </div>
-               </div>
-            </section>
-            <section id="uzgajivac" class="row profile scrollMe">
-               <h2 class="col-xxs-12">Züchter</h2>
-               <div class="col-xxs-12 col-xs-12 content-container">
-                  <h3>Nikola Paulić</h3>
-                  <p>
-                     <img class="lazy" src="images/blank.gif" data-src="images/photos/nikola.png" src="images/photos/nikola.png" alt="Nikola Paulic">Ich arbeite seit 1993 mit Hunden. Als Hundeoffizier führte ich den Polizeihund "Medo". Im selben Jahr habe ich mit der Ausbildung von Hunden für die Polizei begonnen. Ich war Mitglied der Spezialeinheit "Alpha", wo ich intensiv am Hundetraining für militärische Zwecke, speziell für anti-terroristische Operationen mitarbeitete. Diese Ausbilung fand in der rauen Umgebung von Velebit Mesa, im Jahr 2003 statt. Ich wurde Befehlshaber der Suchhundstaffel des Polizei-Hauptquartiers Zagreb. Im Jahr 2003 registrierte ich den Zwinger "Od Slunja". Ich arbeite meistens mit offiziellen Hunden, die für Militär, Polizei und Sicherheit ausgebildet sind. Ich arbeitete auch mit spezialisierten Sprengstoff.- und Betäubungsmittel Erkennungshunden.
-                  </p>
-                  <p>
-                     Nach Jahren harter Arbeit kann ich mich als ein Experte auf dem Gebiet der belgischen Schäferhunde und Polizeihunde sowie Haushaltshunde bezeichnen. Ich führe auch Schulungen für andere Hunderassen durch und bereite Hunde für Ausstellungen und Shows vor. Unteranderem kann ich auch bei der Auswahl einer Hunderasse oder den Kauf eines bestimmten Hundes beraten.
-                  </p>
-               </div>
-            </section>
-            <section id="ovcar" class="row scrollMe">
-               <h2 class="col-xxs-12">Belgischen Schäferhunde</h2>
-               <div class="col-xxs-12 col-xs-12 article content-container">
-                  <p>
-                     <img src="images/blank.gif" data-src="images/imageTest.jpg" class="img-responsive lazy" alt="Malinois">Die Malinois Rasse wird meistens als Polizei / Militärhund verwendet, aber auch als Familienhund. Wenn Sie ein dynamischer Typ von Person sind, dann ist dies ein perfekter Hund für Sie. Er ist stark, wendig, gut muskulös, wachsam und voller Leben. Angesichts seiner dynamischen Natur braucht er viel Bewegung und muss aktiv bleiben.
-                  </p>
-                  <br>
-                  <p>Malinois haben kurze, gerade Haare, die sich rau anfühlen. Das raue Fell und die dichte Unterwolle sorgen für eine Wetterbeständigkeit die für einen Hund, der gezüchtet wurde, um im Freien unter allen Bedingungen zu arbeiten, steht.Das Haar ist etwas länger um den Hals und bildet eine Art Mini-Mähne. Diese Rasse ist selten krank, benötigt weniger Futter und hat keine Hüftprobleme wie die meisten vergleichbaren Hunde. Die Lebenserwartung eines Malinois beträgt etwa 15 Jahre.
-                  </p>
-                  <br>
-                  <p>Die Rasse Malinois gibt es in vielen Frabschattierungen; braun, gelb, rot und schwarz. Grundlegende Merkmale sind ist die mittlere Grösse und das elegante Aussehen.Die farbliche Abstimmung am Kopf ist schön strukturiert, während die Nase meist dunkel ist. Die Kiefer der Malinois sind stark und deren Zähne sind gesund weiss. Die männlichen Malinois haben eine Schulterhöhe von ca. 60 bis 65 Zentimeter und wiegen ca 20 bis 30 Kilogramm. Weibliche Malinois hingegen haben eine Schulterhöhe von ca. 55 bis 60 Zentimeter und wiegen ca 20 bis 30 Kilogramm
-                  </p>
-               </div>
-            </section>
+                  <div class="popup-gallery djanga content-container col-xxs-12 col-xs-12">
+                     <h3 class="col-xxs-12 col-xs-12">Djanga od Moslavine</h3>
+                  </div>
+                  <div class="popup-gallery roki content-container col-xxs-12 col-xs-12">
+                     <h3 class="col-xxs-12 col-xs-12">Roki od Slunja</h3>
+                  </div>
+                  <div class="popup-gallery ria content-container col-xxs-12 col-xs-12">
+                     <h3 class="col-xxs-12 col-xs-12">Ria od Slunja</h3>
+                  </div>
+                  <div class="popup-gallery rex content-container col-xxs-12 col-xs-12">
+                     <h3 class="col-xxs-12 col-xs-12">Rex od Slunja</h3>
+                  </div>
+                  <div class="popup-gallery laki content-container col-xxs-12 col-xs-12">
+                     <h3 class="col-xxs-12 col-xs-12">Laki od Slunja</h3>
+                  </div>
+                  <div class="popup-gallery hed content-container col-xxs-12 col-xs-12">
+                     <h3 class="col-xxs-12 col-xs-12">Hed od Slunja</h3>
+                  </div>
+                  <div class="popup-gallery rus content-container col-xxs-12 col-xs-12">
+                     <h3 class="col-xxs-12 col-xs-12">Rus od Slunja</h3>
+                  </div>
+                  <!--                 <div class="popup-gallery stenci content-container col-xxs-12 col-xs-12">
+                     <h3 class="col-xxs-12 col-xs-12">Pups</h3>
+                     </div> -->
+               </section>
+               <section class="row video-main-video">
+                  <h2 class="col-xxs-12">Videogalerie</h2>
+                  <iframe title="Youtube player" class="col-xxs-12 col-xs-12" src="https://www.youtube.com/embed/ja2vYVgXu2c?theme=light&showinfo=1&iv_load_policy=3&showsearch=0&rel=0" allowfullscreen>
+                  </iframe>
+               </section>
+               <section class="row">
+                  <div class="col-xs-12 video-thumbnail-container content-container"></div>
+               </section>
+               <section id="rodovnice" class="row photo-thumbnail-container scrollMe">
+                  <h2 class="col-xxs-12">Stammbaum  </h2>
+                  <div class="popup-gallery content-container col-xxs-12 col-xs-12">
+                     <div class="col-lg-3 col-sm-4 col-xs-6 gallery-pad">
+                        <h3>Dina</h3>
+                        <a class='col-xs-12 gallery-thumbnail' href="images/photos/rodovnica-dina.jpg" title="Rodovnica Dina">
+                        <img class="lazy" src="images/blank.gif" data-src="images/photos/rodovnica-dina.jpg" alt="Pedigree Dina">
+                        </a>
+                     </div>
+                     <div class="col-lg-3 col-sm-4 col-xs-6 gallery-pad">
+                        <h3>Djanga</h3>
+                        <a class='col-xs-12 gallery-thumbnail' href="images/photos/rodovnica-djanga.jpg" title="Rodovnica Djanga">
+                        <img class="lazy" src="images/blank.gif" data-src="images/photos/rodovnica-djanga.jpg" alt="Pedigree Djanga">
+                        </a>
+                     </div>
+                     <div class="col-lg-3 col-sm-4 col-xs-6 gallery-pad">
+                        <h3>Gero</h3>
+                        <a class='col-xs-12 gallery-thumbnail' href="images/photos/rodovnica-gero.jpg" title="Rodovnica Gero">
+                        <img class="lazy" src="images/blank.gif" data-src="images/photos/rodovnica-gero.jpg" alt="Pedigree Gero">
+                        </a>
+                     </div>
+                  </div>
+               </section>
+            </div>
+            <div class="main-content zanimljivosti scrollMe col-xxs-12 col-xs-12 col-lg-10 col-lg-offset-1">
+               <section id="zanimljivosti" class="row zanimljivosti zanimljivosti-article">
+                  <div class="col-xxs-12">
+                     <h2 class="col-xxs-12">Trivia</h2>
+                     <ul class="col-xxs-12 col-xs-12 content-container">
+                        <li class="col-xs-12">Malinois können z.B. verwendet werden, um Leckagen an Gas-Pipelines zu finden, die sogar für Instrumente nicht erkennbar sind. Ein Gas-Transport-Unternehmen engagierte zwei Hunde, um eine Pipeline zu inspizieren. Sie fanden über 150 kleine Leckagen welche danach durch reparaturen auf Null reduziert wurden.
+                        </li>
+                        <li class="col-xs-12">Der Hund kann vom Boot aus Leichen im Wasser wittern die sich in mehr als zehn Meter Wassertiefe befinden.</li>
+                        <li class="col-xs-12">Gut ausgebildete Hunde in Fünfergruppierungen mit jeweils einem Führer können 50 gut ausgestattete Polizeibeamte ersetzen.</li>
+                        <li class="col-xs-12">Wussten Sie, dass es heute noch in Belgien einen offiziellen Wettbewerb für belgische Hirtenhunde gibt, die die Grenzen ihrer Fähigkeiten im Hürdenlauf, Distanzspringen, Angriff und Verteidigung, Such und Verfolgung unter Beweis stellen, mit einer Testdauer von 40 Minuten pro Hund</li>
+                     </ul>
+                  </div>
+               </section>
+            </div>
+            <!-- Main container end -->
          </div>
-         <div id="galerija" class="main-content scrollMe galerija col-xs-12 col-lg-10 col-lg-offset-1">
-            <section class="row photo-thumbnail-container">
-               <h2 class="col-xxs-12">Fotogallerie</h2>
-               <div class="popup-gallery gero content-container col-xxs-12 col-xs-12">
-                  <h3 class="col-xxs-12 col-xs-12">Gero od Slunja</h3>
-               </div>
-               <div class="popup-gallery djanga content-container col-xxs-12 col-xs-12">
-                  <h3 class="col-xxs-12 col-xs-12">Djanga od Moslavine</h3>
-               </div>
-               <div class="popup-gallery roki content-container col-xxs-12 col-xs-12">
-                  <h3 class="col-xxs-12 col-xs-12">Roki od Slunja</h3>
-               </div>
-               <div class="popup-gallery ria content-container col-xxs-12 col-xs-12">
-                  <h3 class="col-xxs-12 col-xs-12">Ria od Slunja</h3>
-               </div>
-               <div class="popup-gallery rex content-container col-xxs-12 col-xs-12">
-                  <h3 class="col-xxs-12 col-xs-12">Rex od Slunja</h3>
-               </div>
-               <div class="popup-gallery laki content-container col-xxs-12 col-xs-12">
-                  <h3 class="col-xxs-12 col-xs-12">Laki od Slunja</h3>
-               </div>
-               <div class="popup-gallery hed content-container col-xxs-12 col-xs-12">
-                  <h3 class="col-xxs-12 col-xs-12">Hed od Slunja</h3>
-               </div>
-               <div class="popup-gallery rus content-container col-xxs-12 col-xs-12">
-                  <h3 class="col-xxs-12 col-xs-12">Rus od Slunja</h3>
-               </div>
-               <!--                 <div class="popup-gallery stenci content-container col-xxs-12 col-xs-12">
-                  <h3 class="col-xxs-12 col-xs-12">Pups</h3>
-                  </div> -->
-            </section>
-            <section class="row video-main-video">
-               <h2 class="col-xxs-12">Videogalerie</h2>
-               <iframe title="Youtube player" class="col-xxs-12 col-xs-12" src="https://www.youtube.com/embed/ja2vYVgXu2c?theme=light&showinfo=1&iv_load_policy=3&showsearch=0&rel=0" frameborder="0" allowfullscreen>
-               </iframe>
-            </section>
-            <section class="row">
-               <div class="col-xs-12 video-thumbnail-container content-container"></div>
-            </section>
-            <section id="rodovnice" class="row photo-thumbnail-container scrollMe">
-               <h2 class="col-xxs-12">Stammbaum  </h2>
-               <div class="popup-gallery content-container col-xxs-12 col-xs-12">
-                  <div class="col-lg-3 col-sm-4 col-xs-6 gallery-pad">
-                     <h3>Dina</h3>
-                     <a class='col-xs-12 gallery-thumbnail' href="images/photos/rodovnica-dina.jpg" title="Rodovnica Dina">
-                     <img class="lazy" src="images/blank.gif" data-src="images/photos/rodovnica-dina.jpg" alt="Pedigree Dina">
-                     </a>
+         <!-- ****************************************************************************************
+            -->
+         <footer class="col-xs-12">
+            <div class="footer-upper container">
+               <div class="footer-upper-container col-xs-12 col-lg-10 col-lg-offset-1">
+                  <div class="col-xs-4 col-sm-3">
+                     <h2>Adresse</h2>
+                     <p>Zwinger “Od Slunja”</p>
+                     <p>Ilovnjak 30</p>
+                     <p>10410 Velika Gorica</p>
                   </div>
-                  <div class="col-lg-3 col-sm-4 col-xs-6 gallery-pad">
-                     <h3>Djanga</h3>
-                     <a class='col-xs-12 gallery-thumbnail' href="images/photos/rodovnica-djanga.jpg" title="Rodovnica Djanga">
-                     <img class="lazy" src="images/blank.gif" data-src="images/photos/rodovnica-djanga.jpg" alt="Pedigree Djanga">
-                     </a>
+                  <div class="social col-xs-4 col-sm-3">
+                     <h2>Folge uns!</h2>
+                     <div class="col-xs-12">
+                        <a href="https://www.facebook.com/nikola.paulic.520"><img src="images/icons/facebook.png" alt="Facebook"> </a>
+                        <a href="#"><img src="images/icons/twitter.png" alt="Twitter"> </a>
+                     </div>
+                     <div class="col-xs-12">
+                        <a href="#">
+                        <img alt="google" src="images/icons/google.png"> </a>
+                        <a href="https://www.youtube.com/channel/UCTvn3_T7YgR5Hna-vFtD4kw"><img src="images/icons/youtube.png" alt="Youtube"> </a>
+                     </div>
                   </div>
-                  <div class="col-lg-3 col-sm-4 col-xs-6 gallery-pad">
-                     <h3>Gero</h3>
-                     <a class='col-xs-12 gallery-thumbnail' href="images/photos/rodovnica-gero.jpg" title="Rodovnica Gero">
-                     <img class="lazy" src="images/blank.gif" data-src="images/photos/rodovnica-gero.jpg" alt="Pedigree Gero">
-                     </a>
+                  <div class="col-xs-4 col-sm-3 kontakt">
+                     <h2>Kontakt</h2>
+                     <p>Nikola Paulić</p>
+                     <p><span>mob:</span> 098/1744-194</p>
+                     <p></p>
+                  </div>
+                  <div class="footer-sitemap hidden-xxs col-xs-12 col-sm-3">
+                     <h2 class="hidden-xs">Belgischen Schäferhunde</h2>
+                     <ul class="footer-nav">
+                        <li> <a href="#uzgajivac">Züchter</a>
+                        </li>
+                        <li> <a href="#ovcar">Belgischen Schäferhunde</a>
+                        </li>
+                        <li> <a href="#galerija">Galerie</a>
+                        </li>
+                        <li> <a href="#rodovnice">Stammbaum</a>
+                        </li>
+                        <li> <a href="#zanimljivosti">Trivia</a>
+                        </li>
+                     </ul>
                   </div>
                </div>
-            </section>
+            </div>
+         </footer>
+         <div class="footer-lower col-xs-12">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+               <p>Copyright © Belgijski Ovčar 2015</p>
+            </div>
          </div>
-         <div class="main-content zanimljivosti scrollMe col-xxs-12 col-xs-12 col-lg-10 col-lg-offset-1">
-            <section id="zanimljivosti" class="row zanimljivosti zanimljivosti-article">
-               <div class="col-xxs-12">
-                  <h2 class="col-xxs-12">Trivia</h2>
-                  <ul class="col-xxs-12 col-xs-12 content-container">
-                     <li class="col-xs-12">Malinois können z.B. verwendet werden, um Leckagen an Gas-Pipelines zu finden, die sogar für Instrumente nicht erkennbar sind. Ein Gas-Transport-Unternehmen engagierte zwei Hunde, um eine Pipeline zu inspizieren. Sie fanden über 150 kleine Leckagen welche danach durch reparaturen auf Null reduziert wurden.
-                     </li>
-                     <li class="col-xs-12">Der Hund kann vom Boot aus Leichen im Wasser wittern die sich in mehr als zehn Meter Wassertiefe befinden.</li>
-                     <li class="col-xs-12">Gut ausgebildete Hunde in Fünfergruppierungen mit jeweils einem Führer können 50 gut ausgestattete Polizeibeamte ersetzen.</li>
-                     <li class="col-xs-12">Wussten Sie, dass es heute noch in Belgien einen offiziellen Wettbewerb für belgische Hirtenhunde gibt, die die Grenzen ihrer Fähigkeiten im Hürdenlauf, Distanzspringen, Angriff und Verteidigung, Such und Verfolgung unter Beweis stellen, mit einer Testdauer von 40 Minuten pro Hund</li>
-                  </ul>
-               </div>
-            </section>
-         </div>
-         <!-- Main container end -->
-      </div>
-      <!-- ****************************************************************************************
-         -->
-      <footer class="col-xs-12">
-         <div class="footer-upper container">
-            <div class="footer-upper-container col-xs-12 col-lg-10 col-lg-offset-1">
-               <div class="col-xs-4 col-sm-3">
-                  <h2>Adresse</h2>
-                  <p>Zwinger “Od Slunja”</p>
-                  <p>Ilovnjak 30</p>
-                  <p>10410 Velika Gorica</p>
-               </div>
-               <div class="social col-xs-4 col-sm-3">
-                  <h2>Folge uns!</h2>
-                  <div class="col-xs-12">
-                     <a href="https://www.facebook.com/nikola.paulic.520"><img src="images/icons/facebook.png" alt="Facebook"> </a>
-                     <a href="#"><img src="images/icons/twitter.png" alt="Twitter"> </a>
-                  </div>
-                  <div class="col-xs-12">
-                     <a href="#">
-                     <img alt="google" src="images/icons/google.png"> </a>
-                     <a href="https://www.youtube.com/channel/UCTvn3_T7YgR5Hna-vFtD4kw"><img src="images/icons/youtube.png" alt="Youtube"> </a>
-                  </div>
-               </div>
-               <div class="col-xs-4 col-sm-3 kontakt">
-                  <h2>Kontakt</h2>
-                  <p>Nikola Paulić</p>
-                  <p><span>mob:</span> 098/1744-194</p>
-                  <p></p>
-               </div>
-               <div class="footer-sitemap hidden-xxs col-xs-12 col-sm-3">
-                  <h2 class="hidden-xs">Belgischen Schäferhunde</h2>
-                  <ul class="footer-nav">
-                     <li> <a href="#uzgajivac">Züchter</a>
-                     </li>
-                     <li> <a href="#ovcar">Belgischen Schäferhunde</a>
-                     </li>
-                     <li> <a href="#galerija">Galerie</a>
-                     </li>
-                     <li> <a href="#rodovnice">Stammbaum</a>
-                     </li>
-                     <li> <a href="#zanimljivosti">Trivia</a>
-                     </li>
-                  </ul>
-               </div>
-      </footer>
-      </div>
-      </div>
-      <div class="footer-lower col-xs-12">
-         <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-            <p>Copyright © Belgijski Ovčar 2015</p>
-         </div>
-      </div>
       </div>
    </body>
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

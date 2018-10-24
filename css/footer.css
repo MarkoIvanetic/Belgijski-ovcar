@@ -38,6 +38,7 @@ footer {
 
 .footer-upper-container h2 {
   color: #DBAF47;
+  text-align: left;
 }
 
 .footer-lower {
@@ -137,8 +138,9 @@ footer {
 
 @media (min-width: 1200px) {
   footer, .footer-lower {
-    width: calc(100% - 250px)!important;
-    margin-left: 250px!important;
+/*    width: calc(100% - 250px)!important;
+    margin-left: 250px!important;*/
+    width: 100%;
   }
 
   .footer-upper {

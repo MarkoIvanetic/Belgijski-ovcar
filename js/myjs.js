@@ -140,7 +140,15 @@
                 }
             });
         }
+        $('.navbar-toggle').click(function () {
+            if ($('.sidebar-nav').is(":visible")) {
 
+            $('#sidebar-wrapper').addClass("navbar-collapsed");
+            } else {
+                
+            $('#sidebar-wrapper').removeClass("navbar-collapsed");
+            }
+        });
         //scroll effect
         var nav_offset;
 
