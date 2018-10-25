@@ -75,8 +75,6 @@
             id: 'jHa3WHELINg',
             naslov: 'Od Slunja - Stenci 2016'
         }];
-        var videoW = 560;
-        var videoH = 315;
 
         var reset = 1;
         var sizes = [0];
@@ -84,12 +82,14 @@
         $(window).on('resize', function() {
             reset = 1;
         });
+
         //Keeps videos responsive
         function setAspectRatio() {
             jQuery('iframe').each(function() {
-                jQuery(this).css('height', jQuery(this).width() * (videoH / videoW));
+                jQuery(this).css('height', jQuery(this).width() * (315 / 560));
             });
         }
+        
         setAspectRatio();
         jQuery(window).resize(setAspectRatio);
 

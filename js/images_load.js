@@ -1,17 +1,21 @@
  $(function() {
+
      setTimeout(function() {
          $('.lazy').Lazy({
              // your configuration goes here
              scrollDirection: 'vertical',
              effect: 'fadeIn',
+             threshold: 500,
              visibleOnly: true,
              onError: function(element) {
                  console.log('error loading ' + element.data('src'));
              }
          });
      }, 200)
+
  });
  $(window).load(function() {
+
      $('#loading').fadeOut(600);
 
      function generateImages(classGallery, folder, alt, extension, callback) {
@@ -28,8 +32,14 @@
                      $("." + classGallery).append(popupImage);
                  });
                  $("img.lazy").Lazy({
+                     // your configuration goes here
                      scrollDirection: 'vertical',
-                     effect: 'fadeIn'
+                     effect: 'fadeIn',
+                     threshold: 500,
+                     visibleOnly: true,
+                     onError: function(element) {
+                         console.log('error loading ' + element.data('src'));
+                     }
                  });
              }
          });
@@ -46,7 +56,6 @@
          generateImages("rus", "rus", "Rus od Slunja", "(Majka- Djanga, Otac - Gero)");
          generateImages("rex", "rex", "Rex od Slunja", "(Majka- Djanga, Otac - Gero)");
          generateImages("laki", "laki", "Laki od Slunja", "(Majka- Dina, Otac - <a target='_blank' href='http://en.working-dog.eu/dogs-details/86104/Conan-van-Karlosha'>Conan von Karlosha</a>)");
-
      }, 500);
 
  });
