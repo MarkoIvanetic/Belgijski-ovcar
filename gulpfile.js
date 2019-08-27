@@ -1,11 +1,16 @@
 var gulp = require('gulp');
+var watch = require('gulp-watch')
+var sass = require('gulp-sass');
 var runSequence = require('run-sequence');
 var concatCss = require('gulp-concat-css');
 var autoprefixer = require('gulp-autoprefixer');
 var cleanCSS = require('gulp-clean-css');
 
+sass.compiler = require('node-sass');
+
 var path = {
     css: 'css/**/*.css',
+    scss: 'css/**/*.scss',
     dist: 'dist/',
     js: 'js/**/*.js',
     img: 'images/**/*.*'
@@ -35,6 +40,20 @@ gulp.task('compile', function(callback) {
         'build-css',
         callback
     );
+});
+
+gulp.task('sass', function () {
+  return gulp.src(path.scss)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(path.dist));
+});
+
+gulp.task('sass:watch', function () {
+  gulp.watch(path.scss, ['sass']);
+});
+
+gulp.task('watch',['build-css'], function () {
+    gulp.watch(path.css, ['build-css'])
 });
 
 gulp.task('build', function(callback) {
