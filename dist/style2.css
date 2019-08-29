@@ -4,6 +4,9 @@ html {
   min-height: 100%;
   -webkit-tap-highlight-color: transparent; }
 
+header {
+  margin-bottom: 20px; }
+
 body {
   font-family: 'Open Sans', sans-serif;
   display: flex;
@@ -13,16 +16,38 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Lora', sans-serif !important; }
+  font-family: 'Lora', sans-serif;
+  line-height: 1.15; }
+
+h5 {
+  font-family: 'Lora', sans-serif;
+  /*font-family: 'IBM Plex Sans', sans-serif;*/
+  color: #A5A5A5;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin: 0;
+  margin-bottom: 15px; }
 
 .wrap {
   min-height: 100%; }
 
 .navbar-header {
   color: #A5A5A5;
-  font-size: 4rem;
   margin: 0;
-  margin-top: 18px; }
+  margin-top: 18px;
+  display: flex;
+  align-items: center; }
+  .navbar-header h1 {
+    font-size: 4rem;
+    margin: 0; }
+  .navbar-header h2 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin: 0;
+    padding-left: 4px; }
+  .navbar-header img {
+    width: 7.5rem;
+    margin-right: 15px; }
 
 nav ul {
   display: flex;
@@ -56,3 +81,37 @@ nav ul {
   @media (min-width: 1200px) {
     .container {
       width: 1170px; } }
+
+main {
+  display: flex;
+  width: 100%; }
+  main .intro-text p {
+    margin: 0 0 14px;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    font-family: 'IBM Plex Sans', sans-serif; }
+  main > div {
+    flex: 1; }
+  main .intro-text {
+    padding-left: 10px; }
+  main .image-container {
+    padding-right: 10px;
+    display: flex; }
+    main .image-container img {
+      width: 100%;
+      cursor: pointer;
+      transition: filter .5s ease-in-out;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%); }
+      main .image-container img:hover {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%); }
+    main .image-container .image-column {
+      flex: 1;
+      /*padding: 0px;*/ }
+      main .image-container .image-column img {
+        margin-bottom: 10px; }
+    main .image-container .image-column.column-l {
+      padding-right: 5px; }
+    main .image-container .image-column.column-r {
+      padding-left: 5px; }
