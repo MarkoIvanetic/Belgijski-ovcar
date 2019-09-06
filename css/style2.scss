@@ -75,6 +75,17 @@ h5 {
     margin-bottom: 15px;
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #A5A5A5;
+    opacity: .5;
+    z-index: 50;
+}
+
 .wrap {
     min-height: 100%;
 }
@@ -160,7 +171,7 @@ main {
     display: flex;
     width: 100%;
 
-    .intro-text {
+    .main-content {
         p {
             margin: 0 0 14px;
             font-size: rem(18px);

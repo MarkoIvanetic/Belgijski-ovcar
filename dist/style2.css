@@ -32,6 +32,16 @@ h5 {
   margin: 0;
   margin-bottom: 15px; }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #A5A5A5;
+  opacity: .5;
+  z-index: 50; }
+
 .wrap {
   min-height: 100%; }
 
@@ -91,7 +101,7 @@ nav ul {
 main {
   display: flex;
   width: 100%; }
-  main .intro-text p {
+  main .main-content p {
     margin: 0 0 14px;
     font-size: 1.125rem;
     font-family: 'IBM Plex Sans', sans-serif;
