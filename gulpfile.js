@@ -29,7 +29,7 @@ gulp.task('copy-css', function() {
    .pipe(gulp.dest(path.tmp));
 });
 gulp.task('build-css', function() {
-    return gulp.src(path.tmp + '/**/*.css')
+    return gulp.src([path.tmp + '/vendor/*.css', path.tmp + '/*.css'])
         .pipe(concatCss("bundle.css"))
         .pipe(gulp.dest(path.dist));
 });
@@ -61,13 +61,9 @@ gulp.task('sass:watch', function () {
   gulp.watch(path.scss, ['sass', 'copy-css', 'build-css']);
 });
 
-gulp.task('sass:watch', function () {
-  gulp.watch(path.scss, ['sass', 'copy-css', 'build-css', 'build-autoprefixer']);
-});
-
 
 gulp.task('build', function(callback) {
-    return runSequence(['sass', 'copy-css', 'build-css', 'build-autoprefixer'], ['build-custom', 'minify-custom'], callback);
+    return runSequence(['sass', 'copy-css', 'build-css', 'build-autoprefixer'], ['build-custom'], callback);
 });
 
 gulp.task('build-full', function(callback) {

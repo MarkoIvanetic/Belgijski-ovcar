@@ -16,7 +16,7 @@ chart_data.djanga = {
             type: "step",
             style: {
                 "stroke-width": 2,
-                'stroke': '#bbb'
+                'stroke': '#9B9B9B'
             }
         },
         node: {
@@ -25,7 +25,7 @@ chart_data.djanga = {
     },
 
     nodeStructure: {
-        text: { name: "Djanga Od Moslavine" },
+        text: { name: "Djanga Od Moslavine", desc: "HR 11979 MN" },
         connectors: {
             // style: {
             //  'stroke': '#bbb'
@@ -58,7 +58,8 @@ chart_data.djanga = {
                 }
             ]
         }, {
-            text: { name: "Lili Od Slunja" },
+            text: { name: "Lili Od Slunja", desc:"HR 11438"},
+            link: {href: "https://www.working-dog.com/dogs-details/1020408/Lili-od-Slunja", target:"_blank"},
             stackChildren: true,
             connectors: {
                 // stackIndent: 30,
