@@ -67,5 +67,5 @@ gulp.task('build', function(callback) {
 });
 
 gulp.task('build-full', function(callback) {
-    return runSequence(['sass', 'copy-css', 'build-css', 'build-autoprefixer'], ['build-vendor', 'build-custom', 'minify-vendor'], callback);
+    return runSequence(['sass', 'copy-css', 'build-css', 'build-autoprefixer'], ['build-vendor', 'build-custom'], ['minify-vendor'], callback);
 });
