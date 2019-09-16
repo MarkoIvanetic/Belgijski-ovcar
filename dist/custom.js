@@ -21,7 +21,7 @@ chart_data.djanga = {
             }
         },
         node: {
-            HTMLclass: "big-commpany"
+            HTMLclass: "dog-pedigree"
         }
     },
 

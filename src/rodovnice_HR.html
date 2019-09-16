@@ -70,6 +70,15 @@
                         </a>
                     </div>
                 </div>
+                <div class="pedigree-picker">
+                    <ul>
+                        <li data-dog="djanga">Djanga</li>
+                        <li data-dog="ria">Ria</li>
+                        <li data-dog="dina">Dina</li>
+                        <li data-dog="gero">Gero</li>
+                        <li data-dog="kali">Kali</li>
+                    </ul>
+                </div>
                 <div class="tree-container">
                     <div class="chart" id="pedigree-tree">
                     </div>
@@ -115,46 +124,65 @@
 <script type="text/javascript" src="../dist/custom.js"></script>
  -->
 <script type="text/javascript">
-function loadSrc(src, callback) {
-    const script = document.createElement("script");
-    script.src = src;
-    document.body.appendChild(script);
-
-    if (callback) {
+function loadScript(url) {
+    return new Promise((resolve, reject) => {
+        let script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = url;
+        script.addEventListener('load', () => resolve(script), false);
+        document.body.appendChild(script);
         script.onload = function() {
-            callback();
+            resolve();
         };
-    }
+    });
 }
 
+function changePedigree(name) {
+    $('.tree-container .overlay').fadeIn(100, "linear");
+
+    new Treant(chart_data[name], function() {
+        $('.tree-container .overlay').fadeOut(100, "linear");
+    });
+}
+
+
 window.addEventListener("load", function() {
-    loadSrc("https://code.jquery.com/jquery-3.4.1.slim.min.js", function() {
-        
-        loadSrc("../dist/vendor-min.js", function() {
 
-            new Treant(chart_data.djanga, function() {
-                $('.tree-container .overlay').fadeOut(200, "linear");
-            });
-            // TEST
-            function changePedigree(name) {
-                $('.tree-container .overlay').fadeIn(100, "linear");
+    loadScript("https://code.jquery.com/jquery-3.4.1.min.js")
+        .then(() => {
 
-                new Treant(chart_data[name], function() {
-                    $('.tree-container .overlay').fadeOut(100, "linear");
+            $('.pedigree-picker li').click(function () {
+                console.log($(this).data('dog'));
+                changePedigree($(this).data('dog'));
+            })
+
+            loadScript("../dist/vendor-min.js").then(response => {
+                new Treant(chart_data.djanga, function() {
+                    $('.tree-container .overlay').fadeOut(200, "linear");
                 });
-            }
+                // TEST
+                // function changePedigree(name) {
+                //     $('.tree-container .overlay').fadeIn(100, "linear");
 
-            $('.lightgallery').lightGallery({
-                mode: 'lg-slide',
-                speed: 200,
-                cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-                download: false
+                //     new Treant(chart_data[name], function() {
+                //         $('.tree-container .overlay').fadeOut(100, "linear");
+                //     });
+                // }
+
+                $('.lightgallery').lightGallery({
+                    mode: 'lg-slide',
+                    speed: 200,
+                    cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+                    download: false
+                });
+
+            }, error => {
+
             });
+            loadScript("../dist/custom.js");
+        }, () => {
 
         });
-
-        loadSrc("../dist/custom.js");
-    });
 })
 </script>
 

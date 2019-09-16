@@ -115,9 +115,12 @@ h5 {
     }
 }
 
+ul {
+    list-style-type: none;
+}
+
 nav ul {
     display: flex;
-    list-style-type: none;
     padding: 0;
     font-size: rem(18px);
     text-transform: uppercase;
@@ -294,4 +297,25 @@ footer {
 
 .gallery-title {
 	    color: #A5A5A5;
+}
+
+
+.pedigree-picker {
+font-family: 'Open Sans', sans-serif;
+    color: #A5A5A5;
+
+    ul {
+        margin: 0;
+        padding: 10px 0px;
+
+        li {
+            display: inline-block;
+            border-bottom: 2px solid transparent;
+                cursor: pointer;
+
+            &:hover {
+                border-bottom: 2px solid #CCC;
+            }
+        }
+    }
 }
