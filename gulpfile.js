@@ -6,6 +6,7 @@ var concat = require('gulp-concat');
 var runSequence = require('run-sequence');
 var concatCss = require('gulp-concat-css');
 var autoprefixer = require('gulp-autoprefixer');
+var clean = require('gulp-clean');
 
 sass.compiler = require('node-sass');
 
@@ -56,6 +57,11 @@ gulp.task('minify-vendor', function() {
     .pipe(gulp.dest(path.dist))
 });
 // *****************************************************
+gulp.task('clean-temp', function() {
+    return gulp.src('temporary/', {read: false})
+        .pipe(clean({force: true}));
+});
+// *****************************************************
 
 gulp.task('sass:watch', function () {
   gulp.watch(path.scss, ['sass', 'copy-css', 'build-css']);
@@ -63,9 +69,9 @@ gulp.task('sass:watch', function () {
 
 
 gulp.task('build', function(callback) {
-    return runSequence(['sass', 'copy-css', 'build-css', 'build-autoprefixer'], ['build-custom'], callback);
+    return runSequence('clean-temp', ['sass', 'copy-css', 'build-css', 'build-autoprefixer'], 'build-custom', callback);
 });
 
 gulp.task('build-full', function(callback) {
-    return runSequence(['sass', 'copy-css', 'build-css', 'build-autoprefixer'], ['build-vendor', 'build-custom'], ['minify-vendor'], callback);
+    return runSequence('clean-temp', ['sass', 'copy-css', 'build-css', 'build-autoprefixer'], ['build-vendor', 'build-custom'], ['minify-vendor'], callback);
 });
