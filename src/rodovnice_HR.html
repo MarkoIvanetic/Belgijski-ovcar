@@ -37,9 +37,9 @@
             <nav role="navigation">
                 <ul id="menu-primary-navigation" class="nav navbar-nav">
                     <li><a href="/">Uzgajivač</a></li>
-                    <li class="active"><a href="https://belgijskiovcar.com/ovcar/">Belgijski Ovčar</a></li>
+                    <li><a href="https://belgijskiovcar.com/ovcar/">Belgijski Ovčar</a></li>
                     <li><a href="/galerija">Galerija</a></li>
-                    <li><a href="/rodovnice">Rodovnice</a></li>
+                    <li class="active"><a href="/rodovnice">Rodovnice</a></li>
                     <li><a href="/zanimljivosti">Zanimljivosti</a></li>
                 </ul>
             </nav>
@@ -72,7 +72,7 @@
                 </div>
                 <div class="pedigree-picker">
                     <ul>
-                        <li data-dog="djanga">Djanga</li>
+                        <li class="active" data-dog="djanga">Djanga</li>
                         <li data-dog="ria">Ria</li>
                         <li data-dog="dina">Dina</li>
                         <li data-dog="gero">Gero</li>
@@ -138,10 +138,10 @@ function loadScript(url) {
 }
 
 function changePedigree(name) {
-    $('.tree-container .overlay').fadeIn(100, "linear");
+    $('.tree-container .overlay').fadeIn(200, "linear");
 
-    new Treant(chart_data[name], function() {
-        $('.tree-container .overlay').fadeOut(100, "linear");
+    new Treant(getChartData(name), function() {
+        $('.tree-container .overlay').fadeOut(200, "linear");
     });
 }
 
@@ -154,20 +154,17 @@ window.addEventListener("load", function() {
             $('.pedigree-picker li').click(function () {
                 console.log($(this).data('dog'));
                 changePedigree($(this).data('dog'));
+
+                $('.pedigree-picker li.active').removeClass("active");
+                $(this).addClass('active');
             })
 
             loadScript("../dist/vendor-min.js").then(response => {
-                new Treant(chart_data.djanga, function() {
-                    $('.tree-container .overlay').fadeOut(200, "linear");
-                });
-                // TEST
-                // function changePedigree(name) {
-                //     $('.tree-container .overlay').fadeIn(100, "linear");
 
-                //     new Treant(chart_data[name], function() {
-                //         $('.tree-container .overlay').fadeOut(100, "linear");
-                //     });
-                // }
+                new Treant(getChartData("djanga"), function() {
+                    $('.tree-container .overlay').fadeOut(200, "linear");
+                    $('.tree-container').css("min-height", "unset");
+                });
 
                 $('.lightgallery').lightGallery({
                     mode: 'lg-slide',

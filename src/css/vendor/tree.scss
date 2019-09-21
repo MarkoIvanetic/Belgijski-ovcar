@@ -1,3 +1,10 @@
+// $treant-bg-color: #e56155;
+$title-color: #373740;;
+$treant-bg-color: #3FBF90;
+$treant-bd-color: rgba(127, 219, 145, 0.7);
+// $treant-bg-color: #E8E8E3;
+// $treant-bg-color: #887070;
+
 .Treant {
     position: relative;
     overflow: hidden;
@@ -70,24 +77,30 @@
     }
 
     .node.dog-pedigree {
-        cursor: default;
         padding: 0 2px;
         min-width: 60px;
         text-align: center;
         height: 30px;
-        border: 2px solid #a29696;
-        /*border: 2px solid #E8E8E3;*/
-        /*border: 2px solid #887070;*/
-         
+        // border: 2px solid #a29696;
+        border: 2px solid $treant-bg-color;
+
         border-radius: 2px;
-        box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+        // box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
         background: #fff;
+        text-decoration: none;
+        cursor: pointer;
+
+        background-color: $treant-bg-color;
     }
 
     .node.dog-pedigree .node-name {
         line-height: 30px;
         font-size: 16px;
+
         color: #9B9B9B;
+        color: white;
+
+
         font-weight: 900;
         /*color: #333;*/
         /*color: #887070;*/

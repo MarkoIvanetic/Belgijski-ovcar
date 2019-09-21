@@ -70,9 +70,13 @@ gulp.task('clean-temp', function() {
 // *****************************************************
 
 gulp.task('sass:watch', function () {
-  gulp.watch(path.scss, ['sass', 'copy-css', 'build-css-custom', 'build-css-vendor']);
+  gulp.watch(path.scss, ["build-style"]);
 });
 
+
+gulp.task('build-style', function(callback) {
+    return runSequence('clean-temp', 'sass', 'copy-css', ['build-css-custom', 'build-css-vendor'], callback);
+});
 
 gulp.task('build', function(callback) {
     return runSequence('clean-temp', 'sass', 'copy-css', ['build-css-custom', 'build-css-vendor'], ['build-autoprefixer', 'build-custom'], callback);

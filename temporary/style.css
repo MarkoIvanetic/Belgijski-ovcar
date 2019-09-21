@@ -39,7 +39,7 @@ h5 {
   right: 0;
   bottom: 0;
   background: #A5A5A5;
-  opacity: .5;
+  opacity: .8;
   z-index: 50; }
 
 .wrap {
@@ -180,10 +180,19 @@ footer {
   color: #A5A5A5; }
   .pedigree-picker ul {
     margin: 0;
-    padding: 10px 0px; }
+    padding: 0px;
+    display: flex;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none; }
     .pedigree-picker ul li {
       display: inline-block;
-      border-bottom: 2px solid transparent;
-      cursor: pointer; }
-      .pedigree-picker ul li:hover {
-        border-bottom: 2px solid #CCC; }
+      cursor: pointer;
+      padding: 10px 15px;
+      background: #373740;
+      color: #E9F2EF;
+      border-right: 1px solid #e9f2ef; }
+      .pedigree-picker ul li.active, .pedigree-picker ul li:hover {
+        background: #3FBF90; }
