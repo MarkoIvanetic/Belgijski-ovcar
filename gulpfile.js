@@ -7,6 +7,7 @@ var runSequence = require('run-sequence');
 var concatCss = require('gulp-concat-css');
 var autoprefixer = require('gulp-autoprefixer');
 var clean = require('gulp-clean');
+var order = require("gulp-order");
 
 sass.compiler = require('node-sass');
 
@@ -20,31 +21,33 @@ var path = {
 };
 
 // *****************************************************
-gulp.task('sass', function () {
-  return gulp.src(path.scss)
-    .pipe(sass().on('error', sass.logError))
+gulp.task("styles", function() {
+  gulp
+    .src(path.scss)
+    .pipe(sass().on("error", sass.logError))
     .pipe(gulp.dest(path.tmp));
-});
-gulp.task('copy-css', function() {
-   gulp.src(path.css)
-   .pipe(gulp.dest(path.tmp));
-});
-gulp.task('build-css-custom', function() {
-    return gulp.src(path.tmp + '/*.css')
-        .pipe(concatCss("bundle.css"))
-        .pipe(gulp.dest(path.dist));
-});
-gulp.task('build-css-vendor', function() {
-    return gulp.src(path.tmp + '/vendor/*.css')
-        .pipe(concatCss("vendor.css"))
-        .pipe(gulp.dest(path.dist));
+
+  gulp
+    .src(path.css)
+    .pipe(gulp.dest(path.tmp));
+
+  gulp
+    .src(path.tmp + "/*.css")
+    .pipe(concatCss("bundle.css"))
+    .pipe(gulp.dest(path.dist));
+
+  gulp
+    .src(path.tmp + "/vendor/*.css")
+    .pipe(concatCss("vendor.css"))
+    .pipe(gulp.dest(path.dist));
+
+  gulp
+    .src([path.dist + "bundle.css", path.dist + "vendor.css"])
+    .pipe(autoprefixer())
+    .pipe(gulp.dest(path.dist));
 });
 
-gulp.task('build-autoprefixer', function() {
-    return gulp.src([path.dist + 'bundle.css', path.dist + 'vendor.css'])
-        .pipe(autoprefixer())
-        .pipe(gulp.dest(path.dist));
-});
+
 
 // *****************************************************
 gulp.task('build-vendor', function() {
@@ -62,6 +65,17 @@ gulp.task('minify-vendor', function() {
     .pipe(minify())
     .pipe(gulp.dest(path.dist))
 });
+
+gulp.task('build-scripts', function() {
+  gulp.src(path.customjs)
+    .pipe(order([
+    "src/js/pedigree_data.js",
+    "src/js/rodovnice.js"
+  ]))
+  .pipe(concat("rodovnice.js"))
+  .pipe(gulp.dest(path.dist));
+  
+});
 // *****************************************************
 gulp.task('clean-temp', function() {
     return gulp.src('temporary/', {read: false})
@@ -75,7 +89,7 @@ gulp.task('sass:watch', function () {
 
 
 gulp.task('build-style', function(callback) {
-    return runSequence('clean-temp', 'sass', 'copy-css', ['build-css-custom', 'build-css-vendor'], callback);
+    return runSequence('clean-temp', 'styles', callback);
 });
 
 gulp.task('build', function(callback) {
