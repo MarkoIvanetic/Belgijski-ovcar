@@ -45,19 +45,19 @@
 }
 @font-face {
   font-family: 'BebasNeue';
-  src: url("fonts/BebasNeue Bold.woff") format('woff');
+  src: url("fonts/BebasNeue Bold.woff") format("woff");
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'BebasNeue';
-  src: url("fonts/BebasNeue Light.woff") format('woff');
+  src: url("fonts/BebasNeue Light.woff") format("woff");
   font-weight: lighter;
 }
 
 @font-face {
   font-family: 'BebasNeue';
-  src: url("fonts/BebasNeue Regular.woff") format('woff');
+  src: url("fonts/BebasNeue Regular.woff") format("woff");
   font-weight: normal;
 }
 .hidden {
@@ -227,7 +227,9 @@ main .image-container {
 main .image-container img {
   width: 100%;
   cursor: pointer;
+  transition: -webkit-filter .5s ease-in-out;
   transition: filter .5s ease-in-out;
+  transition: filter .5s ease-in-out, -webkit-filter .5s ease-in-out;
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
 }
@@ -326,7 +328,8 @@ footer .social-icon {
   margin: 0;
   padding: 0px;
   display: flex;
-  user-select: none;
+  -ms-user-select: none;
+      user-select: none;
   -moz-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;

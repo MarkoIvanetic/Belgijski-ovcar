@@ -1,29 +1,15 @@
-function loadScript(url) {
-    return new Promise((resolve, reject) => {
-        let script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = url;
-        script.addEventListener('load', () => resolve(script), false);
-        document.body.appendChild(script);
-        script.onload = function() {
-            resolve();
-        };
-    });
-}
-
 function changePedigree(name) {
     $('.tree-container .overlay').fadeIn(200, "linear");
 
-    new Treant(getChartData(name), function() {
+    new Treant(getChartData(name), function () {
         $('.tree-container .overlay').fadeOut(200, "linear");
     });
 }
 
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
 
-    loadScript("https://code.jquery.com/jquery-3.4.1.min.js")
-        .then(() => {
+    await loadScript("https://code.jquery.com/jquery-3.4.1.min.js")
 
             $('.pedigree-picker li').click(function () {
                 console.log($(this).data('dog'));
@@ -33,9 +19,9 @@ window.addEventListener("load", function() {
                 $(this).addClass('active');
             })
 
-            loadScript("../dist/vendor-min.js").then(response => {
+    await  loadScript("../dist/vendor-min.js")
 
-                new Treant(getChartData("djanga"), function() {
+                new Treant(getChartData("djanga"), function () {
                     $('.tree-container .overlay').fadeOut(200, "linear");
                     $('.tree-container').css("min-height", "unset");
                 });
@@ -47,11 +33,7 @@ window.addEventListener("load", function() {
                     download: false
                 });
 
-            }, error => {
 
-            });
-            loadScript("../dist/custom.js");
-        }, () => {
+    await loadScript("../dist/custom.js");
 
-        });
 })
