@@ -1,48 +1,11 @@
-.404.container {
-  background-color: #373737;
-  height: 100%;
-  padding: 0;
+/* COLORS */
+
+:root {
+  --main-green: $color-green;
+  --main-font-dark: $color-font-dark;
+  --main-font-light: $color-font-light;
 }
 
-.dog-top {
-  margin-top: 5em;
-  background-color: #d5ebda;
-  width: 100%;
-  text-align: center;
-}
-
-.dog-top img {
-  width: 100%;
-  height: auto;
-  display: inline-block;
-  max-width: 700px;
-  /*change to fit your image*/
-}
-
-.dog-bottom h1 {
-  color: #DBAF47;
-  font-size: 3em;
-  margin-top: .5em;
-  margin-bottom: .2em;
-}
-
-.dog-bottom h2 {
-  font-size: 1.5em;
-}
-
-.dog-bottom a {
-  font-size: 1em;
-  margin-left: 10px;
-}
-
-.dog-bottom a:hover {
-  color: #DBAF47;
-}
-
-.navigation {
-  text-align: center;
-  margin-top: 15px;
-}
 @font-face {
   font-family: 'BebasNeue';
   src: url("fonts/BebasNeue Bold.woff") format("woff");
@@ -60,6 +23,7 @@
   src: url("fonts/BebasNeue Regular.woff") format("woff");
   font-weight: normal;
 }
+
 .hidden {
   display: none;
 }
@@ -93,7 +57,7 @@ h4 {
 h5 {
   font-family: 'Lora', sans-serif;
   /*font-family: 'IBM Plex Sans', sans-serif;*/
-  color: #A5A5A5;
+  color: var(--main-font-ligh);
   font-size: 2rem;
   letter-spacing: 1px;
   margin: 0;
@@ -106,7 +70,7 @@ h5 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #A5A5A5;
+  background: var(--main-font-ligh);
   opacity: .8;
   z-index: 50;
 }
@@ -116,7 +80,7 @@ h5 {
 }
 
 .navbar-header {
-  color: #A5A5A5;
+  color: var(--main-font-ligh);
   margin: 0;
   margin-top: 18px;
   display: flex;
@@ -125,6 +89,7 @@ h5 {
 
 .navbar-header h1 {
   font-size: 4rem;
+  color: #373740;
   margin: 0;
 }
 
@@ -161,7 +126,7 @@ nav ul li.active a {
 }
 
 nav ul li a {
-  color: #A5A5A5;
+  color: var(--main-font-ligh);
   padding: 5px 0;
   text-decoration: none;
   border-bottom: 2px solid #FFF;
@@ -316,12 +281,12 @@ footer .social-icon {
 }
 
 .gallery-title {
-  color: #A5A5A5;
+  color: var(--main-font-ligh);
 }
 
 .pedigree-picker {
   font-family: 'Open Sans', sans-serif;
-  color: #A5A5A5;
+  color: var(--main-font-ligh);
 }
 
 .pedigree-picker ul {
@@ -347,5 +312,51 @@ footer .social-icon {
 
 .pedigree-picker ul li.active,
 .pedigree-picker ul li:hover {
-  background: #3FBF90;
+  background: var(--main-green);
+}
+
+.404.container {
+  background-color: #373737;
+  height: 100%;
+  padding: 0;
+}
+
+.dog-top {
+  margin-top: 5em;
+  background-color: #d5ebda;
+  width: 100%;
+  text-align: center;
+}
+
+.dog-top img {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  max-width: 700px;
+  /*change to fit your image*/
+}
+
+.dog-bottom h1 {
+  color: #DBAF47;
+  font-size: 3em;
+  margin-top: .5em;
+  margin-bottom: .2em;
+}
+
+.dog-bottom h2 {
+  font-size: 1.5em;
+}
+
+.dog-bottom a {
+  font-size: 1em;
+  margin-left: 10px;
+}
+
+.dog-bottom a:hover {
+  color: #DBAF47;
+}
+
+.navigation {
+  text-align: center;
+  margin-top: 15px;
 }

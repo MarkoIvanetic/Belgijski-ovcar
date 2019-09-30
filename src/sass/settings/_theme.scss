@@ -1,0 +1,54 @@
+/* COLORS */
+$color-green: #5ca58a;
+$color-font-dark: #373740;
+$color-font-light: #A5A5A5;
+
+:root {
+	--main-green: $color-green;
+	--main-font-dark: $color-font-dark;
+	--main-font-light: $color-font-light;
+}
+
+
+@function rem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+
+@mixin min-tablet-portrait {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin min-tablet {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin min-desktop {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin for-big-desktop-up {
+    @media (min-width: 1600px) {
+        @content;
+    }
+}
+
+@mixin unselectable {
+        user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+}

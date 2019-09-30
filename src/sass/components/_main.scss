@@ -96,9 +96,9 @@ nav ul {
         padding: 0 25px 0 0;
 
         &.active {
-        	a {
-			border-bottom: 2px solid #CCC;
-        	}
+            a {
+                border-bottom: 2px solid #CCC;
+            }
         }
 
         a {
@@ -253,41 +253,43 @@ footer {
 
 
 .lightgallery {
-	a {
-		text-decoration: none;
-		&>img {
-			 height: 180px;
-		}
-	}
+    a {
+        text-decoration: none;
+
+        &>img {
+            height: 180px;
+        }
+    }
 }
 
 .gallery-title {
-	    color: var(--main-font-ligh);
+    color: var(--main-font-ligh);
 }
 
 
 .pedigree-picker {
-font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: var(--main-font-ligh);
 
     ul {
         margin: 0;
         padding: 0px;
         display: flex;
-            @include unselectable;
+        @include unselectable;
 
         li {
             display: inline-block;
             // border-bottom: 2px solid transparent;
-                cursor: pointer;
-                padding: 10px 15px;
-                background: $color-font-dark;
-                color: #E9F2EF;
-                border-right: 1px solid #e9f2ef;
+            cursor: pointer;
+            padding: 10px 15px;
+            background: $color-font-dark;
+            color: #E9F2EF;
+            border-right: 1px solid #e9f2ef;
 
-            &.active, &:hover {
+            &.active,
+            &:hover {
                 // border-bottom: 2px solid #CCC;
-                background: $color-green;
+                background: var(--main-green);
             }
         }
     }

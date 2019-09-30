@@ -17,8 +17,8 @@ var util = require("gulp-util");
 // *************************************************************
 
 var path = {
-  customscss: "src/css/*.scss",
-  vendorscss: "src/css/vendor/*.scss",
+  customscss: "src/sass/*.scss",
+  vendorscss: "src/sass/vendor/*.scss",
   tmp: "temporary/",
   dist: "dist/",
   vendorjs: "src/js/vendor/*.js",
@@ -28,7 +28,8 @@ var path = {
 // ***************** STYLES ************************************
 gulp.task("build-styles", function() {
   gulp
-    .src(path.customscss)
+    // .src(path.customscss)
+    .src("src/sass/style.scss")
     .pipe(sass().on("error", sass.logError))
     .pipe(concatCss("bundle.css"))
     .pipe(autoprefixer())

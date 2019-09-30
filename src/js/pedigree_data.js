@@ -23,7 +23,8 @@ const CHART = {
   };
 
 function getChartData(dogName) {
-  return {...CHART, nodeStructure: chart_data[dogName]}
+  // return {...CHART, nodeStructure: chart_data[dogName]}
+  return Object.assign({}, CHART, {  nodeStructure: chart_data[dogName] });
 }
 
 var chart_data = {};
