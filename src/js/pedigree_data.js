@@ -1,5 +1,4 @@
 // fix arrow end issues:
-// https://github.com/DmitryBaranovskiy/raphael/issues/471
 
 const CHART = {
     chart: {

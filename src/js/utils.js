@@ -1,12 +1,9 @@
-function loadScript(url) {
-    return new Promise((resolve, reject) => {
+function loadScript(url, callback) {
         let script = document.createElement('script');
         script.type = 'text/javascript';
         script.src = url;
-        script.addEventListener('load', () => resolve(script), false);
+        script.addEventListener('load', () => {
+            callback();
+        });
         document.body.appendChild(script);
-        script.onload = function () {
-            resolve();
-        };
-    });
 }

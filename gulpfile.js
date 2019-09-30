@@ -2,6 +2,7 @@ var gulp = require("gulp");
 
 var sass = require("gulp-sass");
 var concatCss = require("gulp-concat-css");
+var concat = require("gulp-concat");
 var autoprefixer = require("gulp-autoprefixer");
 
 var watch = require("gulp-watch");
@@ -45,12 +46,19 @@ gulp.task("build-styles", function() {
 gulp.task("build-scripts", function() {
 
   gulp.src(path.vendorjs)
-    .pipe(minify({noSource: true}))
+    // .pipe(minify({noSource: true}))
+    .pipe(concat('vendor.js'))
+      .pipe(
+        babel({
+          presets: ["@babel/env"]
+        })
+      )
     .pipe(gulp.dest(path.dist));
 
   if (util.env.production) {
     gulp
       .src(path.customjs)
+      .pipe(concat('custom.js'))
       .pipe(
         babel({
           presets: ["@babel/env"]
@@ -60,16 +68,18 @@ gulp.task("build-scripts", function() {
   } else {
     gulp
       .src(path.customjs)
-      .pipe(sourcemaps.init())
-      .pipe(
-        babel({
-          presets: ["@babel/env"]
-        })
-      )
-      .pipe(sourcemaps.write('.'))
+      // .pipe(concat('custom.js'))
+      // .pipe(sourcemaps.init())
+      // .pipe(
+      //   babel({
+      //     presets: ["@babel/env"]
+      //   })
+      // )
+      // .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest(path.dist));
   }
 });
+
 
 // *************************************************************
 
