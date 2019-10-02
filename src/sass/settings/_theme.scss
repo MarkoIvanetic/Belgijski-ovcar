@@ -1,12 +1,13 @@
 /* COLORS */
 $color-green: #5ca58a;
 $color-font-dark: #373740;
-$color-font-light: #A5A5A5;
+// $color-font-light: #A5A5A5;
+$color-font-light: #717171;
 
 :root {
-	--main-green: $color-green;
-	--main-font-dark: $color-font-dark;
-	--main-font-light: $color-font-light;
+	--main-green: #{$color-green};
+	--main-font-dark: #{$color-font-dark};
+	--main-font-light: #{$color-font-light};
 }
 
 

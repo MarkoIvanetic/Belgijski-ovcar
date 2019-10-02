@@ -17,7 +17,7 @@ var util = require("gulp-util");
 // *************************************************************
 
 var path = {
-  customscss: "src/sass/*.scss",
+  customscss: "src/sass/**/*.scss",
   vendorscss: "src/sass/vendor/*.scss",
   tmp: "temporary/",
   dist: "dist/",
