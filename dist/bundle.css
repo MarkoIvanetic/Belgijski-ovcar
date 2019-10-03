@@ -1,27 +1,45 @@
 /* COLORS */
 
 :root {
-  --main-green: #5ca58a;
+  --main-green: #4aab87;
   --main-font-dark: #373740;
   --main-font-light: #717171;
 }
 
 @font-face {
-  font-family: 'BebasNeue';
-  src: url("fonts/BebasNeue Bold.woff") format("woff");
-  font-weight: bold;
+  font-family: 'CrimsonText';
+  src: url("fonts/CrimsonText-Regular.ttf") format("truetype");
+  font-weight: 400;
 }
 
 @font-face {
-  font-family: 'BebasNeue';
-  src: url("fonts/BebasNeue Light.woff") format("woff");
-  font-weight: lighter;
+  font-family: 'CrimsonText';
+  src: url("fonts/CrimsonText-Bold.ttf") format("truetype");
+  font-weight: 700;
 }
 
 @font-face {
-  font-family: 'BebasNeue';
-  src: url("fonts/BebasNeue Regular.woff") format("woff");
-  font-weight: normal;
+  font-family: 'CrimsonText';
+  src: url("fonts/CrimsonText-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'SourceSerifPro';
+  src: url("fonts/SourceSerifPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SourceSerifPro';
+  src: url("fonts/SourceSerifPro-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'SourceSerifPro';
+  src: url("fonts/SourceSerifPro-Bold.ttf") format("truetype");
+  font-weight: 700;
 }
 
 .hidden {
@@ -40,27 +58,29 @@ header {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'CrimsonText', serif;
+  font-weight: 400;
   display: flex;
   position: relative;
   flex-direction: column;
   color: var(--main-font-light);
 }
 
-h1,
 h2,
 h3,
 h4 {
-  font-family: 'Lora', sans-serif;
+  font-family: 'CrimsonText', serif;
   line-height: 1.15;
+  font-weight: 600;
 }
 
 h5 {
-  font-family: 'Lora', sans-serif;
+  font-family: 'CrimsonText', serif;
   /*font-family: 'IBM Plex Sans', sans-serif;*/
-  color: var(--main-font-light);
+  color: var(--main-font-dark);
   font-size: 2rem;
-  letter-spacing: 1px;
+  font-weight: 400;
+  /*letter-spacing: 1px;*/
   margin: 0;
   margin-bottom: 15px;
 }
@@ -89,7 +109,11 @@ h5 {
 }
 
 .navbar-header h1 {
+  font-family: 'SourceSerifPro', serif;
+  letter-spacing: 1px;
   font-size: 4rem;
+  line-height: 1.15;
+  font-weight: 600;
   color: #373740;
   margin: 0;
 }
@@ -171,8 +195,9 @@ main {
 
 main .main-content p {
   margin: 0 0 14px;
-  font-size: 1.125rem;
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.25rem;
+  font-family: 'CrimsonText', sans-serif;
+  /*font-weight: 600;*/
   color: #888;
   line-height: 1.5;
 }
@@ -275,14 +300,31 @@ footer .social-icon {
 
 .lightgallery a {
   text-decoration: none;
+  display: inline-block;
+  border: 2px solid transparent;
+  height: 180px;
 }
 
 .lightgallery a > img {
   height: 180px;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+div.gallery {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #CCC;
+}
+
+div.gallery:first-of-type {
+  border-top: 2px solid #CCC;
 }
 
 .gallery-title {
   color: var(--main-font-light);
+  font-size: 1.375rem;
+  margin-bottom: 5px;
 }
 
 .pedigree-picker {

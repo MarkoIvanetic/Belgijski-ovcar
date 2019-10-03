@@ -21,9 +21,6 @@
     
     <link rel="stylesheet" href="../dist/vendor.css">
     <link rel="stylesheet" href="../dist/bundle.css">
-
-    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -85,7 +82,7 @@
                 <div class="tree-container">
                     <div class="chart" id="pedigree-tree">
                     </div>
-                    <div class="overlay"></div>
+                    <!-- <div class="overlay"></div> -->
                 </div>
             </div>
         </main>
@@ -141,11 +138,17 @@ function loadScript(url, callback) {
 }
 
 function changePedigree(name) {
-    $('.tree-container .overlay').fadeIn(200, "linear");
+    // $('.tree-container .overlay').fadeIn(200, "linear");
+    $('#pedigree-tree').fadeOut(200, "linear", function() {
 
-    new Treant(getChartData(name), function() {
-        $('.tree-container .overlay').fadeOut(200, "linear");
     });
+    setTimeout(function() {
+
+        new Treant(getChartData(name), function() {
+            // $('.tree-container .overlay').fadeOut(200, "linear");
+            $('#pedigree-tree').fadeIn(200, "linear");
+        });
+    }, 200)
 }
 
 $('.pedigree-picker li').click(function() {

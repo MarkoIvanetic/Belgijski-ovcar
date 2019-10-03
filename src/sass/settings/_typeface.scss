@@ -1,17 +1,35 @@
 @font-face {
-    font-family: 'BebasNeue';
-    src: url('fonts/BebasNeue Bold.woff') format('woff');
-    font-weight: bold;
+    font-family: 'CrimsonText';
+    src: url('./fonts/CrimsonText-Regular.ttf') format('truetype');
+    font-weight: 400;
 }
 
 @font-face {
-    font-family: 'BebasNeue';
-    src: url('fonts/BebasNeue Light.woff') format('woff');
-    font-weight: lighter;
+    font-family: 'CrimsonText';
+    src: url('./fonts/CrimsonText-Bold.ttf') format('truetype');
+    font-weight: 700;
 }
 
 @font-face {
-    font-family: 'BebasNeue';
-    src: url('fonts/BebasNeue Regular.woff') format('woff');
-    font-weight: normal;
+    font-family: 'CrimsonText';
+    src: url('./fonts/CrimsonText-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'SourceSerifPro';
+    src: url('./fonts/SourceSerifPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'SourceSerifPro';
+    src: url('./fonts/SourceSerifPro-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'SourceSerifPro';
+    src: url('./fonts/SourceSerifPro-Bold.ttf') format('truetype');
+    font-weight: 700;
 }
