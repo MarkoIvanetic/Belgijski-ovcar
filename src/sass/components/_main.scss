@@ -12,7 +12,7 @@ html {
 }
 
 header {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 body {
@@ -60,6 +60,8 @@ h5 {
     min-height: 100%;
 }
 
+
+
 .navbar-header {
     color: var(--main-font-light);
     margin: 0;
@@ -99,6 +101,7 @@ nav ul {
     padding: 0;
     font-size: rem(18px);
     text-transform: uppercase;
+        margin: 20px 0px 10px 0;
 
     li {
         /*flex: 1;*/
@@ -263,6 +266,12 @@ footer {
 
 
 .lightgallery {
+
+    &.gallery-hidden {
+        height:0;
+        visibility: hidden;
+    }
+
     a {
         text-decoration: none;
         display: inline-block;
@@ -270,7 +279,7 @@ footer {
         height: 180px;
 
         &>img {
-            height: 180px;
+            height: 220px;
             display: inline-block;
             border-radius: 3px;
         }
@@ -290,17 +299,35 @@ padding-bottom: 20px;
     color: var(--main-font-light);
     font-size: rem(22px);
     margin-bottom: 5px;
+        margin-top: 15px;
+
 }
 
 
 .pedigree-picker {
     font-family: 'Open Sans', sans-serif;
     color: var(--main-font-light);
+    display: flex;
+
+    button {
+        cursor: pointer;
+        padding: 10px 15px;
+        background: #373740;
+        color: #E9F2EF;
+        border: 0;
+
+        &:hover, &:focus {
+            outline: none;
+            border-style: unset;
+        }
+    }
 
     ul {
         margin: 0;
         padding: 0px;
         display: flex;
+        flex: 1;
+        /*display: inline-block;*/
         @include unselectable;
 
         li {

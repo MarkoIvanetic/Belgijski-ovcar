@@ -27,7 +27,7 @@
     <header class="banner navbar navbar-default navbar-static-top" role="banner">
         <div class="container">
             <div class="navbar-header">
-                <!-- <img id="banner" src="images/used/logo.png?1" alt="Banner"> -->
+                <!-- <img id="banner" src="images/used/logo-darker.png?1" alt="Banner"> -->
                 <img id="banner" src="images/used/logo-darker.png?1" alt="Banner">
                 <div class="title">
                     <h1>Belgijski Ovčar</h1>
@@ -48,6 +48,7 @@
     <div class="wrap container" role="document">
         <main role="main">
             <div class="main-content">
+
                 <div class="gallery hidden">
                     <div class="rodovnice-titles">
                         <h4>Dina</h4>
@@ -55,21 +56,8 @@
                         <h4>Gero</h4>
                         <h4>Kali</h4>
                     </div>
-                    <div class="lightgallery">
-                        <a href="images/rodovnice/rodovnica-dina.jpg">
-                            <img src="images/rodovnice/rodovnica-dina.jpg" />
-                        </a>
-                        <a href="images/rodovnice/rodovnica-djanga.jpg">
-                            <img src="images/rodovnice/rodovnica-djanga.jpg" />
-                        </a>
-                        <a href="images/rodovnice/rodovnica-gero.jpg">
-                            <img src="images/rodovnice/rodovnica-gero.jpg" />
-                        </a>
-                        <a href="images/rodovnice/rodovnica-kali.jpg">
-                            <img src="images/rodovnice/rodovnica-kali.jpg" />
-                        </a>
-                    </div>
                 </div>
+
                 <div class="pedigree-picker">
                     <ul>
                         <li class="active" data-dog="djanga">Djanga</li>
@@ -78,6 +66,29 @@
                         <li data-dog="gero">Gero</li>
                         <li data-dog="kali">Kali</li>
                     </ul>
+                    <div>
+                        <button id="btn-original">Pogledaj original</button>
+                    </div>
+                </div>
+                <div class="lightgallery gallery-hidden">
+                        <a data-dog="keel" href="images/rodovnice/rodovnica-keel.jpeg">
+                            
+                        </a>
+                        <a data-dog="ria" href="images/rodovnice/rodovnica-ria.jpeg">
+                            
+                        </a>
+                        <a data-dog="dina" href="images/rodovnice/rodovnica-dina.jpg">
+                            
+                        </a>
+                        <a data-dog="djanga" href="images/rodovnice/rodovnica-djanga.jpg">
+                            
+                        </a>
+                        <a data-dog="gero" href="images/rodovnice/rodovnica-gero.jpg">
+                            
+                        </a>
+                        <a data-dog="kali" href="images/rodovnice/rodovnica-kali.jpg">
+                            
+                        </a>
                 </div>
                 <div class="tree-container">
                     <div class="chart" id="pedigree-tree">
@@ -126,6 +137,7 @@
 <script type="text/javascript" src="js/vendor/jquery_v3.4.1.min.js"></script>
 <script type="text/javascript" src="js/vendor/jquery.tree.js"></script>
 <script type="text/javascript" src="js/vendor/lazyload.min.js"></script>
+<script type="text/javascript" src="js/vendor/lightgallery.min.js"></script>
 <script type="text/javascript">
 function loadScript(url, callback) {
     let script = document.createElement('script');
@@ -158,6 +170,23 @@ $('.pedigree-picker li').click(function() {
     $('.pedigree-picker li.active').removeClass("active");
     $(this).addClass('active');
 })
+
+$('#btn-original').click(function() {
+    var active_dog = $('.pedigree-picker li.active').data('dog');
+
+    $(".lightgallery").find("[data-dog='" + active_dog + "']").click()
+
+})
+
+$(document).ready(function() {
+        $('.lightgallery').lightGallery({
+            mode: 'lg-slide',
+            speed: 200,
+            cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+            download: false
+        });
+})
+
 
 new Treant(getChartData("djanga"), function() {
     $('.tree-container .overlay').fadeOut(200, "linear");

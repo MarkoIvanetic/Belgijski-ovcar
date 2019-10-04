@@ -54,7 +54,7 @@ html {
 }
 
 header {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 body {
@@ -139,6 +139,7 @@ nav ul {
   padding: 0;
   font-size: 1.125rem;
   text-transform: uppercase;
+  margin: 20px 0px 10px 0;
 }
 
 nav ul li {
@@ -298,6 +299,11 @@ footer .social-icon {
   filter: grayscale(100%);
 }
 
+.lightgallery.gallery-hidden {
+  height: 0;
+  visibility: hidden;
+}
+
 .lightgallery a {
   text-decoration: none;
   display: inline-block;
@@ -306,7 +312,7 @@ footer .social-icon {
 }
 
 .lightgallery a > img {
-  height: 180px;
+  height: 220px;
   display: inline-block;
   border-radius: 3px;
 }
@@ -325,17 +331,35 @@ div.gallery:first-of-type {
   color: var(--main-font-light);
   font-size: 1.375rem;
   margin-bottom: 5px;
+  margin-top: 15px;
 }
 
 .pedigree-picker {
   font-family: 'Open Sans', sans-serif;
   color: var(--main-font-light);
+  display: flex;
+}
+
+.pedigree-picker button {
+  cursor: pointer;
+  padding: 10px 15px;
+  background: #373740;
+  color: #E9F2EF;
+  border: 0;
+}
+
+.pedigree-picker button:hover,
+.pedigree-picker button:focus {
+  outline: none;
+  border-style: unset;
 }
 
 .pedigree-picker ul {
   margin: 0;
   padding: 0px;
   display: flex;
+  flex: 1;
+  /*display: inline-block;*/
   -ms-user-select: none;
       user-select: none;
   -moz-user-select: none;
