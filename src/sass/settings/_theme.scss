@@ -17,35 +17,36 @@ $color-font-light: #717171;
     @return #{$remSize}rem;
 }
 
-@mixin for-phone-only {
+@mixin max-600 {
     @media (max-width: 599px) {
         @content;
     }
 }
 
-@mixin min-tablet-portrait {
-    @media (min-width: 768px) {
+@mixin max-640 {
+    @media (max-width: 640px) {
         @content;
     }
 }
 
-@mixin min-tablet {
-    @media (min-width: 992px) {
+@mixin max-768 {
+    @media (max-width: 767px) {
         @content;
     }
 }
 
-@mixin min-desktop {
-    @media (min-width: 1200px) {
+@mixin max-992 {
+    @media (max-width: 991px) {
         @content;
     }
 }
 
-@mixin for-big-desktop-up {
-    @media (min-width: 1600px) {
+@mixin max-1200 {
+    @media (max-width: 1199px) {
         @content;
     }
 }
+
 
 @mixin unselectable {
         user-select: none;
@@ -53,4 +54,12 @@ $color-font-light: #717171;
         -khtml-user-select: none;
         -webkit-user-select: none;
         -o-user-select: none;
+}
+
+.visible-lg {
+    display: inline-block;
+
+    @include max-1200 {
+        display: none;
+    }
 }
