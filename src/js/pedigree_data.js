@@ -5,7 +5,7 @@ const CHART = {
       container: "#pedigree-tree",
       levelSeparation: 20,
     siblingSeparation: 10,
-    subTeeSeparation: 10,
+    subTeeSeparation: 20,
       rootOrientation: "WEST",
       nodeAlign: "BOTTOM",
       connectors: {

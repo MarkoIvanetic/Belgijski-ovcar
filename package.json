@@ -19,6 +19,7 @@
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
+    "babel-polyfill": "^6.26.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-babel": "^8.0.0",
@@ -36,6 +37,7 @@
     "run-sequence": "^2.2.1"
   },
   "dependencies": {
+    "@babel/runtime": "^7.6.2",
     "lazyload": "^2.0.0-rc.2",
     "lightgallery": "^1.6.12"
   }

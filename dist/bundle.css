@@ -172,12 +172,6 @@ main .intro-text {
   padding-left: 10px;
 }
 
-@media (max-width: 1199px) {
-  main .intro-text {
-    margin-top: 20px;
-  }
-}
-
 main .image-container {
   padding-right: 10px;
   display: flex;
@@ -185,14 +179,7 @@ main .image-container {
 
 main .image-container img {
   width: 100%;
-  cursor: pointer;
-}
-
-@media (max-width: 1199px) {
-  main .image-container img {
-    width: unset;
-    height: 540px;
-  }
+  /*cursor: pointer;*/
 }
 
 main .image-container .image-column {
@@ -204,17 +191,6 @@ main .image-container .image-column img {
   margin-bottom: 10px;
 }
 
-main .image-container .image-column .image-main {
-  width: inherit;
-}
-
-@media (max-width: 1199px) {
-  main .image-container .image-column .image-main {
-    width: 100%;
-    height: unset;
-  }
-}
-
 main .image-container .image-column.column-l {
   padding-right: 5px;
 }
@@ -223,9 +199,22 @@ main .image-container .image-column.column-r {
   padding-left: 5px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
+  .belgijski-body .image-container img {
+    width: unset;
+    height: 540px;
+  }
+}
+
+@media (max-width: 991px) {
   .belgijski-body main {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 991px) {
+  .belgijski-body main .intro-text {
+    margin-top: 20px;
   }
 }
 
@@ -439,17 +428,19 @@ nav ul li a:hover {
   border-bottom: 2px solid #CCC;
 }
 
-.404.container {
-  background-color: #373737;
+.container-404 {
+  /*background-color: #373737;*/
+  /*background-color: #d5ebda;*/
   height: 100%;
-  padding: 0;
+  padding: 10px;
 }
 
 .dog-top {
   margin-top: 5em;
   background-color: #d5ebda;
   width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .dog-top img {
@@ -457,26 +448,25 @@ nav ul li a:hover {
   height: auto;
   display: inline-block;
   max-width: 700px;
-  /*change to fit your image*/
 }
 
-.dog-bottom h1 {
+.dog-top h1 {
   color: #DBAF47;
   font-size: 3em;
   margin-top: .5em;
   margin-bottom: .2em;
 }
 
-.dog-bottom h2 {
+.dog-top h2 {
   font-size: 1.5em;
 }
 
-.dog-bottom a {
+.dog-top a {
   font-size: 1em;
   margin-left: 10px;
 }
 
-.dog-bottom a:hover {
+.dog-top a:hover {
   color: #DBAF47;
 }
 

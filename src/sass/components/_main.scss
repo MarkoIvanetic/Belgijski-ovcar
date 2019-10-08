@@ -122,9 +122,6 @@ main {
     .intro-text {
         padding-left: 10px;
 
-        @include max-1200 {
-            margin-top: 20px;
-        }
     }
 
     .image-container {
@@ -133,13 +130,7 @@ main {
 
         img {
             width: 100%;
-            cursor: pointer;
-
-
-            @include max-1200 {
-                width: unset;
-                height: 540px;
-            }
+            /*cursor: pointer;*/
         }
 
         .image-column {
@@ -148,15 +139,6 @@ main {
             /*padding: 0px;*/
             img {
                 margin-bottom: 10px;
-            }
-
-            .image-main {
-                width: inherit;
-
-                @include max-1200 {
-                width: 100%;
-                height: unset;
-                }
             }
         }
 
@@ -174,11 +156,28 @@ main {
 }
 
 .belgijski-body {
+
+    .image-container {
+         img {
+                @include max-1200 {
+                    width: unset;
+                    height: 540px;
+                }
+         }
+    }
+
     main {
-        @include max-768 {
+        @include max-992 {
             flex-direction: column;
         }
+
+        .intro-text {
+        @include max-992 {
+            margin-top: 20px;
+        }
+        }
     }
+
 }
 
 footer {

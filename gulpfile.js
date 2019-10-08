@@ -17,6 +17,7 @@ var util = require("gulp-util");
 // *************************************************************
 
 var path = {
+  font: "src/fonts/*.*",
   customscss: "src/sass/**/*.scss",
   vendorscss: "src/sass/vendor/*.scss",
   tmp: "temporary/",
@@ -47,38 +48,28 @@ gulp.task("build-styles", function() {
 gulp.task("build-scripts", function() {
 
   gulp.src(path.vendorjs)
-    // .pipe(minify({noSource: true}))
-    .pipe(concat('vendor.js'))
-      .pipe(
-        babel({
-          presets: ["@babel/env"]
-        })
-      )
+    .pipe(gulp.dest(path.dist + 'vendor/'));
+
+  gulp.src([path.customjs, "!src/js/utils.js"])
     .pipe(gulp.dest(path.dist));
 
-  if (util.env.production) {
     gulp
-      .src(path.customjs)
-      .pipe(concat('custom.js'))
+      .src(["node_modules/babel-polyfill/dist/polyfill.min.js", "src/js/utils.js"])
+      .pipe(concat("utils.js"))
       .pipe(
         babel({
           presets: ["@babel/env"]
         })
       )
       .pipe(gulp.dest(path.dist));
-  } else {
-    gulp
-      .src(path.customjs)
-      // .pipe(concat('custom.js'))
-      // .pipe(sourcemaps.init())
-      // .pipe(
-      //   babel({
-      //     presets: ["@babel/env"]
-      //   })
-      // )
-      // .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest(path.dist));
-  }
+});
+
+// ***************** FONT ************************************
+gulp.task("build-fonts", function() {
+
+  gulp.src(path.font)
+    .pipe(gulp.dest(path.dist + 'fonts/'));
+
 });
 
 
@@ -88,4 +79,4 @@ gulp.task('sass:watch', function () {
   gulp.watch(path.customscss, ["build-styles"]);
 });
 
-gulp.task('build', ['build-styles', 'build-scripts']);
+gulp.task('build', ['build-styles', 'build-scripts', 'build-fonts']);

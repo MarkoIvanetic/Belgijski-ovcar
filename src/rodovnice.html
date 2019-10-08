@@ -18,9 +18,8 @@
     <meta property="og:image" content="https://belgijskiovcar.com/images/used/belgijski_ovcar.jpg?1" />
     <link rel="canonical" href="https://belgijskiovcar.com/" />
     <link rel="shortcut icon" href="images/icons/favicon.ico">
-    
-    <link rel="stylesheet" href="../dist/vendor.css">
-    <link rel="stylesheet" href="../dist/bundle.css">
+    <link rel="stylesheet" href="dist/vendor.css">
+    <link rel="stylesheet" href="dist/bundle.css">
 </head>
 
 <body>
@@ -37,18 +36,16 @@
             <nav role="navigation">
                 <ul id="menu-primary-navigation" class="nav navbar-nav">
                     <li><a href="/">Uzgajivač</a></li>
-                    <li><a href="https://belgijskiovcar.com/ovcar/">Belgijski Ovčar</a></li>
+                    <li><a href="/ovcar/">Belgijski Ovčar</a></li>
                     <li><a href="/galerija">Galerija</a></li>
                     <li class="active"><a href="/rodovnice">Rodovnice</a></li>
-                    
                 </ul>
             </nav>
         </div>
     </header>
     <div class="wrap container" role="document">
         <main role="main">
-            <div class="main-content">
-
+            <div>
                 <div class="gallery hidden">
                     <div class="rodovnice-titles">
                         <h4>Dina</h4>
@@ -57,7 +54,6 @@
                         <h4>Kali</h4>
                     </div>
                 </div>
-
                 <div class="pedigree-picker">
                     <ul>
                         <li class="active" data-dog="djanga">Djanga</li>
@@ -71,24 +67,18 @@
                     </div>
                 </div>
                 <div class="lightgallery gallery-hidden">
-                        <a data-dog="keel" href="images/rodovnice/rodovnica-keel.jpeg">
-                            
-                        </a>
-                        <a data-dog="ria" href="images/rodovnice/rodovnica-ria.jpeg">
-                            
-                        </a>
-                        <a data-dog="dina" href="images/rodovnice/rodovnica-dina.jpg">
-                            
-                        </a>
-                        <a data-dog="djanga" href="images/rodovnice/rodovnica-djanga.jpg">
-                            
-                        </a>
-                        <a data-dog="gero" href="images/rodovnice/rodovnica-gero.jpg">
-                            
-                        </a>
-                        <a data-dog="kali" href="images/rodovnice/rodovnica-kali.jpg">
-                            
-                        </a>
+                    <a data-dog="keel" href="images/rodovnice/rodovnica-keel.jpeg">
+                    </a>
+                    <a data-dog="ria" href="images/rodovnice/rodovnica-ria.jpeg">
+                    </a>
+                    <a data-dog="dina" href="images/rodovnice/rodovnica-dina.jpg">
+                    </a>
+                    <a data-dog="djanga" href="images/rodovnice/rodovnica-djanga.jpg">
+                    </a>
+                    <a data-dog="gero" href="images/rodovnice/rodovnica-gero.jpg">
+                    </a>
+                    <a data-dog="kali" href="images/rodovnice/rodovnica-kali.jpg">
+                    </a>
                 </div>
                 <div class="tree-container">
                     <div class="chart" id="pedigree-tree">
@@ -102,58 +92,41 @@
             -->
     <footer>
         <div class="container">
-        <div class="footer-left">
-            <p>
-                <strong>adresa:</strong>
-                - Ilovnjak 30, 10410 Velika Gorica
-            </p>
-            <p>
-                <strong>tel:</strong>
-                - 098/1744-194
-            </p>
-            <p>
-                <strong>email</strong>
-                - nikolapaulic4@gmail.com
-            </p>
-
-        </div>
-
-        <div class="footer-right">
-            <p>Copyright © Belgijski Ovčar 2015-2020</p>
-            <div>
-                <a href="https://www.facebook.com/nikola.paulic.520">
-                    <img class="social-icon" src="images/icons/facebook.png?1" alt="Facebook">
-                </a>
-
-                <a href="https://www.youtube.com/channel/UCTvn3_T7YgR5Hna-vFtD4kw">
-                    <img class="social-icon" src="images/icons/youtube.png?1" alt="Youtube">
-                </a>
+            <div class="footer-left">
+                <p>
+                    <strong>adresa:</strong>
+                    - Ilovnjak 30, 10410 Velika Gorica
+                </p>
+                <p>
+                    <strong>tel:</strong>
+                    - 098/1744-194
+                </p>
+                <p>
+                    <strong>email</strong>
+                    - nikolapaulic4@gmail.com
+                </p>
+            </div>
+            <div class="footer-right">
+                <p>Copyright © Belgijski Ovčar 2015-2020</p>
+                <div>
+                    <a href="https://www.facebook.com/nikola.paulic.520" target="_blank"> 
+                        <img class="social-icon" src="images/icons/facebook.png?1" alt="Facebook">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCTvn3_T7YgR5Hna-vFtD4kw" target="_blank"> 
+                        <img class="social-icon" src="images/icons/youtube.png?1" alt="Youtube">
+                    </a>
                 </div>
+            </div>
         </div>
-        </div>
-
-
-
     </footer>
 </body>
-<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-<!-- <script type="text/javascript" src="../dist/vendor.js"></script> -->
-<script type="text/javascript" src="../dist/pedigree_data.js"></script>
-<!-- <script type="text/javascript" src="../dist/custom.js"></script> -->
-<script type="text/javascript" src="js/vendor/jquery_v3.4.1.min.js"></script>
-<script type="text/javascript" src="js/vendor/jquery.tree.js"></script>
-<script type="text/javascript" src="js/vendor/lazyload.min.js"></script>
-<script type="text/javascript" src="js/vendor/lightgallery.min.js"></script>
+
+<script type="text/javascript" src="dist/utils.js"></script>
+<script type="text/javascript" src="dist/pedigree_data.js"></script>
+
 <script type="text/javascript">
-function loadScript(url, callback) {
-    let script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = url;
-    script.addEventListener('load', () => {
-        callback();
-    });
-    document.body.appendChild(script);
-}
+
+var errorEvent = false;
 
 function changePedigree(name) {
     // $('.tree-container .overlay').fadeIn(200, "linear");
@@ -163,48 +136,67 @@ function changePedigree(name) {
     setTimeout(function() {
 
         new Treant(getChartData(name), function() {
-            // $('.tree-container .overlay').fadeOut(200, "linear");
-            $('#pedigree-tree').fadeIn(200, "linear");
+            // Fallback for bugged library            
+
+            if (errorEvent) {
+                window.location.reload();
+            } else if ($(".chart.Treant-loaded svg").width() < 200) {
+
+                errorEvent = true;
+                console.log("error");
+                setTimeout(function() {
+                    changePedigree(getActiveDogName());
+                });
+
+            } else {
+                $('#pedigree-tree').fadeIn(200, "linear");
+                errorEvent = false;
+            }
         });
     }, 200)
 }
 
-$('.pedigree-picker li').click(function() {
-    console.log($(this).data('dog'));
-    changePedigree($(this).data('dog'));
+function getActiveDogName() {
+    return $('.pedigree-picker li.active').data('dog');
+}
 
-    $('.pedigree-picker li.active').removeClass("active");
-    $(this).addClass('active');
+
+loadScriptArray(["dist/vendor/jquery_v3.4.1.min.js",
+    "dist/vendor/jquery.tree.js",
+    "dist/vendor/lightgallery.min.js",
+], function() {
+
+
+    $('.pedigree-picker li').click(function() {
+        console.log($(this).data('dog'));
+        changePedigree($(this).data('dog'));
+
+        $('.pedigree-picker li.active').removeClass("active");
+        $(this).addClass('active');
+    })
+
+    $('#btn-original').click(function() {
+        $(".lightgallery").find("[data-dog='" + getActiveDogName() + "']").click()
+
+    })
+
+    window.addEventListener("resize", debounce(function(e) {
+        changePedigree(getActiveDogName());
+    }));
+
+    $('.lightgallery').lightGallery({
+        mode: 'lg-slide',
+        speed: 200,
+        cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+        download: false
+    });
+    new Treant(getChartData("djanga"), function() {
+        $('.tree-container .overlay').fadeOut(200, "linear");
+        $('.tree-container').css("min-height", "unset");
+    });
+
 })
 
-$('#btn-original').click(function() {
-    var active_dog = $('.pedigree-picker li.active').data('dog');
-
-    $(".lightgallery").find("[data-dog='" + active_dog + "']").click()
-
-})
-
-$(document).ready(function() {
-        $('.lightgallery').lightGallery({
-            mode: 'lg-slide',
-            speed: 200,
-            cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-            download: false
-        });
-})
-
-
-new Treant(getChartData("djanga"), function() {
-    $('.tree-container .overlay').fadeOut(200, "linear");
-    $('.tree-container').css("min-height", "unset");
-});
-
-// $('.lightgallery').lightGallery({
-//     mode: 'lg-slide',
-//     speed: 200,
-//     cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-//     download: false
-// });
 </script>
 
 </html>
