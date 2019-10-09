@@ -5,11 +5,13 @@ var concatCss = require("gulp-concat-css");
 var concat = require("gulp-concat");
 var autoprefixer = require("gulp-autoprefixer");
 
+var imagemin = require('gulp-imagemin');
+
 var watch = require("gulp-watch");
 var runSequence = require("run-sequence");
 
-const sourcemaps = require('gulp-sourcemaps');
-const babel = require('gulp-babel');
+var sourcemaps = require('gulp-sourcemaps');
+var babel = require('gulp-babel');
 
 var minify = require("gulp-minify");
 var util = require("gulp-util");
@@ -69,6 +71,14 @@ gulp.task("build-fonts", function() {
 
   gulp.src(path.font)
     .pipe(gulp.dest(path.dist + 'fonts/'));
+
+});
+
+gulp.task("build-images", function() {
+
+    gulp.src(['src/images/photos/**/*.jpg', "!src/images/photos/**/low/*.jpg"])
+        .pipe(imagemin({verbose: true}))
+        .pipe(gulp.dest('src/images/photos/**/*.jpg'))
 
 });
 

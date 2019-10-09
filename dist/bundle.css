@@ -18,36 +18,42 @@
 
 @font-face {
   font-family: 'CrimsonText';
+  font-display: fallback;
   src: url("fonts/CrimsonText-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'CrimsonText';
+  font-display: fallback;
   src: url("fonts/CrimsonText-Bold.ttf") format("truetype");
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'CrimsonText';
+  font-display: fallback;
   src: url("fonts/CrimsonText-SemiBold.ttf") format("truetype");
   font-weight: 600;
 }
 
 @font-face {
   font-family: 'SourceSerifPro';
+  font-display: fallback;
   src: url("fonts/SourceSerifPro-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'SourceSerifPro';
+  font-display: fallback;
   src: url("fonts/SourceSerifPro-SemiBold.ttf") format("truetype");
   font-weight: 600;
 }
 
 @font-face {
   font-family: 'SourceSerifPro';
+  font-display: fallback;
   src: url("fonts/SourceSerifPro-Bold.ttf") format("truetype");
   font-weight: 700;
 }
@@ -363,6 +369,7 @@ div.gallery:first-of-type {
   margin-top: 18px;
   display: flex;
   align-items: center;
+  min-height: 7.5rem;
 }
 
 .navbar-header h1 {

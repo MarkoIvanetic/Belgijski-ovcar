@@ -26,7 +26,6 @@
     <header class="banner navbar navbar-default navbar-static-top" role="banner">
         <div class="container">
             <div class="navbar-header">
-                <!-- <img id="banner" src="images/used/logo-darker.png?1" alt="Banner"> -->
                 <img id="banner" src="images/used/logo-darker.png?1" alt="Banner">
                 <div class="title">
                     <h1>Belgijski Ovčar</h1>
@@ -109,10 +108,10 @@
             <div class="footer-right">
                 <p>Copyright © Belgijski Ovčar 2015-2020</p>
                 <div>
-                    <a href="https://www.facebook.com/nikola.paulic.520" target="_blank"> 
+                    <a href="https://www.facebook.com/nikola.paulic.520" rel="noopener" target="_blank">
                         <img class="social-icon" src="images/icons/facebook.png?1" alt="Facebook">
                     </a>
-                    <a href="https://www.youtube.com/channel/UCTvn3_T7YgR5Hna-vFtD4kw" target="_blank"> 
+                    <a href="https://www.youtube.com/channel/UCTvn3_T7YgR5Hna-vFtD4kw" rel="noopener" target="_blank">
                         <img class="social-icon" src="images/icons/youtube.png?1" alt="Youtube">
                     </a>
                 </div>
@@ -136,7 +135,7 @@ function changePedigree(name) {
     setTimeout(function() {
 
         new Treant(getChartData(name), function() {
-            // Fallback for bugged library            
+            // Fallback for bugged library
 
             if (errorEvent) {
                 window.location.reload();
