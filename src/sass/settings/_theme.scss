@@ -17,6 +17,12 @@ $color-font-light: #717171;
     @return #{$remSize}rem;
 }
 
+@mixin max-450 {
+    @media (max-width: 450px) {
+        @content;
+    }
+}
+
 @mixin max-600 {
     @media (max-width: 599px) {
         @content;

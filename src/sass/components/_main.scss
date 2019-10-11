@@ -7,6 +7,7 @@ html {
     position: relative;
     min-height: 100%;
     -webkit-tap-highlight-color: transparent;
+    min-width: 360px;
 
     @include max-992 {
         font-size: 14px;
@@ -24,6 +25,14 @@ html {
 
 header {
     margin-bottom: 15px;
+
+    @media (max-width: 500px) {
+        position: fixed;
+        z-index: 1;
+        background: white;
+        width: 100%;
+        box-shadow: 0 1px 1px 0 #0003;
+    }
 }
 
 body {
@@ -69,6 +78,12 @@ h5 {
 
 .wrap {
     min-height: 100%;
+
+    &.container {
+        @media (max-width: 500px) {
+            margin-top: 68px;
+        }
+    }
 }
 
 .container {
@@ -85,7 +100,7 @@ h5 {
 
     @include max-992 {
         width: 750px;
-    }    
+    }
 
     @include max-768 {
         width: 100%;
@@ -158,12 +173,16 @@ main {
 .belgijski-body {
 
     .image-container {
-         img {
-                @include max-1200 {
-                    width: unset;
-                    height: 540px;
-                }
-         }
+        img {
+            @include max-1200 {
+                width: unset;
+                height: 540px;
+            }
+            @include max-600 {
+                width: 100%;
+                height: unset;
+            }
+        }
     }
 
     main {
@@ -172,9 +191,9 @@ main {
         }
 
         .intro-text {
-        @include max-992 {
-            margin-top: 20px;
-        }
+            @include max-992 {
+                margin-top: 20px;
+            }
         }
     }
 
@@ -248,12 +267,17 @@ footer {
         text-decoration: none;
         display: inline-block;
         border: 2px solid transparent;
-        height: 180px;
+        /*height: 180px;*/
 
         &>img {
 
             @include max-640 {
                 height: 150px;
+            }
+
+            @include max-450 {
+                height: unset;
+                width: 100%;
             }
 
             height: 220px;

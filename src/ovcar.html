@@ -28,7 +28,7 @@
     <header class="banner navbar navbar-default navbar-static-top" role="banner">
         <div class="container">
             <div class="navbar-header">
-                <img id="banner" src="images/used/logo-darker.png?1" alt="Banner">
+                <img id="logo" src="images/used/logo-darker.png?1" aria-label="Banner" alt="Banner">
                 <div class="title">
                     <h1>Belgijski Ovčar</h1>
                     <h2>Uzgajivačnica "Od Slunja"</h2>
@@ -37,7 +37,26 @@
             <nav role="navigation">
                 <ul id="menu-primary-navigation" class="nav navbar-nav">
                     <li><a href="/">Uzgajivač</a></li>
-                    <li class="active"><a href="/ovcar">Belgijski Ovčar</a></li>
+                    <li class="active"><a href="/ovcar/">Belgijski Ovčar</a></li>
+                    <li><a href="/galerija">Galerija</a></li>
+                    <li><a href="/rodovnice">Rodovnice</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container-mobile">
+            <div class="navbar-header">
+                <div class="title">
+                <img id="logo" src="images/used/logo-darker.png?1" aria-label="Banner" alt="Banner">
+                    <h1>Belgijski Ovčar</h1>
+                </div>
+                <button class="nav-button">
+                    <img src="images/icons/menu.png" alt="menu">
+                </button>
+            </div>
+            <nav class="mobile-navigation" role="navigation" style="display:none">
+                <ul id="menu-primary-navigation" class="nav navbar-nav">
+                    <li><a href="/">Uzgajivač</a></li>
+                    <li><a href="/ovcar/">Belgijski Ovčar</a></li>
                     <li><a href="/galerija">Galerija</a></li>
                     <li><a href="/rodovnice">Rodovnice</a></li>
                 </ul>
@@ -47,7 +66,7 @@
     <div class="wrap container" role="document">
         <main role="main">
             <div class="main-content image-container">
-                <img id="banner" src="images/used/belgijski_ovcar.jpg?1" alt="Banner">
+                <img id="logo" src="images/used/belgijski_ovcar.jpg?1" alt="Banner">
             </div>
             <div class="main-content intro-text">
                 <h5>Belgijski Ovčar</h5>
@@ -92,5 +111,22 @@
         </div>
     </footer>
 </body>
+
+<script type="text/javascript" src="dist/utils.js"></script>
+
+<script type="text/javascript">
+
+loadScriptArray(["dist/vendor/jquery_v3.4.1.min.js"], function () {
+    $('.nav-button').click(function () {
+        if ($('.mobile-navigation').is(":visible")) {
+        $('.mobile-navigation').hide();
+        } else {
+        $('.mobile-navigation').show();
+        }
+    })
+
+})
+
+</script>
 
 </html>

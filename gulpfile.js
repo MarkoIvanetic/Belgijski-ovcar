@@ -23,7 +23,7 @@ var path = {
   customscss: "src/sass/**/*.scss",
   vendorscss: "src/sass/vendor/*.scss",
   tmp: "temporary/",
-  dist: "dist/",
+  dist: "src/dist/",
   vendorjs: "src/js/vendor/*.js",
   customjs: "src/js/*.js"
 };
