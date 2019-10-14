@@ -69,7 +69,7 @@
                         <h4>Dina</h4>
                         <h4>Djanga</h4>
                         <h4>Gero</h4>
-                        <h4>Kali</h4>
+                        <!-- <h4>Kali</h4> -->
                     </div>
                 </div>
                 <div class="pedigree-picker">
@@ -78,7 +78,7 @@
                         <li data-dog="ria">Ria</li>
                         <li data-dog="dina">Dina</li>
                         <li data-dog="gero">Gero</li>
-                        <li data-dog="kali">Kali</li>
+                        <!-- <li data-dog="kali">Kali</li> -->
                     </ul>
                     <div>
                         <button id="btn-original">Pogledaj original</button>
@@ -95,8 +95,7 @@
                     </a>
                     <a data-dog="gero" href="images/rodovnice/rodovnica-gero.jpg">
                     </a>
-                    <a data-dog="kali" href="images/rodovnice/rodovnica-kali.jpg">
-                    </a>
+                    <!-- <a data-dog="kali" href="images/rodovnice/rodovnica-kali.jpg"></a> -->
                 </div>
                 <div class="lightgallery gallery-mobile">
                     <a data-dog="keel" href="images/rodovnice/rodovnica-keel.jpeg">
@@ -114,9 +113,9 @@
                     <a data-dog="gero" href="images/rodovnice/rodovnica-gero.jpg">
                         <img class="lazyload" aria-label="gero" alt="gero" src="images/used/loading-image.png" data-src="images/rodovnice/rodovnica-gero.jpg"/>
                     </a>
-                    <a data-dog="kali" href="images/rodovnice/rodovnica-kali.jpg">
+<!--                     <a data-dog="kali" href="images/rodovnice/rodovnica-kali.jpg">
                         <img class="lazyload" aria-label="kali" alt="kali" src="images/used/loading-image.png" data-src="images/rodovnice/rodovnica-kali.jpg"/>
-                    </a>
+                    </a> -->
                 </div>
                 <div class="tree-container">
                     <div class="chart" id="pedigree-tree">
@@ -208,6 +207,16 @@ loadScriptArray(["dist/vendor/jquery_v3.4.1.min.js",
     "dist/vendor/lazyload.min.js",
     "dist/vendor/lightgallery.min.js",
 ], function() {
+
+    $('.mobile-navigation').hide();
+
+    $('.nav-button').click(function () {
+        if ($('.mobile-navigation').is(":visible")) {
+        $('.mobile-navigation').hide();
+        } else {
+        $('.mobile-navigation').show();
+        }
+    })
 
 
     $('.pedigree-picker li').click(function() {

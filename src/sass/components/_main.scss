@@ -114,8 +114,10 @@ main {
     width: 100%;
     flex-direction: row;
 
-    @include max-992 {
-        // flex-direction: column;
+    &.uzgajivac {
+        @media (max-width: 500px) {
+            flex-direction: column;
+        }
     }
 
 
@@ -160,6 +162,11 @@ main {
         .image-column.column-l {
             padding-right: 5px;
 
+            img:first-of-type {
+                @media (max-width: 500px) {
+                display:none;
+                }
+            };
 
 
         }

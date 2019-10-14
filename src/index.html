@@ -18,11 +18,8 @@
     <meta property="og:image" content="https://belgijskiovcar.com/images/used/belgijski_ovcar.jpg?1" />
     <link rel="canonical" href="https://belgijskiovcar.com/" />
     <link rel="shortcut icon" href="images/icons/favicon.ico">
-
     <link rel="stylesheet" href="dist/vendor.css">
     <link rel="stylesheet" href="dist/bundle.css">
-
-
 </head>
 
 <body>
@@ -47,7 +44,7 @@
         <div class="container-mobile">
             <div class="navbar-header">
                 <div class="title">
-                <img id="logo" src="images/used/logo-darker.png?1" aria-label="Banner" alt="Banner">
+                    <img id="logo" src="images/used/logo-darker.png?1" aria-label="Banner" alt="Banner">
                     <h1>Belgijski Ovčar</h1>
                 </div>
                 <button class="nav-button">
@@ -65,16 +62,16 @@
         </div>
     </header>
     <div class="wrap container" role="document">
-        <main role="main">
+        <main role="main" class="uzgajivac">
             <div class="main-content image-container">
                 <div class="image-column column-l">
-                    <img id="logo" src="images/used/_nikola_2.jpg?1" class="" alt="Nikola">
-                    <img id="logo" src="images/used/_nikola_3.jpg?1" class="" alt="Nikola">
+                    <img class="lazyload" data-src="images/used/_nikola_2.jpg" alt="Nikola">
+                    <img class="lazyload" data-src="images/used/_nikola_3.jpg" alt="Nikola">
                 </div>
                 <div class="image-column column-r visible-lg">
-                    <img id="logo" src="images/used/_nikola_0.jpg?1" alt="Nikola">
-                    <img id="logo" src="images/used/_nikola_1.jpg?1" alt="Nikola">
-                    <img id="logo" src="images/used/_nikola_4.jpg?1" alt="Nikola">
+                    <img class="lazyload" data-src="images/used/_nikola_0.jpg" alt="Nikola">
+                    <img class="lazyload" data-src="images/used/_nikola_1.jpg" alt="Nikola">
+                    <img class="lazyload" data-src="images/used/_nikola_4.jpg" alt="Nikola">
                 </div>
             </div>
             <div class="main-content intro-text">
@@ -90,56 +87,49 @@
             -->
     <footer>
         <div class="container">
-        <div class="footer-left">
-            <p>
-                <strong>adresa:</strong>
-                - Ilovnjak 30, 10410 Velika Gorica
-            </p>
-            <p>
-                <strong>tel:</strong>
-                - 098/1744-194
-            </p>
-            <p>
-                <strong>email</strong>
-                - nikolapaulic4@gmail.com
-            </p>
-
-        </div>
-
-        <div class="footer-right">
-            <p>Copyright © Belgijski Ovčar 2015-2020</p>
-            <div>
-                <a href="https://www.facebook.com/nikola.paulic.520" rel="noopener" target="_blank">
-                    <img class="social-icon lazy" src="images/icons/facebook.png?1" alt="Facebook">
-                </a>
-
-                <a href="https://www.youtube.com/channel/UCTvn3_T7YgR5Hna-vFtD4kw" rel="noopener" target="_blank">
-                    <img class="social-icon lazy" src="images/icons/youtube.png?1" alt="Youtube">
-                </a>
+            <div class="footer-left">
+                <p>
+                    <strong>adresa:</strong>
+                    - Ilovnjak 30, 10410 Velika Gorica
+                </p>
+                <p>
+                    <strong>tel:</strong>
+                    - 098/1744-194
+                </p>
+                <p>
+                    <strong>email</strong>
+                    - nikolapaulic4@gmail.com
+                </p>
+            </div>
+            <div class="footer-right">
+                <p>Copyright © Belgijski Ovčar 2015-2020</p>
+                <div>
+                    <a href="https://www.facebook.com/nikola.paulic.520" rel="noopener" target="_blank">
+                        <img class="social-icon lazy" src="images/icons/facebook.png?1" alt="Facebook">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCTvn3_T7YgR5Hna-vFtD4kw" rel="noopener" target="_blank">
+                        <img class="social-icon lazy" src="images/icons/youtube.png?1" alt="Youtube">
+                    </a>
                 </div>
+            </div>
         </div>
-        </div>
-
-
-
     </footer>
 </body>
-
 <script type="text/javascript" src="dist/utils.js"></script>
-
 <script type="text/javascript">
-
-loadScriptArray(["dist/vendor/jquery_v3.4.1.min.js"], function () {
-    $('.nav-button').click(function () {
+loadScriptArray(["dist/vendor/jquery_v3.4.1.min.js", "dist/vendor/lazyload.min.js"], function() {
+    $('.nav-button').click(function() {
         if ($('.mobile-navigation').is(":visible")) {
-        $('.mobile-navigation').hide();
+            $('.mobile-navigation').hide();
         } else {
-        $('.mobile-navigation').show();
+            $('.mobile-navigation').show();
         }
+
     })
 
-})
+    $("img.lazyload").lazyload();
 
+})
 </script>
 
 </html>
