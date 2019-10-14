@@ -44,7 +44,7 @@
         <div class="container-mobile">
             <div class="navbar-header">
                 <div class="title">
-                <img id="logo" src="images/used/logo-darker.png?1" aria-label="Banner" alt="Banner">
+                    <img id="logo" src="images/used/logo-darker.png?1" aria-label="Banner" alt="Banner">
                     <h1>Belgijski Ovčar</h1>
                 </div>
                 <button class="nav-button">
@@ -98,6 +98,26 @@
                     <a data-dog="kali" href="images/rodovnice/rodovnica-kali.jpg">
                     </a>
                 </div>
+                <div class="lightgallery gallery-mobile">
+                    <a data-dog="keel" href="images/rodovnice/rodovnica-keel.jpeg">
+                        <img class="lazyload" aria-label="keel" alt="keel" src="images/used/loading-image.png" data-src="images/rodovnice/rodovnica-keel.jpeg"/>
+                    </a>
+                    <a data-dog="ria" href="images/rodovnice/rodovnica-ria.jpeg">
+                        <img class="lazyload" aria-label="ria" alt="ria" src="images/used/loading-image.png" data-src="images/rodovnice/rodovnica-ria.jpeg"/>
+                    </a>
+                    <a data-dog="dina" href="images/rodovnice/rodovnica-dina.jpg">
+                        <img class="lazyload" aria-label="dina" alt="dina" src="images/used/loading-image.png" data-src="images/rodovnice/rodovnica-dina.jpg"/>
+                    </a>
+                    <a data-dog="djanga" href="images/rodovnice/rodovnica-djanga.jpg">
+                        <img class="lazyload" aria-label="djanga" alt="djanga" src="images/used/loading-image.png" data-src="images/rodovnice/rodovnica-djanga.jpg"/>
+                    </a>
+                    <a data-dog="gero" href="images/rodovnice/rodovnica-gero.jpg">
+                        <img class="lazyload" aria-label="gero" alt="gero" src="images/used/loading-image.png" data-src="images/rodovnice/rodovnica-gero.jpg"/>
+                    </a>
+                    <a data-dog="kali" href="images/rodovnice/rodovnica-kali.jpg">
+                        <img class="lazyload" aria-label="kali" alt="kali" src="images/used/loading-image.png" data-src="images/rodovnice/rodovnica-kali.jpg"/>
+                    </a>
+                </div>
                 <div class="tree-container">
                     <div class="chart" id="pedigree-tree">
                     </div>
@@ -138,12 +158,9 @@
         </div>
     </footer>
 </body>
-
 <script type="text/javascript" src="dist/utils.js"></script>
 <script type="text/javascript" src="dist/pedigree_data.js"></script>
-
 <script type="text/javascript">
-
 var errorEvent = false;
 
 function changePedigree(name) {
@@ -151,6 +168,13 @@ function changePedigree(name) {
     $('#pedigree-tree').fadeOut(200, "linear", function() {
 
     });
+
+    if ($(window).width() <= 500) {
+        $(".lightgallery").find("[data-dog='" + getActiveDogName() + "']").click()
+        return;
+    }
+
+
     setTimeout(function() {
 
         new Treant(getChartData(name), function() {
@@ -181,6 +205,7 @@ function getActiveDogName() {
 
 loadScriptArray(["dist/vendor/jquery_v3.4.1.min.js",
     "dist/vendor/jquery.tree.js",
+    "dist/vendor/lazyload.min.js",
     "dist/vendor/lightgallery.min.js",
 ], function() {
 
@@ -199,22 +224,38 @@ loadScriptArray(["dist/vendor/jquery_v3.4.1.min.js",
     })
 
     window.addEventListener("resize", debounce(function(e) {
-        changePedigree(getActiveDogName());
+        if ($(window).width() > 500) {
+            changePedigree(getActiveDogName());
+        }
     }));
 
-    $('.lightgallery').lightGallery({
+    $('.lightgallery.gallery-hidden').lightGallery({
         mode: 'lg-slide',
         speed: 200,
         cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
         download: false
     });
+
+    if ($(window).width() <= 500) {
+
+        $("img.lazyload").lazyload();
+
+        $('.lightgallery.gallery-mobile').lightGallery({
+            mode: 'lg-slide',
+            speed: 200,
+            cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+            download: false
+        });
+    }
+
+    if (true) {}
+
     new Treant(getChartData("djanga"), function() {
         $('.tree-container .overlay').fadeOut(200, "linear");
         $('.tree-container').css("min-height", "unset");
     });
 
 })
-
 </script>
 
 </html>

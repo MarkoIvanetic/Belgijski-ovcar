@@ -81,7 +81,7 @@ h5 {
 
     &.container {
         @media (max-width: 500px) {
-            margin-top: 68px;
+            margin-top: 85px;
         }
     }
 }
@@ -178,6 +178,7 @@ main {
                 width: unset;
                 height: 540px;
             }
+
             @include max-600 {
                 width: 100%;
                 height: unset;
@@ -254,6 +255,12 @@ footer {
     }
 }
 
+#btn-original {
+        @media (max-width: 500px) {
+            display: none;
+        }
+}
+
 
 
 .lightgallery {
@@ -262,6 +269,14 @@ footer {
         height: 0;
         visibility: hidden;
     }
+
+    &.gallery-mobile {
+        display: none;
+        @media (max-width: 500px) {
+            display: inline-block;
+        }
+    }
+
 
     a {
         text-decoration: none;
@@ -295,6 +310,11 @@ div.gallery {
 
     &:first-of-type {
         border-top: 2px solid #CCC;
+
+        @media (max-width: 500px) {
+            border-top: 0;
+        }
+
     }
 }
 
@@ -311,6 +331,10 @@ div.gallery {
     font-family: 'Open Sans', sans-serif;
     color: var(--main-font-light);
     display: flex;
+
+        @media (max-width: 500px) {
+            display: none;
+        }
 
     button {
         cursor: pointer;
