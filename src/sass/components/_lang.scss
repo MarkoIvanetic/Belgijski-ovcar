@@ -1,0 +1,39 @@
+.navbar-header {
+	position: relative;
+
+	ul.lang {
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    display: flex;
+	    flex-direction: row;
+
+	    @media (max-width: 700px) {
+	        top: unset;
+	        bottom: 0;
+	    }
+
+	    @media (max-width: 501px) {
+	       position: unset;
+	    }
+
+	    li {
+	    	cursor: pointer;
+	    	margin-right: 5px;
+	    	padding-right: 5px;
+	    	color: var(--main-font-light);
+
+	    	&:not(:last-of-type) {
+	    		border-right: 1px solid var(--main-font-light);
+	    	}
+
+	    	&:hover {
+	    		text-decoration: underline;
+	    	}
+
+	    	&.active {
+	    		text-decoration: underline;
+	    	}
+	    }
+	}
+}

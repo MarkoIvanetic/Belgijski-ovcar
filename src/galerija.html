@@ -31,6 +31,11 @@
                     <h1>Belgijski Ovčar</h1>
                     <h2>Uzgajivačnica "Od Slunja"</h2>
                 </div>
+                <ul class="lang" data-page="gallery">
+                    <li data-lang="hr">HR</li>
+                    <li data-lang="en">EN</li>
+                    <li data-lang="de">DE</li>
+                </ul>
             </div>
             <nav role="navigation">
                 <ul id="menu-primary-navigation" class="nav navbar-nav">
@@ -46,6 +51,11 @@
                 <div class="title">
                 <img id="logo" src="images/dogbanner.png?1" aria-label="Banner" alt="Banner">
                     <h1>Belgijski Ovčar</h1>
+                    <ul class="lang" data-page="ovcar">
+                        <li data-lang="hr">HR</li>
+                        <li data-lang="en">EN</li>
+                        <li data-lang="de">DE</li>
+                    </ul>
                 </div>
                 <button class="nav-button">
                     <img src="images/icons/menu.png" alt="menu">
@@ -203,8 +213,19 @@
 
 loadScriptArray(["dist/vendor/jquery_v3.4.1.min.js",
     "dist/vendor/lazyload.min.js",
-    "dist/vendor/lightgallery.min.js"
+    "dist/vendor/lightgallery.min.js",
+    'dist/translation_data.js'
 ], function () {
+
+    var _lang = localStorage.getItem('bo-lang');
+
+    if (_lang) {
+       $('ul.lang').find("[data-lang='" + _lang + "']").click();
+       $('ul.lang').find("[data-lang='" + _lang + "']").addClass('active')
+    } else {
+        $('ul.lang li').removeClass('active');
+        $('ul.lang').find("[data-lang='hr']").addClass('active');
+    }
 
     $('.mobile-navigation').hide();
 
