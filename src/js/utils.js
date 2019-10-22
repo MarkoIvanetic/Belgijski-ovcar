@@ -1,6 +1,3 @@
-
-
-
 function loadScript(url) {
     return new Promise((resolve, reject) => {
         var script = document.createElement('script');
@@ -32,3 +29,4 @@ function debounce(func) {
         timer = setTimeout(func, 100, event);
     };
 }
+

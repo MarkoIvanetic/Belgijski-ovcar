@@ -138,3 +138,21 @@ $('ul.lang li').click(function (e) {
         break;
     }
 })
+
+
+
+// NOTIFICATION
+var expirey_date = '2019-12-01T10:20:30Z';
+var message = "Novi stenci";
+
+if ((new Date()).getTime() < new Date(expirey_date).getTime()) {
+    $('header').append('<div style="display:none" class="newsbar"><span class="news">X</span><span class="news-close">✕</span></div>');
+    $('.news').text(message);
+    $('body').addClass('offset');
+    $('.newsbar').fadeIn(300);
+
+    $('.news-close').click(function () {
+        $('.newsbar').fadeOut(300);
+        $('body').removeClass('offset');
+    });
+}
