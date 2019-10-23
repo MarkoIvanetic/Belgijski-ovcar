@@ -3,24 +3,27 @@ var translation = {
         metatitle: 'Belgijski Ovčar - Uzgajivačnica Belgijskih Ovčara "Od Slunja"',
         title: "Belgijski Ovčar",
         subtitle: 'Uzgajivačnica "Od Slunja"',
+        news: 'Ocekujemo nove štence sredinom Studenog!',
         nav: ['Uzgajivač', 'Belgijski Ovčar', 'Galerija', 'Rodovnice'],
-        adress: 'adresa'
+        address: 'adresa'
 
     },
     en: {
         metatitle: 'Belgian Shepard - Kennels "Od Slunja", Malinois training',
         title: "Belgian Shepard",
         subtitle: 'Kennels "Od Slunja"',
+        news: 'We are expecting new pups by the mid November!',
         nav: ['Breeder', 'Belgian Shepard', 'Gallery', 'Pedigree'],
-        adress: 'adress:'
+        address: 'address:'
 
     },
     de: {
         metatitle: 'Belgischen Schäferhunde- Zwinger "Od Slunja", Malinois Ausbildung',
         title: "Belgischen Schäferhunde",
         subtitle: 'Zwinger "Od Slunja"',
+        news: 'Wir erwarten Mitte November neue Welpen!',
         nav: ['Züchter', 'Belgischen Schäferhunde', 'Galerie', 'Stammbaum'],
-        adress: 'adresse:'
+        address: 'adresse:'
 
     },
 }
@@ -45,7 +48,6 @@ var translation_home = {
         p1: 'Ich arbeite seit 1993 mit Hunden. Als Hundeoffizier führte ich den Polizeihund "Medo". Im selben Jahr habe ich mit der Ausbildung von Hunden für die Polizei begonnen. Ich war Mitglied der Spezialeinheit "Alpha", wo ich intensiv am Hundetraining für militärische Zwecke, speziell für anti-terroristische Operationen mitarbeitete. Diese Ausbilung fand in der rauen Umgebung von Velebit Mesa, im Jahr 2003 statt. Ich wurde Befehlshaber der Suchhundstaffel des Polizei-Hauptquartiers Zagreb.',
         p2: 'Im Jahr 2003 registrierte ich den Zwinger "Od Slunja". Ich arbeite meistens mit offiziellen Hunden, die für Militär, Polizei und Sicherheit ausgebildet sind. Ich arbeitete auch mit spezialisierten Sprengstoff.- und Betäubungsmittel Erkennungshunden.',
         p3: 'Nach Jahren harter Arbeit kann ich mich als ein Experte auf dem Gebiet der belgischen Schäferhunde und Polizeihunde sowie Haushaltshunde bezeichnen. Ich führe auch Schulungen für andere Hunderassen durch und bereite Hunde für Ausstellungen und Shows vor. Unteranderem kann ich auch bei der Auswahl einer Hunderasse oder den Kauf eines bestimmten Hundes beraten.',
-
     },
 }
 
@@ -89,7 +91,7 @@ function translate_main(lang) {
     $('head title').text(translation[lang].metatitle);
     $('div.title h1').text(translation[lang].title);
     $('div.title h2').text(translation[lang].subtitle);
-    $('footer .footer-left p strong:first').text(translation[lang].adress);
+    $('footer .footer-left p strong:first').text(translation[lang].address);
 
     $('#menu-primary-navigation').each(function () {
         var nav = $(this);
@@ -98,6 +100,10 @@ function translate_main(lang) {
             $(a).text(translation[lang].nav[i])
         })
     })
+
+    if ($('.newsbar').length) {
+        $('.news').text(translation[lang].news);
+    }
 }
 
 function translate_home(lang) {
@@ -123,7 +129,7 @@ $('ul.lang li').click(function (e) {
 
     $('ul.lang li').removeClass('active')
     $(this).addClass('active')
-    
+
     translate_main(lang);
 
     switch($('ul.lang').data('page')) {
@@ -142,12 +148,14 @@ $('ul.lang li').click(function (e) {
 
 
 // NOTIFICATION
-var expirey_date = '2019-12-01T10:20:30Z';
-var message = "Novi stenci";
+var expirey_date = '2020-03-01T10:20:30Z';
 
 if ((new Date()).getTime() < new Date(expirey_date).getTime()) {
     $('header').append('<div style="display:none" class="newsbar"><span class="news">X</span><span class="news-close">✕</span></div>');
-    $('.news').text(message);
+
+    var _lang = localStorage.getItem('bo-lang');
+    $('.news').text(translation[_lang || 'hr'].news);
+
     $('body').addClass('offset');
     $('.newsbar').fadeIn(300);
 
